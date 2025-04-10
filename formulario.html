@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulario de Solicitud</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #D6D6D6;
+      padding: 40px;
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+  
+    form {
+      max-width: 500px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+  
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+  
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: bold;
+      color: #2d3748;
+    }
+  
+    input[type="text"],
+    input[type="email"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+      box-sizing: border-box;
+    }
+  
+    select {
+      background-color: white;
+    }
+  
+    button {
+      background-color: #2f855a;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      width: 100%;
+    }
+  
+    button:hover {
+      background-color: #276749;
+    }
+  
+    @media (max-width: 600px) {
+      body {
+        padding: 20px;
+      }
+  
+      form {
+        padding: 20px;
+      }
+    }
+
+    /*BARRA SUPERIOR*/
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #222;
+    color: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.navbar .logo a img {
+    height: 50px;
+    width: auto;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    position: relative; /* Necesario para el submenu */
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #1b5e20;
+    border-radius: 5px;
+}
+
+/* Submenú (inicialmente oculto) */
+nav ul li .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    min-width: 150px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    z-index: 999;
+}
+
+nav ul li .submenu li a {
+    padding: 10px 15px;
+    display: block;
+    color: white;
+    font-size: 16px;
+    font-weight: normal;
+    border-radius: 0;
+}
+
+nav ul li .submenu li a:hover {
+    background-color: #1b5e20;
+}
+
+/* Mostrar submenu al pasar el ratón */
+nav ul li.dropdown:hover .submenu {
+    display: block;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        text-align: left;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+        padding: 12px 20px;
+    }
+
+    nav ul li .submenu {
+        position: static;
+        box-shadow: none;
+        background-color: #333;
+    }
+
+    nav ul li .submenu li a {
+        padding-left: 30px;
+    }
+}
+/*BARRA SUPERIOR*/
+  </style>
+</head>
+<div class="navbar">
+  <div class="logo">
+      <a href="index.html"><img src="logo.png" alt="Logo de Terrezu"></a>
+  </div>
+  <nav>
+      <ul class="menu">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="paisajismo.html">Paisajismo</a></li>
+          <li class="dropdown">
+              <a href="sabores.html">Sabores Bio & Eco</a>
+              <ul class="submenu">
+                  <li><a href="bodegas.html">Vinos</a></li>
+                  <li><a href="aceites.html">Aceites</a></li>
+              </ul>
+          </li>
+          <li><a href="formulario.html">Contacto</a></li>
+      </ul>
+  </nav>
+</div>
+</head>
+<body>
+
+  <h2 style="text-align:center;">Solicitar Producto o Hacer Consulta</h2>
+
+  <form action="https://formspree.io/f/xzzekony" method="POST">
+    <label for="name">Nombre:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Correo electrónico:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="pais">País:</label>
+      <select id="pais" name="pais" required>
+        <option value="">Selecciona tu país</option>
+        <option value="España">España</option>
+        <option value="Bélgica">Bélgica</option>
+        <option value="Francia">Francia</option>
+        <option value="Alemania">Alemania</option>
+        <option value="Países Bajos">Países Bajos</option>
+        <option value="Otro">Otro</option>
+    </select>
+
+    <label for="ciudad">Ciudad:</label>
+    <input type="text" id="ciudad" name="ciudad">
+
+    <label for="product">Producto de interés:</label>
+    <input type="text" id="product" name="producto" required>
+
+    <label for="message">Consulta:</label>
+    <textarea id="message" name="mensaje" rows="5" required></textarea>
+
+    <button type="submit">Enviar solicitud</button>
+  </form>
+
+  <script>
+    // Rellenar el campo del producto si viene desde enlace con parámetro
+    const params = new URLSearchParams(window.location.search);
+    const producto = params.get('producto');
+    if (producto) {
+      document.getElementById('product').value = decodeURIComponent(producto);
+    }
+  </script>
+</body>
+</html>
