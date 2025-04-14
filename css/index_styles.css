@@ -21,13 +21,11 @@ body {
     left: 0;
     width: 100%;
     z-index: 1000;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Logo */
 .navbar .logo a img {
     height: 50px;
-    width: auto;
+    width: auto; 
 }
 
 /* Menú navegación */
@@ -69,6 +67,29 @@ nav ul li a:hover {
     color: white;
     cursor: pointer;
 }
+
+/*IDIOMAS*/
+.language-switch a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    margin: 0 5px;
+    transition: color 0.3s ease;
+    margin-right: 25px;
+}
+
+.language-switch a:first-child {
+    margin-right: 2px;
+}
+
+.language-switch a:last-child {
+    margin-left: 2px;
+}
+.language-switch a:hover {
+    color: #5A1E29;
+}
+
+
 
 /* Responsive */
 @media (max-width: 768px) {
@@ -116,7 +137,7 @@ nav ul li a:hover {
 header {
     background-color: #5A1E29;
     color: #D4AF37;
-    padding: 20px;
+    padding: 5px;
 }
 
 a {

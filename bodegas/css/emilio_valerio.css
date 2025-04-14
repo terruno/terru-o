@@ -63,6 +63,26 @@ nav ul li a:hover {
     border-radius: 5px;
 }
 
+/*IDIOMAS*/
+.language-switch a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    margin: 0 5px;
+    transition: color 0.3s ease;
+}
+
+.language-switch a:first-child {
+    margin-right: 2px;
+}
+
+.language-switch a:last-child {
+    margin-left: 2px;
+}
+.language-switch a:hover {
+    color: #5A1E29;
+}
+
 /* Responsive: cambia a menú vertical */
 @media (max-width: 768px) {
     .menu-toggle {
