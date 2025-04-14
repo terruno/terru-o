@@ -3,11 +3,12 @@ body {
     font-family: Arial, sans-serif;
     color: white;
     background: black;
-    background-image: url("../img/emilio_valerio/emilio_valerio_fondo.jpg");
-    background-size: cover; /* Hace que la imagen cubra toda la pantalla */
-    background-position: center; /* Centra la imagen */
-    background-attachment: fixed; /* Hace que la imagen de fondo se quede fija al hacer scroll */
-   
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("../img/emilio_valerio/emilio_valerio_fondo.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 
@@ -16,10 +17,11 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 10px; /* Ajusta el valor según el espacio que desees */
+    padding: 15px 10px;
     background-color: #222;
     color: white;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    position: relative;
 }
 
 .navbar .logo a img {
@@ -27,6 +29,16 @@ body {
     width: auto;
 }
 
+/* Botón hamburguesa oculto por defecto */
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    user-select: none;
+    color: white;
+}
+
+/* Menú horizontal por defecto */
 nav ul {
     display: flex;
     list-style-type: none;
@@ -35,7 +47,6 @@ nav ul {
 }
 
 nav ul li {
-    position: relative;
     margin: 0 20px;
 }
 
@@ -53,26 +64,37 @@ nav ul li a:hover {
     border-radius: 5px;
 }
 
-/* Responsive: menú */
+/* Responsive: cambia a menú vertical */
 @media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
+    .menu-toggle {
+        display: block;
+    }
+
+    nav {
+        width: 100%;
     }
 
     nav ul {
         flex-direction: column;
+        background-color: #222;
         width: 100%;
-        text-align: left;
+        display: none; /* Oculto por defecto */
+    }
+
+    nav ul.show {
+        display: flex; /* Mostrado cuando se activa el toggle */
     }
 
     nav ul li {
         margin: 10px 0;
+        text-align: left;
     }
 
     nav ul li a {
         font-size: 16px;
         padding: 12px 20px;
+        display: block;
+        width: 100%;
     }
 }
 /*BARRA SUPERIOR*/
@@ -81,12 +103,13 @@ nav ul li a:hover {
 
 .container {
     display: flex;
+    flex-wrap: wrap;
     max-width: 1200px;
     width: 90%;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    margin: 0 auto; /* Para asegurar que el contenedor se mantenga centrado horizontalmente */
+    margin: 40px auto;
+    gap: 20px;
 }
 
 .logo_bodega {
@@ -210,4 +233,20 @@ p {
 
 .producto button:hover {
     background-color: #005f6b;
+}
+
+/* RESPONSIVE del catálogo */
+@media (max-width: 480px) {
+    .producto p {
+        font-size: 1em;
+    }
+
+    .producto button {
+        font-size: 0.9em;
+        padding: 8px 16px;
+    }
+
+    .producto img {
+        max-height: 180px;
+    }
 }

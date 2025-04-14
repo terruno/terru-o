@@ -146,6 +146,46 @@ p {
 }
 
 
+.etiquetas-container {
+    display: flex;
+    flex-direction: row; /* Esto coloca los elementos en una fila horizontal */
+    align-items: center; /* Alinea verticalmente los elementos (opcional) */
+    justify-content: flex-end; /* Alinea los elementos al final del contenedor (a la derecha) */
+    padding: 0px;
+    gap: 0px; /* Espacio entre las imágenes */
+}
+
+.etiquetas-container img {
+width: 150px;
+height: auto;
+margin-bottom: 0px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        height: auto;
+        padding: 20px 0;
+    }
+
+    .logo_bodega, .texto {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .texto {
+        font-size: 1em;
+    }
+
+    .etiquetas-container {
+        justify-content: center;
+    }
+
+    .etiquetas-container img {
+        width: 120px;
+    }
+}
+
 /*CATÁLOGO DE PRODUCTOS*/
 .catalogo {
     background-color: #f8f8f8;
