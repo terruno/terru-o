@@ -122,6 +122,31 @@
     </main>
     <footer>
         <p>To place an order, contact us <a href="formulario.html">HERE</a></p>
+        <p>
+            <a href="privacy-policy.html">Política de Privacidad</a> |
+            <a href="cookie-policy.html">Política de Cookies</a>
+        </p>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+<script>
+window.addEventListener("load", function(){
+  window.cookieconsent.initialise({
+    palette: {
+      popup: { background: "#000" },
+      button: { background: "#f1d600", text: "#000" }
+    },
+    theme: "classic",
+    position: "bottom",
+    content: {
+      message: "This website uses technical cookies for its operation.",
+      dismiss: "Accept",
+      link: "Learn more",
+      href: "cookie-policy.html"
+    }
+  });
+});
+</script>
+
 </body>
 </html>

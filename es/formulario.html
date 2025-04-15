@@ -148,6 +148,21 @@ nav ul li a:hover {
     color: #5A1E29;
 }
 
+/*FOOTER*/
+footer {
+    background-color: #5A1E29;
+    color: #D4AF37;
+    padding: 10px;
+    margin-top: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+a {
+    color: #ffff;
+    text-decoration: none;
+}
+
+
 /* Responsive: cambia a menú vertical */
 @media (max-width: 768px) {
     .menu-toggle {
@@ -234,6 +249,10 @@ nav ul li a:hover {
 
     <label for="message">Consulta:</label>
     <textarea id="message" name="mensaje" rows="5" required></textarea>
+    <label>
+      <input type="checkbox" required>
+      He leído y acepto la <a href="politica-privacidad.html" target="_blank">Política de Privacidad</a>.
+    </label>
 
     <button type="submit">Enviar solicitud</button>
   </form>
@@ -246,5 +265,13 @@ nav ul li a:hover {
       document.getElementById('product').value = decodeURIComponent(producto);
     }
   </script>
+
+<footer>
+  <p>Para realizar un pedido, contáctanos <a href="formulario.html">AQUÍ</a></p>
+  <p>
+      <a href="politica-privacidad.html">Política de Privacidad</a> |
+      <a href="politica-cookies.html">Política de Cookies</a>
+  </p>
+</footer>
 </body>
 </html>

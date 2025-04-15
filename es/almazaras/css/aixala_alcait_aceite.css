@@ -3,11 +3,12 @@ body {
     font-family: Arial, sans-serif;
     color: white;
     background: black;
-    background-image: url("../img/emilio_valerio/emilio_valerio_fondo.jpg");
-    background-size: cover; /* Hace que la imagen cubra toda la pantalla */
-    background-position: center; /* Centra la imagen */
-    background-attachment: fixed; /* Hace que la imagen de fondo se quede fija al hacer scroll */
-   
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("../img/aixala_alcait/aixal_alcait_almazara_fondo.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 
@@ -63,26 +64,6 @@ nav ul li a:hover {
     border-radius: 5px;
 }
 
-/*IDIOMAS*/
-.language-switch a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    margin: 0 5px;
-    transition: color 0.3s ease;
-}
-
-.language-switch a:first-child {
-    margin-right: 2px;
-}
-
-.language-switch a:last-child {
-    margin-left: 2px;
-}
-.language-switch a:hover {
-    color: #5A1E29;
-}
-
 /* Responsive: cambia a menú vertical */
 @media (max-width: 768px) {
     .menu-toggle {
@@ -118,7 +99,7 @@ nav ul li a:hover {
 }
 /*BARRA SUPERIOR*/
 
-/* RESPONSIVE para el contenido principal */
+
 
 .container {
     display: flex;
@@ -164,48 +145,6 @@ h1 {
 p {
     font-size: 1.2em;
 }
-
-
-.etiquetas-container {
-    display: flex;
-    flex-direction: row; /* Esto coloca los elementos en una fila horizontal */
-    align-items: center; /* Alinea verticalmente los elementos (opcional) */
-    justify-content: flex-end; /* Alinea los elementos al final del contenedor (a la derecha) */
-    padding: 0px;
-    gap: 0px; /* Espacio entre las imágenes */
-}
-
-.etiquetas-container img {
-width: 150px;
-height: auto;
-margin-bottom: 0px;
-}
-
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        height: auto;
-        padding: 20px 0;
-    }
-
-    .logo_bodega, .texto {
-        width: 100%;
-        padding: 10px;
-    }
-
-    .texto {
-        font-size: 1em;
-    }
-
-    .etiquetas-container {
-        justify-content: center;
-    }
-
-    .etiquetas-container img {
-        width: 120px;
-    }
-}
-
 
 /*CATÁLOGO DE PRODUCTOS*/
 .catalogo {
@@ -310,19 +249,4 @@ margin-bottom: 0px;
     .producto img {
         max-height: 180px;
     }
-}
-
-/*FOOTER*/
-footer {
-    background-color: #5A1E29;
-    color: #D4AF37;
-    padding: 10px;
-    margin-top: 0px;
-    text-align: center;
-    font-family: Arial, sans-serif;
-    font-size: 13.3px;
-}
-footer a {
-    color: #ffff;
-    text-decoration: none;
 }
