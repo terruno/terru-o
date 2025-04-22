@@ -54,6 +54,10 @@
                 <h3><a href="doc/aixala_alcait/les_clivelles_de_l'alzina_2020.pdf">VER FICHA</a></h3>
                 <a href="../formulario.html?producto=Celler%20aixala%CC%80%20i%20alcait%20-%20Les%20Clivelles%20De%20L%60Alzina">
                     <button>Solicitar este producto</button></a>
+                    <div>
+                        <button onclick="añadirAlCarrito('CELLER AIXALÁ I ALCAIT - Les Clivelles de l´Alzina 2020', 'cantidad-garnacha')">Añadir al carrito</button>
+                        <input type="number" id="cantidad-garnacha" value="1" min="1" style="width: 40px; height: 30px;">
+                    </div>
             </div>
             <div class="producto">
                 <img src="img/aixala_alcait/el_coster_lalzina.PNG" alt="el_coster_lalzina">
@@ -117,6 +121,20 @@
              <a href="../politica-cookies.html">Política de Cookies</a>
        </p>
    </footer>
+   <script>
+    function añadirAlCarrito(nombreProducto, idCantidad) {
+      const cantidad = parseInt(document.getElementById(idCantidad).value);
+      if (isNaN(cantidad) || cantidad < 1) {
+        alert('Por favor, introduce una cantidad válida.');
+        return;
+      }
+    
+      const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+      carrito.push({ producto: nombreProducto, cantidad: cantidad });
+      localStorage.setItem('carrito', JSON.stringify(carrito));
+      alert(`${nombreProducto} (x${cantidad}) añadido al carrito.`);
+    }
+    </script>
     <script src="js/navbar.js"></script>
 </body>
 </html>

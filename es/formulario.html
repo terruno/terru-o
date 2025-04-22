@@ -26,6 +26,11 @@
       text-align: center;
       margin-bottom: 30px;
     }
+
+    h3 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
   
     label {
       display: block;
@@ -223,6 +228,7 @@ a {
 <main>
 
   <h2 style="text-align:center;">Solicitar Producto o Hacer Consulta</h2>
+  <h3>Este no es un proceso de compra. Recibirás una respuesta por correo confirmando tu pedido.</h3>
 
   <form action="https://formspree.io/f/xzzekony" method="POST">
     <label for="name">Nombre:</label>
@@ -245,8 +251,9 @@ a {
     <label for="ciudad">Ciudad:</label>
     <input type="text" id="ciudad" name="ciudad">
 
-    <label for="product">Producto de interés:</label>
-    <input type="text" id="product" name="producto" required>
+    <label>Productos seleccionados:</label>
+    <div id="productos-seleccionados"></div>
+    <input type="hidden" name="productos" id="campo-productos">
 
     <label for="message">Consulta:</label>
     <textarea id="message" name="mensaje" rows="5" required></textarea>
@@ -257,15 +264,6 @@ a {
 
     <button type="submit">Enviar solicitud</button>
   </form>
-
-  <script>
-    // Rellenar el campo del producto si viene desde enlace con parámetro
-    const params = new URLSearchParams(window.location.search);
-    const producto = params.get('producto');
-    if (producto) {
-      document.getElementById('product').value = decodeURIComponent(producto);
-    }
-  </script>
 </main>
 <footer>
   <p>Para realizar un pedido, contáctanos <a href="formulario.html">AQUÍ</a></p>
@@ -274,5 +272,16 @@ a {
       <a href="politica-cookies.html">Política de Cookies</a>
   </p>
 </footer>
+
+<script>
+  // Rellenar el campo del producto si viene desde enlace con parámetro
+  const params = new URLSearchParams(window.location.search);
+  const producto = params.get('producto');
+  if (producto) {
+    document.getElementById('product').value = decodeURIComponent(producto);
+  }
+</script>
+
+<script src="js/carrito.js"></script>
 </body>
 </html>

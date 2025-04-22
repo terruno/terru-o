@@ -23,6 +23,10 @@
                     <li><a href="../formulario.html">Contacto</a></li>
                 </ul>
             </nav>
+            <div class="carrito_logo">
+                <a href="../formulario.html"><img src="../img/carrito_logo.png" alt="Logo de carrito"></a>  
+                <span class="contador-carrito" id="cart-count">0</span>
+            </div>
             <div class="language-switch">
                 <a href="bodegas_sancha.html">ES</a> | <a href="../../en/bodegas/bodegas_sancha_en.html">EN</a>
             </div>
@@ -36,8 +40,8 @@
         </div>
         <div class="texto">
             <h1>BODEGAS SANCHA</h1>
-            <p>La bodega, en la entrada de Baños de Río Tobía y rodeada de viñedos, recuerda a un pequeño château borgoñón y representa la realización del sueño de Juan Carlos Sancha. Poder elaborar sus propios vinos poniendo en valor la variedad propia de la zona, la garnacha, y recuperando variedades minoritarias en peligro de extinción como la Maturana Tinta, la Maturana Blanca y el Monastel. También trabaja el Tempranillo Blanco, variedad AUTÓCTONA de Rioja.</p>
-            <p>La bodega dispone de 24 hectáreas de viñedo propio plantado íntegramente en Baños de Río Tobía, en pleno Valle del Najerilla, una zona extrema y límite de la DOCa. Todo el viñedo está plantado en parcelas muy pequeñas y con alta densidad de plantación (5.000 cepas/ha cuando lo habitual es de unas 3.000 cepas/ha) en suelos pobres, poco profundos y calizos, que obligan a la vid a reducir su vigor y su producción de uva. El resultado son vinos concentrados pero frescos al extremo, de alta calidad y con una personalidad arrolladora. Vinos que intentan reflejan con honradez el terroir, esa mágica mezcla del suelo donde nacen y el microclima en el que se desarrollan.</p>
+            <p>Situada a la entrada de Baños de Río Tobía y rodeada por sus propios viñedos, esta bodega evoca la imagen de un pequeño château de la Borgoña francesa. Es el fruto del proyecto personal de Juan Carlos Sancha, quien se propuso elaborar vinos propios que pusieran en valor la garnacha, variedad emblemática de la región. Además, ha apostado por la recuperación de cepas tradicionales casi desaparecidas como la Maturana Tinta, la Maturana Blanca y el Monastel. También cultiva Tempranillo Blanco, una variedad originaria de Rioja.</p>
+            <p>La finca cuenta con 24 hectáreas de viñedos de su propiedad, todos situados en Baños de Río Tobía, dentro del Valle del Najerilla, una de las zonas más extremas y periféricas de la Denominación de Origen Calificada Rioja. Los viñedos están divididos en pequeñas parcelas, con una alta densidad de plantación —alrededor de 5.000 plantas por hectárea, cuando lo habitual es cerca de 3.000— sobre suelos pobres, delgados y calizos. Estas condiciones obligan a las cepas a limitar su crecimiento y producción, lo que da lugar a vinos intensos pero muy frescos, de notable calidad y marcada identidad. El objetivo es expresar con fidelidad el carácter del entorno, combinando la particularidad del suelo y el clima que los forma.</p>
             <div class="etiquetas-container">
                 <img src="img/denominacion_origen/rioja.png" id="do_rioja" alt="Denominacion de Origen Rioja">
             </div>
@@ -52,80 +56,102 @@
                 <img src="img/sancha/cerro_la_isa_tinto_2018.jpg" alt="la_merced">
                 <p>CERRO LA ISA | Viñedo Singular | Tinto</p>
                 <h3><a href="doc/sancha/cerro_la_isa_tinto_2018.pdf">VER FICHA</a></h3>
-                <a href="../formulario.html?producto=Bodegas%20Sancha%20-%20CERRO%20LA%20ISA%20%7C%20Vi%C3%B1edo%20Singular%20%7C%20Tinto">
-                    <button>Solicitar este producto</button></a>
+                <div>
+                    <input type="number" id="cantidad_cerro_la_isa_tinto" class="inputcantidad" value="1" min="1">
+                    <button onclick="añadirAlCarrito('Bodegas Sancha - Cerro La Isa | Viñedo Singular | Tinto', 'cantidad_cerro_la_isa_tinto')">Añadir al carrito</button>
+                </div>
             </div>
+
             <div class="producto">
                 <img src="img/sancha/cerro_la_isa_blanco_2019.jpg" alt="la_merced">
                 <p>CERRO LA ISA | Viñedo Singular | Blanco</p>
                 <h3><a href="doc/sancha/cerro_la_isa_blanco_2019.pdf">VER FICHA</a></h3>
-                <a href="../formulario.html?producto=Bodegas%20Sancha%20-%20CERRO%20LA%20ISA%20%7C%20Vi%C3%B1edo%20Singular%20%7C%20Blanco">
-                    <button>Solicitar este producto</button></a>
+                <div>
+                    <input type="number" id="cantidad_cerro_la_isa_blanco" class="inputcantidad" value="1" min="1">
+                    <button onclick="añadirAlCarrito('Bodegas Sancha - Cerro La Isa | Viñedo Singular | Blanco', 'cantidad_cerro_la_isa_blanco')">Añadir al carrito</button>
+                </div>
             </div>
             <div class="producto">
                 <img src="img/sancha/ad_libitum_maturana_blanca.png" alt="la_merced">
                 <p>Ad Libitum | Maturana Blanca</p>
                 <h3><a href="">VER FICHA</a></h3>
-                <a href="../formulario.html?producto=Bodegas%20Sancha%20-%20Ad%20Libitum%20%7C%20Maturana%20Blanca">
-                    <button>Solicitar este producto</button></a>
+                <div>
+                    <input type="number" id="cantidad_ad_libitum_maturana_blanca" class="inputcantidad" value="1" min="1">
+                    <button onclick="añadirAlCarrito('Bodegas Sancha - Ad Libitum | Maturana Blanca', 'cantidad_ad_libitum_maturana_blanca')">Añadir al carrito</button>
+                </div>
             </div>
             <div class="producto">
                 <img src="img/sancha/ad_libitum_tempranillo_blanco.png" alt="la_merced">
                 <p>Ad Libitum | Tempranillo Blanco</p>
                 <h3><a href="">VER FICHA</a></h3>
-                <a href="../formulario.html?producto=Bodegas%20Sancha%20-%20Ad%20Libitum%20%7C%20Tempranillo%20Blanco">
-                    <button>Solicitar este producto</button></a>
+                <div>
+                    <input type="number" id="cantidad_ad_libitum_tempranillo_blanco" class="inputcantidad" value="1" min="1">
+                    <button onclick="añadirAlCarrito('Bodegas Sancha - Ad Libitum | Tempranillo Blanco', 'cantidad_ad_libitum_tempranillo_blanco')">Añadir al carrito</button>
+                </div>
             </div>
             <div class="producto">
                 <img src="img/sancha/ad_libitum_maturana_tinta.png" alt="la_merced">
                 <p>Ad Libitum | Maturana Tinta</p>
                 <h3><a href="">VER FICHA</a></h3>
-                <a href="../formulario.html?producto=Bodegas%20Sancha%20-%20Ad%20Libitum%20%7C%20Maturana%20Tinta">
-                    <button>Solicitar este producto</button></a>
+                <div>
+                    <input type="number" id="cantidad_ad_libitum_maturana_tinta" class="inputcantidad" value="1" min="1">
+                    <button onclick="añadirAlCarrito('Bodegas Sancha - Ad Libitum | Maturana Tinta', 'cantidad_ad_libitum_maturana_tinta')">Añadir al carrito</button>
+                </div>
             </div>
             <div class="producto">
                 <img src="img/sancha/ad_libitum_monastel_de_rioja_2012.jpg" alt="la_merced">
                 <p>Ad Libitum | Monastel de Rioja</p>
                 <h3><a href="doc/sancha/ad_libitum_monastel_de_rioja_2012.pdf">VER FICHA</a></h3>
-                <a href="../formulario.html?producto=Bodegas%20Sancha%20-%20Ad%20Libitum%20%7C%20Monastel%20de%20Rioja">
-                    <button>Solicitar este producto</button></a>
+                <div>
+                    <input type="number" id="cantidad_ad_libitum_monastel_de_rioja" class="inputcantidad" value="1" min="1">
+                    <button onclick="añadirAlCarrito('Bodegas Sancha - Ad Libitum | Monastel de Rioja', 'cantidad_ad_libitum_monastel_de_rioja')">Añadir al carrito</button>
+                </div>
             </div>
             <div class="producto">
                 <img src="img/sancha/peña_el_gato_garnacha_viñas_viejas_2012.jpg" alt="la_merced">
                 <p>Peña El Gato | Garnacha Viñas Viejas</p>
                 <h3><a href="doc/sancha/peña_el_gato_garnacha_viñas_viejas_2012.pdf">VER FICHA</a></h3>
-                <a href="../formulario.html?producto=Bodegas%20Sancha%20-%20Pe%C3%B1a%20El%20Gato%20%7C%20Garnacha%20Vi%C3%B1as%20Viejas">
-                    <button>Solicitar este producto</button></a>
+                <div>
+                    <input type="number" id="cantidad_peña_el_gato_garnacha_viñas_viejas" class="inputcantidad" value="1" min="1">
+                    <button onclick="añadirAlCarrito('Bodegas Sancha - Peña El Gato | Garnacha Viñas Viejas', 'cantidad_peña_el_gato_garnacha_viñas_viejas')">Añadir al carrito</button>
+                </div>
             </div>
             <div class="producto">
                 <img src="img/sancha/el_gato_natural_garnacha.png" alt="la_merced">
                 <p>Peña El Gato | Natural "Sin Sulfitos"</p>
                 <h3><a href="">VER FICHA</a></h3>
-                <a href="../formulario.html?producto=Bodegas%20Sancha%20-%20Pe%C3%B1a%20El%20Gato%20%7C%20Natural%20%22Sin%20Sulfitos%22">
-                    <button>Solicitar este producto</button></a>
+                <div>
+                    <input type="number" id="cantidad_peña_el_gato_natural" class="inputcantidad" value="1" min="1">
+                    <button onclick="añadirAlCarrito('Bodegas Sancha - Peña El Gato | Natural - Sin Sulfitos', 'cantidad_peña_el_gato_natural')">Añadir al carrito</button>
+                </div>
             </div>
-            <div class="producto">
+             <div class="producto">
                 <img src="img/sancha/pena_el_gato_tianaja.png" alt="la_merced">
                 <p>Peña El Gato | Tinaja</p>
                 <h3><a href="">VER FICHA</a></h3>
-                <a href="../formulario.html?producto=Bodegas%20Sancha%20-%20Pe%C3%B1a%20El%20Gato%20%7C%20Tinaja">
-                    <button>Solicitar este producto</button></a>
+                <div>
+                    <input type="number" id="cantidad_peña_el_gato_tinaja" class="inputcantidad" value="1" min="1">
+                    <button onclick="añadirAlCarrito('Bodegas Sancha - Peña El Gato | Tinaja', 'cantidad_peña_el_gato_tinaja')">Añadir al carrito</button>
+                </div>
             </div>
             <div class="producto">
                 <img src="img/sancha/el_gato_granito_granita.png" alt="la_merced">
                 <p>Peña El Gato | Granito</p>
                 <h3><a href="">VER FICHA</a></h3>
-                <a href="../formulario.html?producto=Bodegas%20Sancha%20-%20Pe%C3%B1a%20El%20Gato%20%7C%20Granito">
-                    <button>Solicitar este producto</button></a>
+                <div>
+                    <input type="number" id="cantidad_peña_el_gato_granito" class="inputcantidad" value="1" min="1">
+                    <button onclick="añadirAlCarrito('Bodegas Sancha - Peña El Gato | Granito', 'cantidad_peña_el_gato_granito')">Añadir al carrito</button>
+                </div>
             </div>
-            <div class="producto">
+             <div class="producto">
                 <img src="img/sancha/el_gato_garnachas_centenarias_coleccion.png" alt="la_merced">
                 <p>Peña El Gato | Colección</p>
                 <h3><a href="doc/sancha/peña_el_gato_colección_2021.pdf">VER FICHA</a></h3>
-                <a href="../formulario.html?producto=Bodegas%20Sancha%20-%20Pe%C3%B1a%20El%20Gato%20%7C%20Colecci%C3%B3n">
-                    <button>Solicitar este producto</button></a>
+                <div>
+                    <input type="number" id="cantidad_peña_el_gato_coleccion" class="inputcantidad" value="1" min="1">
+                    <button onclick="añadirAlCarrito('Bodegas Sancha - Peña El Gato | Colección', 'cantidad_peña_el_gato_coleccion')">Añadir al carrito</button>
+                </div>
             </div>
-            
         </div>
     </div>
 </main>
@@ -136,6 +162,23 @@
           <a href="../politica-cookies.html">Política de Cookies</a>
     </p>
 </footer>
+
+    <script>
+    function añadirAlCarrito(nombreProducto, idCantidad) {
+      const cantidad = parseInt(document.getElementById(idCantidad).value);
+      if (isNaN(cantidad) || cantidad < 1) {
+        alert('Por favor, introduce una cantidad válida.');
+        return;
+      }
+      const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+      carrito.push({ producto: nombreProducto, cantidad: cantidad });
+      localStorage.setItem('carrito', JSON.stringify(carrito));
+      alert(`${nombreProducto} (x${cantidad}) añadido al carrito.`);
+
+      actualizarContadorCarrito();
+    }
+    </script>
+    <script src="../js/cart_icon.js"></script>
     <script src="js/navbar.js"></script>
 </body>
 </html>
