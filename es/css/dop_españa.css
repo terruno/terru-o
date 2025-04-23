@@ -125,7 +125,10 @@ nav ul li a:hover {
     text-align: justify;
 }
 
-.texto h1,
+.texto h1{
+    color: white;
+    text-align: center;
+}
 .texto p {
     color: white;
 }

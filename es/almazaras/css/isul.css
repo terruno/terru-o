@@ -151,6 +151,7 @@ nav ul li a:hover {
     padding: 30px;
     border-radius: 10px;
     backdrop-filter: blur(5px);
+    text-align: justify;
 }
 
 h1 {
