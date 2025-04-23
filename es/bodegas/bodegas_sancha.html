@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>BODEGAS SANCHA</title>
+    <title>Bodegas Sancha | Terruño Único</title>
     <link rel="stylesheet" href="css/bodegas_sancha.css">
 </head>
 
@@ -12,7 +11,7 @@
     <header>
         <div class="navbar">
             <div class="logo">
-                <a href="../index.html"><img src="../img/terruno_logo.png" alt="Logo de Terruño"></a>  
+                <a href="../index.html"><img src="../img/terruno_logo.png" alt="Logo de Terruño Único"></a>  
             </div>
             <div class="menu-toggle" id="menu-toggle">☰</div>
             <nav>
@@ -20,11 +19,12 @@
                     <li><a href="../index.html#bodegas">Vinos</a></li>
                     <li><a href="../index.html#almazaras">Aceites</a></li>
                     <li><a href="../index.html#otros">Delicias Ibéricas</a></li>
+                    <li><a href="">Noticias</a></li>
                     <li><a href="../formulario.html">Contacto</a></li>
                 </ul>
             </nav>
             <div class="carrito_logo">
-                <a href="../formulario.html"><img src="../img/carrito_logo.png" alt="Logo de carrito"></a>  
+                <a href="../carrito.html"><img src="../img/carrito_logo.png" alt="Logo de carrito"></a>  
                 <span class="contador-carrito" id="cart-count">0</span>
             </div>
             <div class="language-switch">
@@ -32,22 +32,22 @@
             </div>
         </div>
     </header>
+
 <main>
     <div class="container">
         <div class="logo_bodega">
-            <img src="img/sancha/juan-carlos-sancha_con fondo.jpg" id="logo_bodega" alt="logo_bodega">
+            <img src="img/sancha/juan-carlos-sancha_con fondo.jpg" id="logo_bodega" alt="Logo Bodegas Sancha">
             
         </div>
         <div class="texto">
             <h1>BODEGAS SANCHA</h1>
-            <p>Situada a la entrada de Baños de Río Tobía y rodeada por sus propios viñedos, esta bodega evoca la imagen de un pequeño château de la Borgoña francesa. Es el fruto del proyecto personal de Juan Carlos Sancha, quien se propuso elaborar vinos propios que pusieran en valor la garnacha, variedad emblemática de la región. Además, ha apostado por la recuperación de cepas tradicionales casi desaparecidas como la Maturana Tinta, la Maturana Blanca y el Monastel. También cultiva Tempranillo Blanco, una variedad originaria de Rioja.</p>
-            <p>La finca cuenta con 24 hectáreas de viñedos de su propiedad, todos situados en Baños de Río Tobía, dentro del Valle del Najerilla, una de las zonas más extremas y periféricas de la Denominación de Origen Calificada Rioja. Los viñedos están divididos en pequeñas parcelas, con una alta densidad de plantación —alrededor de 5.000 plantas por hectárea, cuando lo habitual es cerca de 3.000— sobre suelos pobres, delgados y calizos. Estas condiciones obligan a las cepas a limitar su crecimiento y producción, lo que da lugar a vinos intensos pero muy frescos, de notable calidad y marcada identidad. El objetivo es expresar con fidelidad el carácter del entorno, combinando la particularidad del suelo y el clima que los forma.</p>
+            <p>Situada a la entrada de Baños de Río Tobía, la bodega de Juan Carlos Sancha se alza como un proyecto profundamente arraigado en la tradición vitivinícola riojana, evocando la imagen de un pequeño château borgoñón rodeado de sus propios viñedos. Fundada en 1997, tras una extensa trayectoria nacional e internacional, Sancha apostó por reivindicar el valor de las variedades autóctonas, con especial énfasis en la garnacha del Alto Najerilla, y por recuperar cepas casi desaparecidas como la Maturana Tinta, la Maturana Blanca y el Monastel. Sus 24 hectáreas de viñedo ecológico, divididas en pequeñas parcelas sobre suelos pobres y calizos, permiten elaborar vinos de gran frescura y carácter, fieles al entorno que los ve nacer.</p>
+            <p>La bodega defiende una filosofía basada en la mínima intervención, el respeto absoluto por el terroir y la sostenibilidad, practicando una viticultura ecológica comprometida con la biodiversidad y la salud del viñedo. Sin el uso de químicos y con un trabajo intensivo en campo, se busca expresar con autenticidad la identidad de la comarca, honrando el legado de los antepasados y el saber transmitido por generaciones. El resultado son vinos sinceros, con alma, que reflejan la esencia del Alto Najerilla y una manera de entender el Rioja desde la pasión, la experiencia y el profundo respeto por la tierra.</p>
             <div class="etiquetas-container">
                 <img src="img/denominacion_origen/rioja.png" id="do_rioja" alt="Denominacion de Origen Rioja">
             </div>
         </div>
     </div>
-
 
     <div class="catalogo">
         <h2>Catálogo de Productos</h2>
@@ -61,7 +61,6 @@
                     <button onclick="añadirAlCarrito('Bodegas Sancha - Cerro La Isa | Viñedo Singular | Tinto', 'cantidad_cerro_la_isa_tinto')">Añadir al carrito</button>
                 </div>
             </div>
-
             <div class="producto">
                 <img src="img/sancha/cerro_la_isa_blanco_2019.jpg" alt="la_merced">
                 <p>CERRO LA ISA | Viñedo Singular | Blanco</p>
@@ -163,22 +162,8 @@
     </p>
 </footer>
 
-    <script>
-    function añadirAlCarrito(nombreProducto, idCantidad) {
-      const cantidad = parseInt(document.getElementById(idCantidad).value);
-      if (isNaN(cantidad) || cantidad < 1) {
-        alert('Por favor, introduce una cantidad válida.');
-        return;
-      }
-      const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
-      carrito.push({ producto: nombreProducto, cantidad: cantidad });
-      localStorage.setItem('carrito', JSON.stringify(carrito));
-      alert(`${nombreProducto} (x${cantidad}) añadido al carrito.`);
-
-      actualizarContadorCarrito();
-    }
-    </script>
-    <script src="../js/cart_icon.js"></script>
+    <script src="js/añadir_al_carrito.js"></script>
+    <script src="js/cart_icon.js"></script>
     <script src="js/navbar.js"></script>
 </body>
 </html>

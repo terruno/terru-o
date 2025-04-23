@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TERRUÑO</title>
+    <title>Terruño Único</title>
     <link rel="stylesheet" href="css/index_styles.css">
     <script src="js/barra.js" defer></script>
 </head>
@@ -11,7 +11,7 @@
     <header>
         <div class="navbar">
             <div class="logo">
-                <a href="index.html"><img src="img/terruno_logo.png" alt="Logo de Terruño"></a>
+                <a href="index.html"><img src="img/terruno_logo.png" alt="Logo de Terruño Único"></a>
             </div>
             <div class="menu-toggle" id="menu-toggle">☰</div>
             <nav>
@@ -19,9 +19,15 @@
                     <li><a href="#bodegas">Vinos</a></li>
                     <li><a href="#almazaras">Aceites</a></li>
                     <li><a href="#navarra">Delicias Ibéricas</a></li>
+                    <li><a href="dop_españa.html">D.O.P. España</a></li>
+                    <li><a href="">Noticias</a></li>
                     <li><a href="formulario.html">Contacto</a></li>
                 </ul>
             </nav>
+            <div class="carrito_logo">
+                <a href="carrito.html"><img src="img/carrito_logo.png" alt="Logo de carrito"></a>  
+                <span class="contador-carrito" id="cart-count">0</span>
+            </div>
             <div class="language-switch">
                 <a href="index.html">ES</a> | <a href="../en/index-en.html">EN</a>
             </div>
@@ -29,8 +35,8 @@
     
     
         <div class="sabores">
-        <h1>TERRUÑO</h1>
-        <p>TERRUÑO nace del amor por la tierra, por la calidad y por los sabores que nos conectan con lo esencial.</p>
+        <h1>TERRUÑO ÚNICO</h1>
+        <p>TERRUÑO ÚNICO nace del amor por la tierra, por la calidad y por los sabores que nos conectan con lo esencial.</p>
         <p>Seleccionamos vinos naturales con carácter, aceites que expresan su origen, y productos locales que contienen la esencia de su lugar.</p>
         <p>Creemos que el valor está en lo que no se ve a simple vista: en <strong>el subsuelo</strong>, en <strong>la vida que late bajo tierra</strong>, en la <strong>tipicidad de cada localidad.</strong></p>
         </div>
@@ -131,25 +137,9 @@
         </p>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
-<script>
-window.addEventListener("load", function(){
-  window.cookieconsent.initialise({
-    palette: {
-      popup: { background: "#000" },
-      button: { background: "#f1d600", text: "#000" }
-    },
-    theme: "classic",
-    position: "bottom",
-    content: {
-      message: "Este sitio web utiliza cookies técnicas para su funcionamiento.",
-      dismiss: "Aceptar",
-      link: "Leer más",
-      href: "politica-cookies.html"
-    }
-  });
-});
-</script>
 
+
+<script src="js/cookies.js"></script>
+<script src="js/cart_icon.js"></script>
 </body>
 </html>

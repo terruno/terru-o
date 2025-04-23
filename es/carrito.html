@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Terruño Único | Formulario de Contacto</title>
+  <title>Terruño Único | Formulario de Pedido</title>
   <style>
     body {
       font-family: sans-serif;
@@ -52,6 +52,11 @@
       box-sizing: border-box;
     }
   
+    form a {
+    color: #000; /* Negro */
+    text-decoration: underline; /* Opcional, para hacerlo visible como enlace */
+    }
+    
     select {
       background-color: white;
     }
@@ -67,43 +72,9 @@
       width: 100%;
     }
   
-    form a {
-    color: #000; /* Negro */
-    text-decoration: underline; /* Opcional, para hacerlo visible como enlace */
+    button:hover {
+      background-color: #276749;
     }
-
-    .privacidad-link {
-    color: #000;
-    text-decoration: underline;
-}
-    /*CARRITO*/
-.carrito_logo {
-    position: absolute;
-    right: 100px;
-    width: 38px;
-    height: 38px;
-    cursor: pointer;
-}
-
-.navbar .carrito_logo a img {
-    height: 38px;
-    width: auto;
-}
-
-.contador-carrito {
-    position: absolute;
-    top: -16px;
-    right: -9px;
-    background-color: #5A1E29;
-    color: white;
-    font-size: 12px;
-    font-weight: bold;
-    border-radius: 50%;
-    padding: 4px 6px;
-    min-width: 18px;
-    text-align: center;
-}
-
   
     @media (max-width: 600px) {
       body {
@@ -256,10 +227,6 @@ a {
                 <li><a href="formulario.html">Contacto</a></li>
             </ul>
         </nav>
-        <div class="carrito_logo">
-          <a href="carrito.html"><img src="img/carrito_logo.png" alt="Logo de carrito"></a>  
-          <span class="contador-carrito" id="cart-count">0</span>
-      </div>
         <div class="language-switch">
             <a href="formulario.html">ES</a> | <a href="../en/formulario-en.html">EN</a>
         </div>
@@ -267,7 +234,8 @@ a {
 </header>
 <main>
 
-  <h2 style="text-align:center;">Haznos tu consulta sin ningún compromiso</h2>
+  <h2 style="text-align:center;">Solicitar Producto o Hacer Consulta</h2>
+  <h3>Este no es un proceso de compra. Recibirás una respuesta por correo confirmando tu pedido.</h3>
 
   <form action="https://formspree.io/f/xzzekony" method="POST">
     <label for="name">Nombre:</label>
@@ -290,6 +258,10 @@ a {
     <label for="ciudad">Ciudad:</label>
     <input type="text" id="ciudad" name="ciudad">
 
+    <label>Productos seleccionados:</label>
+    <div id="productos-seleccionados"></div>
+    <input type="hidden" name="productos" id="campo-productos">
+
     <label for="message">Consulta:</label>
     <textarea id="message" name="mensaje" rows="5" required></textarea>
     <label>
@@ -308,6 +280,15 @@ a {
   </p>
 </footer>
 
-<script src="js/cart_icon.js"></script>
+<script>
+  // Rellenar el campo del producto si viene desde enlace con parámetro
+  const params = new URLSearchParams(window.location.search);
+  const producto = params.get('producto');
+  if (producto) {
+    document.getElementById('product').value = decodeURIComponent(producto);
+  }
+</script>
+
+<script src="js/carrito.js"></script>
 </body>
 </html>

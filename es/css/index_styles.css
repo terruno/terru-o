@@ -54,6 +54,34 @@ nav ul li a:hover {
     border-radius: 5px;
 }
 
+/*CARRITO*/
+.carrito_logo {
+    position: absolute;
+    right: 120px;
+    width: 38px;
+    height: 38px;
+    cursor: pointer;
+}
+
+.navbar .carrito_logo a img {
+    height: 38px;
+    width: auto;
+}
+
+.contador-carrito {
+    position: absolute;
+    top: -16px;
+    right: -9px;
+    background-color: #5A1E29;
+    color: white;
+    font-size: 12px;                   /* 6. Establece el tamaño de la fuente en 12 píxeles */
+    font-weight: bold;
+    border-radius: 50%;
+    padding: 4px 6px;                  /* 9. Añade un espacio interno de 4 píxeles arriba y abajo, y 6 píxeles a los lados */
+    min-width: 18px;                   /* 10. Establece un ancho mínimo de 18 píxeles para que el círculo no sea demasiado pequeño */
+    text-align: center;
+}
+
 /* Cambio visual al hacer scroll */
 .navbar.scrolled {
     background-color: #3a3a3a;
