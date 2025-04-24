@@ -25,7 +25,7 @@ body {
 
 .navbar .logo a img {
     height: 50px;
-    width: auto; 
+    width: auto;
 }
 
 /* Menú navegación */
@@ -74,11 +74,11 @@ nav ul li a:hover {
     right: -9px;
     background-color: #5A1E29;
     color: white;
-    font-size: 12px;                   /* 6. Establece el tamaño de la fuente en 12 píxeles */
+    font-size: 12px;
     font-weight: bold;
     border-radius: 50%;
-    padding: 4px 6px;                  /* 9. Añade un espacio interno de 4 píxeles arriba y abajo, y 6 píxeles a los lados */
-    min-width: 18px;                   /* 10. Establece un ancho mínimo de 18 píxeles para que el círculo no sea demasiado pequeño */
+    padding: 4px 6px;
+    min-width: 18px;
     text-align: center;
 }
 
@@ -117,20 +117,51 @@ nav ul li a:hover {
     color: #5A1E29;
 }
 
-
-
 /* Responsive */
 @media (max-width: 768px) {
+    body {
+        padding-top: 60px;
+    }
+
     .navbar {
-        flex-wrap: wrap;
-        align-items: flex-start;
-        position: static; /* Ya no es fija en móviles */
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 15px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    .logo {
+        flex-shrink: 0;
+    }
+
+    /* Centrar el carrito en móviles */
+    .carrito_logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 38px;
+        height: 38px;
+    }
+
+    .contador-carrito {
+        top: -10px;
+        right: -10px;
     }
 
     .menu-toggle {
         display: block;
-        margin-left: auto;
-        padding: 10px;
+        font-size: 28px;
+        color: white;
+        cursor: pointer;
     }
 
     nav {
@@ -139,9 +170,13 @@ nav ul li a:hover {
 
     nav ul {
         flex-direction: column;
-        background-color: #222;
         width: 100%;
         display: none;
+        margin-top: 10px;
+        background-color: #222;
+        padding: 0;
+        z-index: 10;
+        position: relative;
     }
 
     nav ul.show {
@@ -149,7 +184,9 @@ nav ul li a:hover {
     }
 
     nav ul li {
-        margin: 10px 0;
+        width: 100%;
+        padding: 0;
+        margin: 0;
         text-align: left;
     }
 
@@ -159,9 +196,30 @@ nav ul li a:hover {
         display: block;
         width: 100%;
     }
-}
-/* BARRA SUPERIOR */
 
+    .language-switch {
+        display: flex;
+        margin-right: 10px;
+    }
+
+    nav ul li.language-switch {
+        display: flex !important;
+        justify-content: flex-start;
+        padding: 10px 20px;
+    }
+
+    nav ul li.language-switch a {
+        color: white;
+        margin-right: 10px;
+    }
+
+    nav ul li.language-switch a:hover {
+        color: #5A1E29;
+    }
+}
+
+
+/* BARRA SUPERIOR */
 header {
     background-color: #5A1E29;
     color: #D4AF37;
@@ -176,7 +234,7 @@ a {
 .sabores h1 {
     font-family: Arial, sans-serif;
     font-size: 2.7em;
-    color: #D4AF37; /* Color sutil y elegante */
+    color: #D4AF37;
     margin-bottom: 20px;
     text-align: center;
     font-weight: bold;
@@ -185,7 +243,7 @@ a {
 .sabores p {
     font-family: Arial, sans-serif;
     font-size: 1.1em;
-    color: #D4AF37; /* Color sutil y elegante */
+    color: #D4AF37;
     margin-bottom: 20px;
     text-align: center;
 }
@@ -201,7 +259,6 @@ a {
     color: #333;
     margin: 4;
     margin-bottom: 2rem;
-    
 }
 
 .bodegas_intro p {
@@ -329,13 +386,13 @@ a {
 }
 
 .navarra_productos img {
-    width: 200px;            /* o usa una unidad relativa */
+    width: 200px;
     height: 200px;
-    object-fit: cover;       /* rellena el círculo */
+    object-fit: cover;
     transition: transform 0.3s ease-in-out;
-    border-radius: 50%;      /* círculo perfecto */
-    display: block;          /* quita espacios debajo */
-    margin: 0 auto;          /* centra horizontalmente si es necesario */
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
 }
 
 .navarra_productos img:hover {
@@ -347,7 +404,6 @@ a {
     width: 100%;
     height: 100%;
 }
-
 
 /*FOOTER*/
 footer {
@@ -374,23 +430,18 @@ footer {
     }
 
     .bodega img {
-        max-height: 200px; /* Opcional para evitar imágenes muy altas */
+        max-height: 250px;
+        max-width: 100%;
+        object-fit: contain; /* Cambiado de cover a contain para evitar que se recorten */
     }
+
     .almazaras_grid {
         grid-template-columns: 1fr;
-        grid-auto-rows: auto;
     }
 
     .almazara img {
-        max-height: 200px; /* Opcional para evitar imágenes muy altas */
-    }
-    .navarra_grid {
-        grid-template-columns: 1fr;
-        grid-auto-rows: auto;
-    }
-
-    .navarra_productos img {
-        max-height: 200px; /* Opcional para evitar imágenes muy altas */
+        max-height: 250px;
+        max-width: 100%;
+        object-fit: contain; /* Cambiado de cover a contain para evitar que se recorten */
     }
 }
-
