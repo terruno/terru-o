@@ -329,10 +329,13 @@ a {
 }
 
 .navarra_productos img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+    width: 200px;            /* o usa una unidad relativa */
+    height: 200px;
+    object-fit: cover;       /* rellena el círculo */
     transition: transform 0.3s ease-in-out;
+    border-radius: 50%;      /* círculo perfecto */
+    display: block;          /* quita espacios debajo */
+    margin: 0 auto;          /* centra horizontalmente si es necesario */
 }
 
 .navarra_productos img:hover {
@@ -390,3 +393,4 @@ footer {
         max-height: 200px; /* Opcional para evitar imágenes muy altas */
     }
 }
+

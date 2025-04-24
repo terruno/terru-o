@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terruño Único</title>
+    <title>TERRUÑO ÚNICO - Vinos, Aceites y Delicias Ibéricas</title>
+    <meta name="description" content="TERRUÑO ÚNICO ofrece vinos naturales, aceites ecológicos y productos ibéricos auténticos. Descubre sabores que conectan con lo esencial.">
+    <link rel="icon" href="img/favicon/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/index_styles.css">
     <script src="js/barra.js" defer></script>
 </head>
@@ -11,10 +13,10 @@
     <header>
         <div class="navbar">
             <div class="logo">
-                <a href="index.html"><img src="img/terruno_logo.png" alt="Logo de Terruño Único"></a>
+                <a href="index.html"><img src="img/terruno_logo.png" alt="Inicio - Terruño Único" role="presentation"></a>
             </div>
             <div class="menu-toggle" id="menu-toggle">☰</div>
-            <nav>
+            <nav aria-label="Menú principal">
                 <ul class="menu">
                     <li><a href="#bodegas">Vinos</a></li>
                     <li><a href="#almazaras">Aceites</a></li>
@@ -25,7 +27,7 @@
                 </ul>
             </nav>
             <div class="carrito_logo">
-                <a href="carrito.html"><img src="img/carrito_logo.png" alt="Logo de carrito"></a>  
+                <a href="carrito.html" aria-label="Ver carrito de compras"><img src="img/carrito_logo.png" alt="Carrito de compras"></a>  
                 <span class="contador-carrito" id="cart-count">0</span>
             </div>
             <div class="language-switch">
@@ -76,7 +78,6 @@
             </div>
             <div class="bodega">
                 <img src="img/bodegas/azul_y_garanza_logo_sin_fondo.png" alt="Logo de Azul y Garanza" class="azul_y_garanza">
-                </a>
             </div>
             <div class="bodega">
                 <img src="img/bodegas/bodegas_lezaun_sin_fondo.png" alt="Logo de Bodegas Lezaun" class="lezaun">
@@ -117,12 +118,12 @@
             </div>
             <div class="navarra_grid">
                 <div class="navarra_productos">
-                    <a href="">
+                    <a href="#" onclick="event.preventDefault();">
                         <img src="img/otros/pimientos.jpg" alt="Logo de Almazara Isul" class="isul">
                     </a>
                 </div>
                 <div class="navarra_productos">
-                    <a href="">
+                    <a href="#" onclick="event.preventDefault();">
                         <img src="img/otros/esparragos.jpg" alt="emilio_valerio" class="emilio_valerio">
                     </a>
                 </div>
