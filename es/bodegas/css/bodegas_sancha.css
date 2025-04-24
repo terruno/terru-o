@@ -112,9 +112,49 @@ nav ul li a:hover {
 }
 
 /* Responsive: cambia a menú vertical */
+/* Responsive */
 @media (max-width: 768px) {
+    
+
+    .navbar {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 15px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    .logo {
+        flex-shrink: 0;
+    }
+
+    /* Centrar el carrito en móviles */
+    .carrito_logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 38px;
+        height: 38px;
+    }
+
+    .contador-carrito {
+        top: -10px;
+        right: -10px;
+    }
+
     .menu-toggle {
         display: block;
+        font-size: 28px;
+        color: white;
+        cursor: pointer;
     }
 
     nav {
@@ -123,17 +163,23 @@ nav ul li a:hover {
 
     nav ul {
         flex-direction: column;
-        background-color: #222;
         width: 100%;
-        display: none; /* Oculto por defecto */
+        display: none;
+        margin-top: 10px;
+        background-color: #222;
+        padding: 0;
+        z-index: 10;
+        position: relative;
     }
 
     nav ul.show {
-        display: flex; /* Mostrado cuando se activa el toggle */
+        display: flex;
     }
 
     nav ul li {
-        margin: 10px 0;
+        width: 100%;
+        padding: 0;
+        margin: 0;
         text-align: left;
     }
 
@@ -143,7 +189,28 @@ nav ul li a:hover {
         display: block;
         width: 100%;
     }
+
+    .language-switch {
+        display: flex;
+        margin-right: 30px;
+    }
+
+    nav ul li.language-switch {
+        display: flex !important;
+        justify-content: flex-start;
+        padding: 10px 20px;
+    }
+
+    nav ul li.language-switch a {
+        color: white;
+        margin-right: 10px;
+    }
+
+    nav ul li.language-switch a:hover {
+        color: #5A1E29;
+    }
 }
+
 /*BARRA SUPERIOR*/
 
 /* RESPONSIVE para el contenido principal */
@@ -283,25 +350,25 @@ margin-bottom: 0px;
     transform: scale(1.03);
 }
 
-.producto p {
+.producto h3 {
     font-size: 1.1em;
     color: #333;
     margin: 5px 0;
     min-height: 50px;
 }
 
-.producto h3 {
+.producto h4 {
     margin: 10px 0;
 }
 
-.producto h3 a {
+.producto h4 a {
     text-decoration: none;
     color: #2f855a;
     font-weight: 600;
     transition: color 0.3s;
 }
 
-.producto h3 a:hover {
+.producto h4 a:hover {
     color: #2f855a;
 }
 
