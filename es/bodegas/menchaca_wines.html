@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Menchaca Wines | Terruño Único</title>
+    <meta name="description" content="Descubre el catálogo de productos de Menchaca Wines, una bodega destacada por su selección de vinos de calidad. Encuentra una variedad de opciones para todos los gustos, con información detallada sobre cada uno de sus vinos.">
+    <link rel="icon" href="../img/favicon/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/menchaca_wines.css">
 </head>
 
@@ -12,16 +13,16 @@
     <header>
         <div class="navbar">
             <div class="logo">
-                <a href="../index.html"><img src="../img/terruno_logo.png" alt="Logo de Terruño"></a>  
+                <a href="../index.html"><img src="../img/terruno_logo.png" alt="Inicio - Terruño Único"></a>  
             </div>
-            <div class="menu-toggle" id="menu-toggle">☰</div>
+            <div class="menu-toggle" id="menu-toggle" aria-label="Abrir menú de navegación">☰</div>
             <nav>
                 <ul class="menu">
                     <li><a href="../index.html#bodegas">Vinos</a></li>
                     <li><a href="../index.html#almazaras">Aceites</a></li>
                     <li><a href="../index.html#otros">Delicias Ibéricas</a></li>
                     <li><a href="../dop_españa.html">D.O.P. España</a></li>
-                    <li><a href="">Noticias</a></li>
+                    <li><a href="#">Noticias</a></li>
                     <li><a href="../formulario.html">Contacto</a></li>
                 </ul>
             </nav>
@@ -34,7 +35,9 @@
             </div>
         </div>
     </header>
-    <main>
+    
+<main>
+    <section aria-labelledby="info-menchaca_wines"> 
     <div class="container">
         <div class="logo_bodega">
             <img src="img/menchaca_wines/menchaca_wines_con_fondo.PNG" id="logo_bodega" alt="logo_bodega" style="max-height: 50%; width: 50%; object-fit: contain">
@@ -44,26 +47,28 @@
             <p>Menchaca Wines elabora vinos tintos originales a partir de parcelas multivarietales con cepas centenarias, cultivadas en un antiguo viñedo recuperado en 1947. Situada en la histórica región vitícola de El Molar, muy cerca de Madrid, la bodega da vida a vinos con carácter propio, que son reflejo de una tierra rica en tradición. Entre sus creaciones más destacadas se encuentran "100 Palos" y los vinos singulares de la colección "Botargas", fruto del esfuerzo y la dedicación por mantener viva la esencia del viñedo tradicional.</p>
             <p>Guiados por una filosofía que valora la autenticidad y el respeto por la historia, Menchaca Wines apuesta por conservar tanto los viñedos antiguos como los métodos de elaboración artesanal. Esta forma de entender el vino permite ofrecer productos únicos que transmiten el alma de la tierra donde nacen. Más que un vino, cada botella es una expresión cultural y social de un legado que continúa con ilusión generación tras generación.</p>
             <div class="etiquetas-container">
-                <img src="img/denominacion_origen/vinos_de_madrid.png" id="do_madrid" alt="Denominacion de Origen Madrid" style="max-height: 100px; width: auto;">
+                <img src="img/denominacion_origen/vinos_de_madrid.png" id="do_madrid" alt="Denominacion de Origen Protegido Madrid" style="max-height: 100px; width: auto;">
             </div>
         </div>
     </div>
+</section>
+<section aria-labelledby="catalogo-vinos">
     <div class="catalogo">
         <h2>Catálogo de Productos</h2>
         <div class="productos">
             <div class="producto">
-                <img src="img/menchaca_wines/100palos_tinto.png" alt="100palos_tinto">
-                <p>100Palos | Tinto Garnacha Fermentado en barrica</p>
-                <h3><a href="doc/menchaca_wines/Tinto Garnacha Oak Fermented 2022.pdf">VER FICHA</a></h3>
+                <img src="img/menchaca_wines/100palos_tinto.png" alt="Botella de vino 100Palos | Tinto Garnacha Fermentado en barrica">
+                <h3>100Palos | Tinto Garnacha Fermentado en barrica</h3>
+                <h4><a href="doc/menchaca_wines/Tinto Garnacha Oak Fermented 2022.pdf">VER FICHA</a></h4>
                 <div>
                     <input type="number" id="cantidad_tinto_garnacha" class="inputcantidad" value="1" min="1">
                     <button onclick="añadirAlCarrito('Menchaca Wines | 100Palos - Tinto Garnacha', 'cantidad_tinto_garnacha')">Añadir al carrito</button>
                 </div>
             </div>
             <div class="producto">
-                <img src="img/menchaca_wines/100palos_blanco.PNG" alt="100palos_blanco">
-                <p>100Palos | Blanco Malvar Fermentado en barrica</p>
-                <h3><a href="doc/menchaca_wines/Blanco Malvar Oak Fermented 2022.pdf">VER FICHA</a></h3>
+                <img src="img/menchaca_wines/100palos_blanco.PNG" alt="Botella de vino 100Palos | Blanco Malvar Fermentado en barrica">
+                <h3>100Palos | Blanco Malvar Fermentado en barrica</h3>
+                <h4><a href="doc/menchaca_wines/Blanco Malvar Oak Fermented 2022.pdf">VER FICHA</a></h4>
                 <div>
                     <input type="number" id="cantidad_blanco_malvar" class="inputcantidad" value="1" min="1">
                     <button onclick="añadirAlCarrito('Menchaca Wines | 100Palos - Blanco Malvar', 'cantidad_blanco_malvar')">Añadir al carrito</button>
@@ -71,6 +76,7 @@
             </div>  
         </div>
     </div>
+</section>
 </main>
     <footer>
         <p>Para realizar un pedido, contáctanos <a href="formulario.html">AQUÍ</a></p>

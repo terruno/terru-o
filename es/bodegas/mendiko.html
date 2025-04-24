@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bodega Mendiko | Terruño Único</title>
+    <meta name="description" content="Descubre el catálogo de productos de la bodega Mendiko, una bodega destacada por su selección de vinos de calidad. Encuentra una variedad de opciones para todos los gustos, con información detallada sobre cada uno de sus vinos.">
+    <link rel="icon" href="../img/favicon/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/mendiko.css">
 </head>
 
@@ -13,14 +15,14 @@
             <div class="logo">
                 <a href="../index.html"><img src="../img/terruno_logo.png" alt="Logo de Terruño"></a>  
             </div>
-            <div class="menu-toggle" id="menu-toggle">☰</div>
+            <div class="menu-toggle" id="menu-toggle" aria-label="Abrir menú de navegación">☰</div>
             <nav>
                 <ul class="menu">
                     <li><a href="../index.html#bodegas">Vinos</a></li>
                     <li><a href="../index.html#almazaras">Aceites</a></li>
                     <li><a href="../index.html#otros">Delicias Ibéricas</a></li>
                     <li><a href="../dop_españa.html">D.O.P. España</a></li>
-                    <li><a href="">Noticias</a></li>
+                    <li><a href="#">Noticias</a></li>
                     <li><a href="../formulario.html">Contacto</a></li>
                 </ul>
             </nav>
@@ -33,7 +35,8 @@
             </div>
         </div>
     </header>
-    <main>    
+<main>  
+<section aria-labelledby="info-bodega-mendiko">    
     <div class="container">
         <div class="logo_bodega">
             <img src="img/mendiko/mendiko_logo_con_fondo.jpeg" id="logo_bodega" alt="Logo Bodega Mendiko">
@@ -43,51 +46,53 @@
             <p>Bodega Mendiko es una empresa familiar fundada en el año 2001 en Aibar-Oibar, en la comarca navarra de la Baja Montaña. Con 14 hectáreas de viñedo propio repartidas en nueve fincas, cultiva variedades como Garnacha, Cabernet Sauvignon, Tempranillo y Syrah bajo métodos ecológicos. Su producción artesanal y ecológica está amparada por la DO Navarra y alcanza una capacidad de 100.000 litros. Los vinos de Mendiko son fruto de una cuidada viticultura tradicional, con una recogida anual de entre 55.000 y 60.000 kilos, que se transforma en vinos limpios, brillantes y afrutados, cargados de intensos aromas a frutas silvestres.</p>
             <p>La bodega surge del compromiso de Victorino Ibero con la herencia vitícola de sus antepasados. Desde niño aprendió en las viñas familiares los secretos de una viticultura respetuosa con la tierra, libre de productos químicos y basada en el cuidado manual y constante de la planta. Para honrar este legado, emprendió la creación de un vino verdaderamente ecológico, comenzando por la recuperación de terrenos en Aibar-Oibar. Allí plantó nuevas viñas siguiendo procesos totalmente naturales, garantizando que ni el suelo, ni las uvas, ni el vino hayan estado en contacto con pesticidas, fertilizantes sintéticos o manipulaciones genéticas.</p>
            <div class="etiquetas-container">
-                <img src="img/denominacion_origen/navarra.png" id="do_navarra" alt="Denominacion de Origen Navarra">
+                <img src="img/denominacion_origen/navarra.png" id="do_navarra" alt="Denominacion de Origen Protegido de Navarra">
             </div>
         </div>
     </div>
-
+</section>
+<section aria-labelledby="catalogo-vinos">
     <div class="catalogo">
-        <h2>Catálogo de Productos</h2>
+        <h2>Catálogo de Vinos</h2>
         <div class="productos">
             <div class="producto">
-                <img src="img/mendiko/oraina.png" alt="Oraina">
-                <p>Oraina - Vino joven</p>
-                <h3><a href="">VER FICHA</a></h3>
+                <img src="img/mendiko/oraina.png" alt="Botella de vino Oraina">
+                <h3>Oraina - Vino joven</h3>
+                <h4><a href="#">VER FICHA</a></h4>
                 <div>
                     <input type="number" id="cantidad_oraina" class="inputcantidad" value="1" min="1">
                     <button onclick="añadirAlCarrito('Bodegas Mendiko | Oraina - Vino joven', 'cantidad_oraina')">Añadir al carrito</button>
                 </div>
             </div>
             <div class="producto">
-                <img src="img/mendiko/oreka.png" alt="Oreka">
-                <p>Oreka - Vino roble</p>
-                <h3><a href="">VER FICHA</a></h3>
+                <img src="img/mendiko/oreka.png" alt="Botella de vino Oreka">
+                <h3>Oreka - Vino roble</h3>
+                <h4><a href="#">VER FICHA</a></h4>
                 <div>
                     <input type="number" id="cantidad_oreka" class="inputcantidad" value="1" min="1">
                     <button onclick="añadirAlCarrito('Bodegas Mendiko | Oreka - Vino roble', 'cantidad_oreka')">Añadir al carrito</button>
                 </div>
             </div>
             <div class="producto">
-                <img src="img/mendiko/memoria_1.jpg" style="width: 150px; height: auto;" alt="Memoria" >
-                <p>Memoria - Vino crianza</p>
-                <h3><a href="">VER FICHA</a></h3>
+                <img src="img/mendiko/memoria_1.jpg" style="width: 150px; height: auto;" alt="Botella de vino Memoria" >
+                <h3>Memoria - Vino crianza</h3>
+                <h4><a href="#">VER FICHA</a></h4>
                 <div>
                     <input type="number" id="cantidad_memoria" class="inputcantidad" value="1" min="1">
                     <button onclick="añadirAlCarrito('Bodegas Mendiko | Memoria - Vino crianza', 'cantidad_memoria')">Añadir al carrito</button>
                 </div>
             </div>
             <div class="producto">
-                <img src="img/mendiko/Ikimilikiliklik_2020.jpeg" alt="Ikimilikiliklik">
-                <p>Ikimilikiliklik - Vino selección</p>
-                <h3><a href="">VER FICHA</a></h3>
+                <img src="img/mendiko/Ikimilikiliklik_2020.jpeg" alt="Botella de vino Ikimilikiliklik">
+                <h3>Ikimilikiliklik - Vino selección</h3>
+                <h4><a href="#">VER FICHA</a></h4>
                 <div>
                     <input type="number" id="cantidad_ikimilikiliklik" class="inputcantidad" value="1" min="1">
                     <button onclick="añadirAlCarrito('Bodegas Mendiko | Ikimilikiliklik - Vino selección', 'cantidad_ikimilikiliklik')">Añadir al carrito</button>
                 </div>
             </div>
     </div>
+</section>
 </main>
 
 <footer>

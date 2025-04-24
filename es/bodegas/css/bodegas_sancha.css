@@ -350,11 +350,15 @@ margin-bottom: 0px;
     transform: scale(1.03);
 }
 
+
 .producto h3 {
-    font-size: 1.1em;
-    color: #333;
-    margin: 5px 0;
-    min-height: 50px;
+    font-size: 1.3em;
+    font-family: 'Roboto', sans-serif; /* Cambia la tipografía */
+    color: #2a2a2a; /* Un tono más oscuro para mayor contraste */
+    margin: 10px 0; /* Aumenta el espacio alrededor */
+    min-height: 40px; /* Aumenta la altura mínima */
+    letter-spacing: 1px; /* Añade un pequeño espacio entre las letras */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Añade una sombra sutil */
 }
 
 .producto h4 {
