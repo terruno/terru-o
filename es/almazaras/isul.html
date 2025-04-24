@@ -3,36 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>ISUL</title>
+    <title>ISUL | Almazara Ecológica de La Rioja | Terruño Único</title>
+    <meta name="description" content="Conoce ISUL, la almazara ecológica de La Rioja dedicada a la elaboración de aceites de oliva virgen extra de alta calidad. Explora su catálogo de productos ecológicos cuidadosamente producidos."><link rel="icon" href="../img/favicon/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/isul.css">
- 
 </head>
 <body>
     <header>
         <div class="navbar">
             <div class="logo">
-                <a href="../index.html"><img src="../img/terruno_logo.png" alt="Logo de Terruño"></a>  
+                <a href="../index.html"><img src="../img/terruno_logo.png" alt="Inicio - Terruño Único"></a>  
             </div>
-            <div class="menu-toggle" id="menu-toggle">☰</div>
+            <div class="menu-toggle" id="menu-toggle" aria-label="Abrir menú de navegación">☰</div>
             <nav>
                 <ul class="menu">
                     <li><a href="../index.html#bodegas">Vinos</a></li>
                     <li><a href="../index.html#almazaras">Aceites</a></li>
                     <li><a href="../index.html#otros">Delicias Ibéricas</a></li>
+                    <li><a href="../dop_españa.html">D.O.P. España</a></li>
+                    <li><a href="#">Noticias</a></li>
                     <li><a href="../formulario.html">Contacto</a></li>
                 </ul>
             </nav>
+            <div class="carrito_logo">
+                <a href="../carrito.html"><img src="../img/carrito_logo.png" alt="Logo de carrito"></a>  
+                <span class="contador-carrito" id="cart-count">0</span>
+            </div>
             <div class="language-switch">
-                <a href="isul.html">ES</a> | <a href="../../en/almazaras/isul_en.html">EN</a>
+                <a href="aixala_alcait.html">ES</a> | <a href="../../en/bodegas/aixala_alcait_en.html">EN</a>
             </div>
         </div>
     </header>
+
 <main>
+    <section aria-labelledby="info-almazara-ISUL"></section>
     <div class="container">
         <div class="logo_almazara">
-            <img src="img/isul/isul_logo_fondo_negro.PNG" id="logo_isul" alt="logo_isul">
-            
+            <img src="img/isul/isul_logo_fondo_negro.PNG" id="logo_isul" alt="Logo de ISUL | Almazara Ecológica de La Rioja">  
         </div>
         <div class="texto">
             <h1>ISUL | Almazara Ecológica de La Rioja</h1>
@@ -41,17 +47,19 @@
             <p>En el olivar de ISUL se aplican métodos de cultivo ecológico que, aunque reducen el rendimiento en kilos de aceituna por olivo y suponen un mayor coste de producción, garantizan un fruto completamente libre de residuos perjudiciales para la salud. Esta apuesta por lo ecológico no solo protege al consumidor, sino que también cuida del equilibrio del medio ambiente, evitando la contaminación de las aguas subterráneas, del aire y de los distintos estratos del suelo con nitritos y otras sustancias peligrosas.</p>
         </div>
     </div>
-
-
+</section>
+<section aria-labelledby="catalogo-aceites">
     <div class="catalogo">
-        <h2>Catálogo de Productos</h2>
+        <h2>Catálogo de Aceites</h2>
         <div class="productos">
             <div class="producto">
                 <img src="img/isul/isul_lata_5_litros.png" alt="Foto de lata de 5 litros de aceite ISUL">
-                <p>Lata de 5 Litros ISUL</p>
-                <h3><a href="">VER FICHA</a></h3>
-                <a href="../formulario.html?producto=Lata%20de%205%20Litros%20ISUL">
-                    <button>Solicitar este producto</button></a>
+                <h3>Lata de 5 Litros ISUL</h3>
+                <p><a href="#">VER FICHA</a></p>
+                <div>
+                    <input type="number" id="cantidad_lata_5l_isul" class="inputcantidad" value="1" min="1">
+                    <button onclick="añadirAlCarrito('ISUL | Lata de 5 Litros de Aceite', 'cantidad_lata_5l_isul')">Añadir al carrito</button>
+                </div>
             </div>
             
         </div>
@@ -64,6 +72,8 @@
             <a href="../politica-cookies.html">Política de Cookies</a>
         </p>
     </footer>
+    <script src="js/añadir_al_carrito.js"></script>
+    <script src="js/cart_icon.js"></script>
     <script src="js/navbar.js"></script>
 </body>
 </html>
