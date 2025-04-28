@@ -18,7 +18,8 @@ jobs:
         run: mkdir -p backup
 
       - name: Copy website files to backup directory
-        run: cp -r ./* backup/
+        run: |
+          rsync -av --exclude 'backup/' ./ backup/
 
       - name: Commit and push backup to backup repository
         run: |
