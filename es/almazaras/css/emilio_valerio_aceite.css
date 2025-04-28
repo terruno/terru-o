@@ -5,7 +5,7 @@ body {
     background: black;
     background-image: 
         linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url("../img/emilio_valerio/emilio_valerio_fondo.jpg");
+        url("../img/emilio_valerio/emilio_valerio_fondo.webp");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;

@@ -5,7 +5,7 @@ body {
     background: black;
     background-image: 
         linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url("../img/sancha/sancha_fondo.jpg");
+        url("../img/sancha/sancha_fondo.webp");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -344,6 +344,9 @@ margin-bottom: 0px;
     border-radius: 12px;
     margin-bottom: 15px;
     transition: transform 0.3s ease;
+    min-height: 200px; /* nuevo */
+    justify-content: space-between; /* nuevo */
+    height: 100%; /* nuevo */
 }
 
 .producto img:hover {
@@ -400,6 +403,11 @@ margin-bottom: 0px;
     align-items: center;
     gap: 10px; /* espacio entre el input y el botón */
     margin-top: 10px;
+    margin-top: auto; /* nuevo */
+}
+
+.control-cantidad button {
+    margin-top: 0; /* quitar margen superior para que esté alineado */
 }
 
 .inputcantidad {

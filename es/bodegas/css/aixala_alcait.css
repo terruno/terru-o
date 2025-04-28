@@ -5,7 +5,7 @@ body {
     background: black;
     background-image: 
         linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url("../img/aixala_alcait/aixala_alcait_fondo.jpg");
+        url("../img/aixala_alcait/aixala_alcait_fondo.webp");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;

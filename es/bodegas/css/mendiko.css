@@ -5,7 +5,7 @@ body {
     background: black;
     background-image: 
         linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url("../img/mendiko/mendiko_fondo.jpg");
+        url("../img/mendiko/mendiko_fondo.webp");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -342,6 +342,9 @@ margin-bottom: 0px;
     border-radius: 12px;
     margin-bottom: 15px;
     transition: transform 0.3s ease;
+    min-height: 200px; /* nuevo */
+    justify-content: space-between; /* nuevo */
+    height: 100%; /* nuevo */
 }
 
 .producto img:hover {
@@ -363,7 +366,15 @@ margin-bottom: 0px;
     color: #333;
     margin: 5px 0;
     min-height: 24px;
+    padding-bottom: 5px; /* nuevo */
+    line-height: 1.4; /* mejora lectura */
+    text-align: left;
 }
+
+.producto p strong {
+    color: #2f855a; /* mismo verde que los botones, crea identidad visual */
+    font-weight: 700;
+  }
 
 .producto p a {
     text-decoration: none;
@@ -397,6 +408,11 @@ margin-bottom: 0px;
     align-items: center;
     gap: 10px; /* espacio entre el input y el botón */
     margin-top: 10px;
+    margin-top: auto; /* nuevo */
+}
+
+.control-cantidad button {
+    margin-top: 0; /* quitar margen superior para que esté alineado */
 }
 
 .inputcantidad {
@@ -437,6 +453,15 @@ button:hover {
 
     .producto img {
         max-height: 180px;
+    }
+}
+
+@media (max-width: 480px) {
+    .productos {
+        grid-template-columns: 1fr; /* Una sola columna */
+    }
+    .catalogo {
+        padding: 30px 10px;
     }
 }
 
