@@ -4,7 +4,7 @@ on:
   schedule:
     # Esto ejecutará la copia de seguridad todos los días a las 2:00 AM UTC
     - cron: '0 2 * * *'
-  workflow_dispatch:  # Permite ejecutar manualmente el flujo de trabajo desde la interfaz de GitHub
+  workflow_dispatch:  # Permite ejecutar manualmente el flujo de trabajo desde GitHub Actions
 
 jobs:
   backup:
@@ -17,23 +17,27 @@ jobs:
       - name: Create a backup directory
         run: mkdir -p backup
 
-      - name: Copy website files to backup directory
+      - name: Copy website files to backup directory excluding backup folder
         run: |
           rsync -av --exclude 'backup/' ./ backup/
 
       - name: Add .gitignore entry for backup directory
-        run: echo "backup/" >> .gitignore
+        run: |
+          echo "backup/" >> .gitignore || true
 
-      - name: Commit and push backup to backup repository
+      - name: Commit and push changes
         run: |
           git config --global user.name 'terruno'
           git config --global user.email 'haritz@terrezu.com'
+
+          # Commit de .gitignore
           git add .gitignore
-          git commit -m "Ignore backup directory in version control"
-          git push origin main
-          
-          git add backup/*  # Agregar los archivos del backup
-          git commit -m "Backup of website"
-          git push https://$GH_TOKEN@github.com/tuusuario/mi-repositorio-backup.git HEAD:main
+          git commit -m "Ignore backup directory in version control" || echo "No changes to commit"
+          git push https://$GH_TOKEN@github.com/terruno/terru-o.git HEAD:main
+
+          # Commit de la carpeta backup
+          git add backup/*
+          git commit -m "Backup of website" || echo "No changes to commit"
+          git push https://$GH_TOKEN@github.com/terruno/mi-repositorio-backup.git HEAD:main
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
