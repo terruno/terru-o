@@ -2,9 +2,8 @@ name: Backup Website
 
 on:
   schedule:
-    # Esto ejecutará la copia de seguridad todos los días a las 2:00 AM UTC
-    - cron: '0 2 * * *'
-  workflow_dispatch:  # Permite ejecutar manualmente el flujo de trabajo desde GitHub Actions
+    - cron: '0 2 * * *'  # Cada día a las 2:00 AM UTC
+  workflow_dispatch:      # Permite ejecutarlo manualmente también
 
 jobs:
   backup:
@@ -14,30 +13,30 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Create a backup directory
-        run: mkdir -p backup
-
-      - name: Copy website files to backup directory excluding backup folder
+      - name: Create a dated backup directory
         run: |
-          rsync -av --exclude 'backup/' ./ backup/
+          DATE=$(date +'%Y-%m-%d')
+          mkdir -p backup/$DATE
 
-      - name: Add .gitignore entry for backup directory
+      - name: Copy website files to dated backup directory excluding backup folder
         run: |
-          echo "backup/" >> .gitignore || true
+          DATE=$(date +'%Y-%m-%d')
+          rsync -av --exclude 'backup/' ./ backup/$DATE/
 
-      - name: Commit and push changes
+      - name: Delete backups older than 30 days
         run: |
+          find backup/ -maxdepth 1 -type d -name '20*' -mtime +30 -exec rm -rf {} +
+
+      - name: Initialize backup repo
+        run: |
+          cd backup
+          git init
           git config --global user.name 'terruno'
           git config --global user.email 'haritz@terrezu.com'
-
-          # Commit de .gitignore
-          git add .gitignore
-          git commit -m "Ignore backup directory in version control" || echo "No changes to commit"
-          git push https://$GH_TOKEN@github.com/terruno/terru-o.git HEAD:main
-
-          # Commit de la carpeta backup
-          git add backup/*
-          git commit -m "Backup of website" || echo "No changes to commit"
-          git push https://$GH_TOKEN@github.com/terruno/mi-repositorio-backup.git HEAD:main
+          git remote add origin https://$GH_TOKEN@github.com/terruno/mi-repositorio-backup.git
+          git add .
+          git commit -m "Backup of website on $(date)"
+          git branch -M main
+          git push -f origin main
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
