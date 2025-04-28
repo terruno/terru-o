@@ -18,16 +18,16 @@ jobs:
           DATE=$(date +'%Y-%m-%d')
           mkdir -p backup/$DATE
 
-      - name: Copy website files to dated backup directory excluding backup folder
+      - name: Copy website files to dated backup directory excluding backup folder and git internals
         run: |
           DATE=$(date +'%Y-%m-%d')
-          rsync -av --exclude 'backup/' ./ backup/$DATE/
+          rsync -av --exclude 'backup/' --exclude '.git/' --exclude '.github/' --exclude '.gitignore' ./ backup/$DATE/
 
       - name: Delete backups older than 30 days
         run: |
           find backup/ -maxdepth 1 -type d -name '20*' -mtime +30 -exec rm -rf {} +
 
-      - name: Initialize backup repo
+      - name: Initialize and push backup repository
         run: |
           cd backup
           git init
