@@ -21,13 +21,19 @@ jobs:
         run: |
           rsync -av --exclude 'backup/' ./ backup/
 
+      - name: Add .gitignore entry for backup directory
+        run: echo "backup/" >> .gitignore
+
       - name: Commit and push backup to backup repository
         run: |
           git config --global user.name 'terruno'
           git config --global user.email 'haritz@terrezu.com'
-          git add backup/*
+          git add .gitignore
+          git commit -m "Ignore backup directory in version control"
+          git push origin main
+          
+          git add backup/*  # Agregar los archivos del backup
           git commit -m "Backup of website"
-          git push https://github.com/terruno/mi-repositorio-backup.git
           git push https://$GH_TOKEN@github.com/tuusuario/mi-repositorio-backup.git HEAD:main
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
