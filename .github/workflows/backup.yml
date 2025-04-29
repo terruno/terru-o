@@ -3,40 +3,44 @@ name: Backup Website
 on:
   schedule:
     - cron: '0 2 * * *'  # Cada día a las 2:00 AM UTC
-  workflow_dispatch:      # Permite ejecutarlo manualmente también
+  workflow_dispatch:
 
 jobs:
   backup:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout main repository
         uses: actions/checkout@v2
 
-      - name: Create a dated backup directory
-        run: |
-          DATE=$(date +'%Y-%m-%d')
-          mkdir -p backup/$DATE
+      - name: Set up date variable
+        run: echo "DATE=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
 
       - name: Copy website files to dated backup directory excluding backup folder and git internals
         run: |
-          DATE=$(date +'%Y-%m-%d')
-          rsync -av --exclude 'backup/' --exclude '.git/' --exclude '.github/' --exclude '.gitignore' ./ backup/$DATE/
+          mkdir -p backup/${{ env.DATE }}
+          rsync -av --exclude 'backup/' --exclude '.git/' --exclude '.github/' --exclude '.gitignore' ./ backup/${{ env.DATE }}/
 
       - name: Delete backups older than 30 days
         run: |
           find backup/ -maxdepth 1 -type d -name '20*' -mtime +30 -exec rm -rf {} +
 
-      - name: Initialize and push backup repository
+      - name: Clone backup repository
         run: |
-          cd backup
-          git init
-          git config --global user.name 'terruno'
-          git config --global user.email 'haritz@terrezu.com'
-          git remote add origin https://$GH_TOKEN@github.com/terruno/mi-repositorio-backup.git
+          git clone https://$GH_TOKEN@github.com/terruno/mi-repositorio-backup.git backup-repo
+
+      - name: Copy new backup into backup repo
+        run: |
+          rsync -av backup/ backup-repo/backup/
+
+      - name: Commit and push to backup repository
+        run: |
+          cd backup-repo
+          git config user.name 'terruno'
+          git config user.email 'haritz@terrezu.com'
           git add .
-          git commit -m "Backup of website on $(date)"
-          git branch -M main
-          git push -f origin main
+          git commit -m "Backup on ${{ env.DATE }}" || echo "Nothing to commit"
+          git push origin main
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
+
