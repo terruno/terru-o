@@ -3,44 +3,54 @@ name: Backup Website
 on:
   schedule:
     - cron: '0 2 * * *'  # Cada día a las 2:00 AM UTC
-  workflow_dispatch:
+  workflow_dispatch:      # También se puede ejecutar manualmente
 
 jobs:
   backup:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout main repository
+      - name: Checkout repositorio principal
         uses: actions/checkout@v2
 
-      - name: Set up date variable
+      - name: Definir fecha actual
         run: echo "DATE=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
 
-      - name: Copy website files to dated backup directory excluding backup folder and git internals
-        run: |
-          mkdir -p backup/${{ env.DATE }}
-          rsync -av --exclude 'backup/' --exclude '.git/' --exclude '.github/' --exclude '.gitignore' ./ backup/${{ env.DATE }}/
+      - name: Crear carpeta de backup con la fecha
+        run: mkdir -p backup/${{ env.DATE }}
 
-      - name: Delete backups older than 30 days
+      - name: Copiar archivos (excluyendo carpetas internas)
+        run: |
+          rsync -av \
+            --exclude 'backup/' \
+            --exclude '.git/' \
+            --exclude '.github/' \
+            --exclude '.gitignore' \
+            ./ backup/${{ env.DATE }}/
+
+      - name: Borrar backups de más de 30 días
         run: |
           find backup/ -maxdepth 1 -type d -name '20*' -mtime +30 -exec rm -rf {} +
 
-      - name: Clone backup repository
+      - name: Clonar repositorio de respaldo
         run: |
-          git clone https://$GH_TOKEN@github.com/terruno/mi-repositorio-backup.git backup-repo
+          REPO_URL="https://${GH_TOKEN}@github.com/terruno/mi-repositorio-backup.git"
+          git clone "$REPO_URL" backup-repo
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
-      - name: Copy new backup into backup repo
-        run: |
-          rsync -av backup/ backup-repo/backup/
+      - name: Copiar nuevos backups al repositorio de respaldo
+        run: rsync -av backup/ backup-repo/backup/
 
-      - name: Commit and push to backup repository
+      - name: Confirmar y subir cambios
         run: |
           cd backup-repo
           git config user.name 'terruno'
           git config user.email 'haritz@terrezu.com'
           git add .
-          git commit -m "Backup on ${{ env.DATE }}" || echo "Nothing to commit"
+          git commit -m "Backup on ${{ env.DATE }}" || echo "Sin cambios para confirmar"
           git push origin main
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
+
 
