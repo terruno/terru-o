@@ -1,0 +1,378 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: rgb(0, 0, 0);
+    background: black;
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("../img/dop_españa/fondo_dop_españa.webp");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-size: 18px;  /* Ajustar el tamaño de la letra aquí */
+}
+
+/* BARRA SUPERIOR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10px;
+    background-color: #222;
+    color: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.navbar .logo a img {
+    height: 50px;
+    width: auto;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    user-select: none;
+    color: white;
+}
+
+/* Menú horizontal por defecto */
+nav ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #5A1E29;
+    border-radius: 5px;
+}
+
+/* CARRITO */
+.carrito_logo {
+    position: absolute;
+    right: 120px;
+    width: 38px;
+    height: 38px;
+    cursor: pointer;
+}
+
+.navbar .carrito_logo a img {
+    height: 38px;
+    width: auto;
+}
+
+.contador-carrito {
+    position: absolute;
+    top: -16px;
+    right: -9px;
+    background-color: #5A1E29;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 50%;
+    padding: 4px 6px;
+    min-width: 18px;
+    text-align: center;
+}
+
+/* IDIOMAS */
+.language-switch a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    margin: 0 5px;
+    transition: color 0.3s ease;
+}
+
+.language-switch a:hover {
+    color: #5A1E29;
+}
+
+/* Contenedor principal */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    width: 90%;
+    align-items: center;
+    justify-content: center;
+    margin: 40px auto;
+    gap: 20px;
+}
+
+.texto {
+    flex: 2;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 30px;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    color: white;
+    text-align: justify;
+}
+
+.texto h1{
+    color: white;
+    text-align: center;
+}
+.texto p {
+    color: white;
+}
+
+/* Sección mapa */
+.catalogo {
+    background-color: #f8f8f8;
+    padding: 60px 20px;
+    text-align: center;
+    color: #333;
+}
+
+.catalogo h2 {
+    font-size: 2em;
+}
+
+.fila-mapa {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.texto_mapa {
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 30px;
+    border-radius: 12px;
+    font-size: 16px;
+    line-height: 1.6;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    color: #333;
+    text-align: justify;
+}
+
+.texto_mapa {
+    flex: 4;
+}
+
+.mapa {
+    flex: 7;
+}
+
+.mapa img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.mapa .cita {
+    margin-top: 10px;
+    font-size: 0.75em;
+    color: #555;
+    line-height: 1.4;
+}
+
+/* FOOTER */
+footer {
+    background-color: #5A1E29;
+    color: #D4AF37;
+    padding: 10px;
+    margin-top: 0px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 14.5px;
+}
+footer a {
+    color: #ffff;
+    text-decoration: none;
+}
+
+/* Responsive: cambia a menú vertical */
+@media (max-width: 768px) {
+    
+
+    .navbar {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 15px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    .logo {
+        flex-shrink: 0;
+    }
+
+    /* Centrar el carrito en móviles */
+    .carrito_logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 38px;
+        height: 38px;
+    }
+
+    .contador-carrito {
+        top: -10px;
+        right: -10px;
+    }
+
+    .menu-toggle {
+        display: block;
+        font-size: 28px;
+        color: white;
+        cursor: pointer;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        display: none;
+        margin-top: 10px;
+        background-color: #222;
+        padding: 0;
+        z-index: 10;
+        position: relative;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    nav ul li {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        text-align: left;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+        padding: 12px 20px;
+        display: block;
+        width: 100%;
+    }
+
+    .language-switch {
+        display: flex;
+        margin-right: 30px;
+    }
+
+    nav ul li.language-switch {
+        display: flex !important;
+        justify-content: flex-start;
+        padding: 10px 20px;
+    }
+
+    nav ul li.language-switch a {
+        color: white;
+        margin-right: 10px;
+    }
+
+    nav ul li.language-switch a:hover {
+        color: #5A1E29;
+    }
+    html, body {
+        overflow-x: hidden;
+    }
+
+    .container {
+        display: flex; /* NECESARIO para que flex-direction funcione */
+        flex-direction: column;
+        padding: 10px;
+        width: 100%;
+        max-width: 100%;
+        margin: 30px auto;
+        box-sizing: border-box;
+        overflow-x: hidden;
+    }
+
+    .texto {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        width: 100%;
+        max-width: 100%;
+        margin: 30px auto;
+        box-sizing: border-box;
+        overflow-x: hidden;
+    }
+
+    .catalogo {
+        padding: 25px 15px;
+    }
+
+    .fila-mapa {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        width: 100%;
+        max-width: 100%;
+        margin: 30px auto;
+        box-sizing: border-box;
+        overflow-x: hidden;
+    }
+
+    .texto_mapa,
+    .mapa {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        width: 100%;
+        max-width: 100%;
+        margin: 30px auto;
+        box-sizing: border-box;
+        overflow-x: hidden;
+    
+    }
+
+    .texto_mapa {
+        font-size: 14.5px;
+        line-height: 1.6;
+    }
+
+    .mapa img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    .mapa .cita {
+        font-size: 12px;
+        margin-top: 10px;
+        line-height: 1.4;
+    }
+
+    .footer {
+        font-size: 13px;
+        padding: 10px;
+    }
+  
+}
+
+
+
