@@ -413,6 +413,13 @@ footer {
     margin-top: 20px;
 }
 
+
+footer a {
+    color: #ffff; /* Un color oscuro para mejorar el contraste */
+    text-decoration: underline; /* Subrayado */
+}
+
+
 /*SEPARADOR*/
 .separador {
     height: 2px;
