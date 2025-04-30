@@ -31,13 +31,13 @@
                 <span class="contador-carrito" id="cart-count">0</span>
             </div>
             <div class="language-switch">
-                <a href="emilio_valerio.html">ES</a> | <a>EN</a>
+                <a href="emilio_valerio.html">ES</a> | <a href="#">EN</a>
             </div>
         </div>
     </header>
 
 <main>
-    <section aria-labelledby="info-bodegas-emilio-valerio"></section>
+    <section aria-labelledby="texto-bodegas-emilio-valerio">
     <div class="container">
         <div class="logo_bodega">
             <img src="img/emilio_valerio/logo.webp" id="logo_bodega" alt="Logo bodega Emilio Valerio">
@@ -61,6 +61,7 @@
                 <h3>La Merced</h3>
                 <p><a href="doc/emilio_valerio/la_merced.pdf">VER FICHA</a></p>
                 <div>
+                    <label for="cantidad_la_merced" class="visually-hidden">Cantidad La Merced</label>
                     <input type="number" id="cantidad_la_merced" class="inputcantidad" value="1" min="1">
                     <button onclick="añadirAlCarrito('Emilio Valerio | La Merced', 'cantidad_la_merced')">Añadir al carrito</button>
                 </div>
@@ -70,6 +71,7 @@
                 <h3>Amburza</h3>
                 <p><a href="doc/emilio_valerio/amburza.pdf">VER FICHA</a></p>
                 <div>
+                    <label for="cantidad_la_amburza" class="visually-hidden">Cantidad la Amburza</label>
                     <input type="number" id="cantidad_la_amburza" class="inputcantidad" value="1" min="1">
                     <button onclick="añadirAlCarrito('Emilio Valerio | Amburza', 'cantidad_la_amburza')">Añadir al carrito</button>
                 </div>
@@ -79,6 +81,7 @@
                 <h3>Emilio Valerio</h3>
                 <p><a href="doc/emilio_valerio/emilio_valerio.pdf">VER FICHA</a></p>
                 <div>
+                    <label for="cantidad_emilio_valerio" class="visually-hidden">Cantidad Emilio Valerio</label>
                     <input type="number" id="cantidad_emilio_valerio" class="inputcantidad" value="1" min="1">
                     <button onclick="añadirAlCarrito('Emilio Valerio | Emilio Valerio', 'cantidad_emilio_valerio')">Añadir al carrito</button>
                 </div>
@@ -88,6 +91,7 @@
                 <h3>Usuaran</h3>
                 <p><a href="doc/emilio_valerio/usuaran.pdf">VER FICHA</a></p>
                 <div>
+                    <label for="cantidad_usuaran" class="visually-hidden">Cantidad Usuaran</label>
                     <input type="number" id="cantidad_usuaran" class="inputcantidad" value="1" min="1">
                     <button onclick="añadirAlCarrito('Emilio Valerio | Usuaran', 'cantidad_usuaran')">Añadir al carrito</button>
                 </div>
@@ -98,6 +102,7 @@
                 <p>Viñedo Singular</p>
                 <p><a href="doc/emilio_valerio/leorin.pdf">VER FICHA</a></p>
                 <div>
+                    <label for="cantidad_leorin" class="visually-hidden">Cantidad Leorin</label>
                     <input type="number" id="cantidad_leorin" class="inputcantidad" value="1" min="1">
                     <button onclick="añadirAlCarrito('Emilio Valerio | Leorin - Viñedo Singular', 'cantidad_leorin')">Añadir al carrito</button>
                 </div>
@@ -108,6 +113,7 @@
                 <p>Viñedo Singular</p>
                 <p><a href="doc/emilio_valerio/aranbelza.pdf">VER FICHA</a></p>
                 <div>
+                    <label for="cantidad_aranbelza" class="visually-hidden">Cantidad Aranbelza</label>
                     <input type="number" id="cantidad_aranbelza" class="inputcantidad" value="1" min="1">
                     <button onclick="añadirAlCarrito('Emilio Valerio | Aranbelza - Viñedo Singular', 'cantidad_aranbelza')">Añadir al carrito</button>
                 </div>
@@ -118,6 +124,7 @@
                 <p>Viñedo Singular</p>
                 <p><a href="doc/emilio_valerio/san_martin.pdf">VER FICHA</a></p>
                 <div>
+                    <label for="cantidad_san_martin" class="visually-hidden">Cantidad San Martin</label>
                     <input type="number" id="cantidad_san_martin" class="inputcantidad" value="1" min="1">
                     <button onclick="añadirAlCarrito('Emilio Valerio | San Martín - Viñedo Singular', 'cantidad_san_martin')">Añadir al carrito</button>
                 </div>
@@ -128,6 +135,7 @@
                 <p>Botella de 50cl</p>
                 <p><a href="doc/emilio_valerio/amburza.pdf">VER FICHA</a></p>
                 <div>
+                    <label for="cantidad_amburzita_2018" class="visually-hidden">Cantidad Amburzita 2018</label>
                     <input type="number" id="cantidad_amburzita_2018" class="inputcantidad" value="1" min="1">
                     <button onclick="añadirAlCarrito('Emilio Valerio | Amburzita 2018', 'cantidad_amburzita_2018')">Añadir al carrito</button>
                 </div>
@@ -137,6 +145,7 @@
                 <h3>Rosado de Leorín</h3>
                 <p><a href="doc/emilio_valerio/rosado_de_leorin.pdf">VER FICHA</a></p>
                 <div>
+                    <label for="cantidad_rosado_de_leorin" class="visually-hidden">Cantidad Rosado de Leorin</label>
                     <input type="number" id="cantidad_rosado_de_leorin" class="inputcantidad" value="1" min="1">
                     <button onclick="añadirAlCarrito('Emilio Valerio | Rosado de Leorín', 'cantidad_rosado_de_leorin')">Añadir al carrito</button>
                 </div>
@@ -147,6 +156,7 @@
                 <p>Garnacha Blanca con crianza 5 años en Barrica</p>
                 <p><a href="#">VER FICHA</a></p>
                 <div>
+                    <label for="cantidad_viña_de_mirabellas" class="visually-hidden">Cantidad Viña de Mirabellas</label>
                     <input type="number" id="cantidad_viña_de_mirabellas" class="inputcantidad" value="1" min="1">
                     <button onclick="añadirAlCarrito('Emilio Valerio | Viña de Mirabellas', 'cantidad_viña_de_mirabellas')">Añadir al carrito</button>
                 </div>
@@ -156,7 +166,7 @@
 </section>
 </main>
 <footer>
-    <p>Para realizar un pedido, contáctanos <a href="../formulario.html">AQUÍ</a></p>
+    <p>Para realizar un pedido, contáctanos <a href="../formulario.html">mediante este formulario.</a>></p>
   <p>
       <a href="../politica-privacidad.html">Política de Privacidad</a> |
       <a href="../politica-cookies.html">Política de Cookies</a>

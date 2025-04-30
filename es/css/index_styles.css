@@ -7,6 +7,8 @@ body {
     padding-top: 60px;
 }
 
+
+
 /* GENERAL BARRA */
 .navbar {
     display: flex;
@@ -15,7 +17,7 @@ body {
     padding: 15px 10px;
     background-color: #222;
     color: white;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     position: fixed;
     top: 0;
     left: 0;
@@ -85,7 +87,7 @@ nav ul li a:hover {
 /* Cambio visual al hacer scroll */
 .navbar.scrolled {
     background-color: #3a3a3a;
-    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
 }
 
 /* Menú hamburguesa */
@@ -203,7 +205,7 @@ nav ul li a:hover {
     }
 
     nav ul li.language-switch {
-        display: flex !important;
+        display: flex;
         justify-content: flex-start;
         padding: 10px 20px;
     }
@@ -257,7 +259,7 @@ a {
 .bodegas_intro h2 {
     font-size: 1.8rem;
     color: #333;
-    margin: 4;
+    margin: 4rem;
     margin-bottom: 2rem;
 }
 

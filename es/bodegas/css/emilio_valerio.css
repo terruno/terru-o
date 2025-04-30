@@ -430,6 +430,18 @@ button:hover {
     background-color: #285e61;
 }
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+  
 
 /* RESPONSIVE del catálogo */
 @media (max-width: 480px) {
@@ -457,8 +469,9 @@ footer {
     font-family: Arial, sans-serif;
     font-size: 13.3px;
 }
+
 footer a {
-    color: #ffff;
-    text-decoration: none;
+    color: #ffff; /* Un color oscuro para mejorar el contraste */
+    text-decoration: underline; /* Subrayado */
 }
 
