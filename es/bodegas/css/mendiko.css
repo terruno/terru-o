@@ -4,7 +4,7 @@ body {
     color: white;
     background: black;
     background-image: 
-        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),
         url("../img/mendiko/mendiko_fondo.webp");
     background-size: cover;
     background-position: center;
@@ -239,6 +239,26 @@ nav ul li a:hover {
     border-radius: 15px; /* Bordes redondeados */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra suave */
 }
+
+.etiquetas-container {
+    display: flex;
+    flex-direction: row; /* Esto coloca los elementos en una fila horizontal */
+    align-items: center; /* Alinea verticalmente los elementos (opcional) */
+    justify-content: flex-end; /* Alinea los elementos al final del contenedor (a la derecha) */
+    padding: 10px;
+    gap: 20px; /* Espacio entre las imágenes */
+}
+
+.etiquetas-container img {
+width: 100px;
+height: auto;
+margin-bottom: 10px;
+}
+
+#eurohoja {
+    max-width: 100px;
+}
+
 
 .texto {
     flex: 2;
