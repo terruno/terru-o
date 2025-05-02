@@ -1,0 +1,255 @@
+body {
+    font-family: sans-serif;
+    background-color: #D6D6D6;
+    padding: 40px;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+
+  form {
+    max-width: 500px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  h3 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #2d3748;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  select,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    box-sizing: border-box;
+  }
+
+  form a {
+  color: #000; /* Negro */
+  text-decoration: underline; /* Opcional, para hacerlo visible como enlace */
+  }
+  
+  select {
+    background-color: white;
+  }
+
+  button {
+    background-color: #2f855a;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+  }
+
+  button:hover {
+    background-color: #276749;
+  }
+
+  @media (max-width: 600px) {
+    body {
+      padding: 20px;
+    }
+
+    form {
+      padding: 20px;
+    }
+  }
+
+/* BARRA SUPERIOR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 10px;
+  background-color: #222;
+  color: white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+.navbar .logo a img {
+  height: 50px;
+  width: auto;
+}
+
+/* Botón hamburguesa oculto por defecto */
+.menu-toggle {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  user-select: none;
+  color: white;
+}
+
+/* Menú horizontal por defecto */
+nav ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px;
+  transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #5A1E29;
+  border-radius: 5px;
+}
+
+/*IDIOMAS*/
+.language-switch a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  margin: 0 5px;
+  transition: color 0.3s ease;
+}
+
+.language-switch a:first-child {
+  margin-right: 2px;
+}
+
+.language-switch a:last-child {
+  margin-left: 2px;
+}
+.language-switch a:hover {
+  color: #5A1E29;
+}
+
+/*FOOTER*/
+footer {
+  background-color: #5A1E29;
+  color: #D4AF37;
+  padding: 10px;
+  margin-top: 20px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+footer a {
+  color: #ffff; /* Un color oscuro para mejorar el contraste */
+  text-decoration: underline; /* Subrayado */
+}
+
+
+/* Responsive: cambia a menú vertical */
+@media (max-width: 768px) {
+    
+
+  .navbar {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 15px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+  }
+
+  .logo {
+      flex-shrink: 0;
+  }
+
+
+
+  .menu-toggle {
+      display: block;
+      font-size: 28px;
+      color: white;
+      cursor: pointer;
+  }
+
+  nav {
+      width: 100%;
+  }
+
+  nav ul {
+      flex-direction: column;
+      width: 100%;
+      display: none;
+      margin-top: 10px;
+      background-color: #222;
+      padding: 0;
+      z-index: 10;
+      position: relative;
+  }
+
+  nav ul.show {
+      display: flex;
+  }
+
+  nav ul li {
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      text-align: left;
+  }
+
+  nav ul li a {
+      font-size: 16px;
+      padding: 12px 20px;
+      display: block;
+      width: 100%;
+  }
+
+  .language-switch {
+      display: flex;
+      margin-right: 30px;
+  }
+
+  nav ul li.language-switch {
+      display: flex !important;
+      justify-content: flex-start;
+      padding: 10px 20px;
+  }
+
+  nav ul li.language-switch a {
+      color: white;
+      margin-right: 10px;
+  }
+
+  nav ul li.language-switch a:hover {
+      color: #5A1E29;
+  }
+}
+
+/*BARRA SUPERIOR*/

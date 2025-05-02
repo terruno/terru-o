@@ -195,9 +195,9 @@ footer {
     font-size: 14.5px;
 }
 footer a {
-    color: #ffff;
-    text-decoration: none;
-}
+    color: #ffff; /* Un color oscuro para mejorar el contraste */
+    text-decoration: underline; /* Subrayado */
+  }
 
 /* Responsive: cambia a menú vertical */
 @media (max-width: 768px) {
