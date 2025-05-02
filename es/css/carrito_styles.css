@@ -162,9 +162,9 @@ footer {
   text-align: center;
   font-family: Arial, sans-serif;
 }
-a {
-  color: #ffff;
-  text-decoration: none;
+footer a {
+  color: #ffff; /* Un color oscuro para mejorar el contraste */
+  text-decoration: underline; /* Subrayado */
 }
 
 
