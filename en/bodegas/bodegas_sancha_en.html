@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>BODEGAS SANCHA</title>
+    <title>Bodegas Sancha | Terruño Único</title>
+    <meta name="description" content="Descubre el catálogo de productos de Bodegas Sancha, una bodega destacada por su selección de vinos de calidad. Encuentra una variedad de opciones para todos los gustos, con información detallada sobre cada uno de sus vinos.">
+    <link rel="icon" href="../img/favicon/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/bodegas_sancha.css">
 </head>
 
@@ -12,128 +13,174 @@
     <header>
         <div class="navbar">
             <div class="logo">
-                <a href="../index-en.html"><img src="../img/terruno_logo.png" alt="Logo de Terruño"></a>  
+                <a href="../index-en.html"><img src="../img/terruno_logo.webp" alt="Inicio - Terruño Único"></a>   
             </div>
-            <div class="menu-toggle" id="menu-toggle">☰</div>
+            <div class="menu-toggle" id="menu-toggle" aria-label="Abrir menú de navegación">☰</div>
             <nav>
                 <ul class="menu">
                     <li><a href="../index-en.html#bodegas">Wines</a></li>
                     <li><a href="../index-en.html#almazaras">Oils</a></li>
-                    <li><a href="../index-en.html#navarra">Delicacies from Spain</a></li>
+                    <li><a href="../index.html#otros">Delicias Ibéricas</a></li>
+                    <li><a href="../dop_españa.html">D.O.P. España</a></li>
+                    <li><a href="">Noticias</a></li>
                     <li><a href="../formulario-en.html">Contact</a></li>
                 </ul>
             </nav>
+            <div class="carrito_logo">
+                <a href="../carrito-en.html"><img src="../img/carrito_logo.webp" alt="Logo de carrito"></a>  
+                <span class="contador-carrito" id="cart-count">0</span>
+            </div>
             <div class="language-switch">
                 <a href="../../es/bodegas/bodegas_sancha.html">ES</a> | <a href="bodegas_sancha_en.html">EN</a>
             </div>
         </div>
     </header>
-<main>
-    <div class="container">
-        <div class="logo_bodega">
-            <img src="img/sancha/juan-carlos-sancha_con fondo.jpg" id="logo_bodega" alt="logo_bodega">
-            
-        </div>
-        <div class="texto">
+
+
+    <main>
+        <section aria-labelledby="info-bodegas-sancha">    
+            <div class="container">
+            <div class="logo_bodega">
+                <img src="img/sancha/juan-carlos-sancha_con fondo.webp" id="logo_bodega" alt="Logo Bodegas Sancha"> 
+            </div>
+            <div class="texto">
             <h1>BODEGAS SANCHA</h1>
+            <p>Located at the entrance to Baños de Río Tobía, Juan Carlos Sancha's winery is a project deeply rooted in the Rioja winemaking tradition, evoking the image of a small Burgundian château surrounded by its own vineyards. Founded in 1997, after an extensive national and international career, Sancha is committed to vindicate the value of native varieties, with special emphasis on the Garnacha from Alto Najerilla, and to recover almost disappeared grape varieties such as Maturana Tinta, Maturana Blanca and Monastel. Its 24 hectares of organic vineyards, divided into small plots on poor, limestone soils, allow it to produce wines of great freshness and character, faithful to the environment in which they were born.</p>
+            <p>The winery defends a philosophy based on minimum intervention, absolute respect for the terroir and sustainability, practising organic viticulture committed to biodiversity and the health of the vineyard. Without the use of chemicals and with intensive field work, the aim is to authentically express the identity of the region, honouring the legacy of the ancestors and the knowledge passed down through generations. The result is sincere, soulful wines that reflect the essence of the Alto Najerilla and a way of understanding Rioja based on passion, experience and a deep respect for the land.</p>
             <div class="etiquetas-container">
                 <img src="img/denominacion_origen/rioja.png" id="do_rioja" alt="Denominacion de Origen Rioja">
             </div>
         </div>
     </div>
-
-
+</section>
+<section aria-labelledby="catalogo-vinos">
     <div class="catalogo">
-        <h2>Product Catalogue</h2>
+        <h2>Catálogo de Vinos</h2>
         <div class="productos">
             <div class="producto">
-                <img src="img/sancha/cerro_la_isa_tinto_2018.jpg" alt="la_merced">
-                <p>CERRO LA ISA | Viñedo Singular | Red</p>
-                <h3><a href="doc/sancha/cerro_la_isa_tinto_2018.pdf">VIEW DETAILS</a></h3>
-                <a href="../formulario-en.html?producto=Bodegas%20Sancha%20-%20CERRO%20LA%20ISA%20%7C%20Vi%C3%B1edo%20Singular%20%7C%20Tinto">
-                    <button>Request this Product</button></a>
+                <img src="img/sancha/cerro_la_isa_tinto_2018.webp" alt="Botella de vino CERRO LA ISA | Viñedo Singular | Tinto">
+                <h3>CERRO LA ISA | Viñedo Singular | Tinto</h3>
+                <p><a href="doc/sancha/cerro_la_isa_tinto.pdf">VER FICHA</a></p>
+                <div class="control-cantidad">
+                    <label for="cantidad_cerro_la_isa_tinto" class="visually-hidden">Cantidad Cerro la Isa tinto</label>
+                    <input type="number" id="cantidad_cerro_la_isa_tinto" class="inputcantidad" value="1" min="1">
+                    <button onclick="añadirAlCarrito('Bodegas Sancha - Cerro La Isa | Viñedo Singular | Tinto', 'cantidad_cerro_la_isa_tinto')">Añadir al carrito</button>
+                </div>
             </div>
             <div class="producto">
-                <img src="img/sancha/cerro_la_isa_blanco_2019.jpg" alt="la_merced">
-                <p>CERRO LA ISA | Viñedo Singular | White</p>
-                <h3><a href="doc/sancha/cerro_la_isa_blanco_2019.pdf">VIEW DETAILS</a></h3>
-                <a href="../formulario-en.html?producto=Bodegas%20Sancha%20-%20CERRO%20LA%20ISA%20%7C%20Vi%C3%B1edo%20Singular%20%7C%20Blanco">
-                    <button>Request this Product</button></a>
+                <img src="img/sancha/cerro_la_isa_blanco_2019.webp" alt="Botella de vino CERRO LA ISA | Viñedo Singular | Blanco">
+                <h3>CERRO LA ISA | Viñedo Singular | Blanco</h3>
+                <p><a href="doc/sancha/cerro_la_isa_blanco.pdf">VER FICHA</a></p>
+                <div class="control-cantidad">
+                    <label for="cantidad_cerro_la_isa_blanco" class="visually-hidden">Cantidad Cerro la Isa blanco</label>
+                    <input type="number" id="cantidad_cerro_la_isa_blanco" class="inputcantidad" value="1" min="1">
+                    <button onclick="añadirAlCarrito('Bodegas Sancha - Cerro La Isa | Viñedo Singular | Blanco', 'cantidad_cerro_la_isa_blanco')">Añadir al carrito</button>
+                </div>
             </div>
             <div class="producto">
-                <img src="img/sancha/ad_libitum_maturana_blanca.png" alt="la_merced">
-                <p>Ad Libitum | Maturana White</p>
-                <h3><a href="">VIEW DETAILS</a></h3>
-                <a href="../formulario-en.html?producto=Bodegas%20Sancha%20-%20Ad%20Libitum%20%7C%20Maturana%20Blanca">
-                    <button>Request this Product</button></a>
+                <img src="img/sancha/ad_libitum_maturana_blanca.webp" alt="Botella de vino Ad Libitum | Maturana Blanca">
+                <h3>Ad Libitum | Maturana Blanca</h3>
+                <p><a href="doc/sancha/ad_libitum_maturana_blanca.pdf">VER FICHA</a></p>
+                <div class="control-cantidad">
+                    <label for="cantidad_ad_libitum_maturana_blanca" class="visually-hidden">Cantidad Ad Libitum Maturana Blanca</label>
+                    <input type="number" id="cantidad_ad_libitum_maturana_blanca" class="inputcantidad" value="1" min="1">
+                    <button onclick="añadirAlCarrito('Bodegas Sancha - Ad Libitum | Maturana Blanca', 'cantidad_ad_libitum_maturana_blanca')">Añadir al carrito</button>
+                </div>
             </div>
             <div class="producto">
-                <img src="img/sancha/ad_libitum_tempranillo_blanco.png" alt="la_merced">
-                <p>Ad Libitum | Tempranillo White</p>
-                <h3><a href="">VIEW DETAILS</a></h3>
-                <a href="../formulario-en.html?producto=Bodegas%20Sancha%20-%20Ad%20Libitum%20%7C%20Tempranillo%20Blanco">
-                    <button>Request this Product</button></a>
+                <img src="img/sancha/ad_libitum_tempranillo_blanco.webp" alt="Botella de vino Ad Libitum | Tempranillo Blanco">
+                <h3>Ad Libitum | Tempranillo Blanco</h3>
+                <p><a href="doc/sancha/ad_libitum_tempranillo_blanco.pdf">VER FICHA</a></p>
+                <div class="control-cantidad">
+                    <label for="cantidad_ad_libitum_tempranillo_blanco" class="visually-hidden">Cantidad Ad Libitum Tempranillo Blanco</label>
+                    <input type="number" id="cantidad_ad_libitum_tempranillo_blanco" class="inputcantidad" value="1" min="1">
+                    <button onclick="añadirAlCarrito('Bodegas Sancha - Ad Libitum | Tempranillo Blanco', 'cantidad_ad_libitum_tempranillo_blanco')">Añadir al carrito</button>
+                </div>
             </div>
             <div class="producto">
-                <img src="img/sancha/ad_libitum_maturana_tinta.png" alt="la_merced">
-                <p>Ad Libitum | Maturana Red</p>
-                <h3><a href="">VIEW DETAILS</a></h3>
-                <a href="../formulario-en.html?producto=Bodegas%20Sancha%20-%20Ad%20Libitum%20%7C%20Maturana%20Tinta">
-                    <button>Request this Product</button></a>
+                <img src="img/sancha/ad_libitum_maturana_tinta.webp" alt="Botella de vino Ad Libitum | Maturana Tinta">
+                <h3>Ad Libitum | Maturana Tinta</h3>
+                <p><a href="doc/sancha/ad_libitum_maturana_tinta.pdf">VER FICHA</a></p>
+                <div class="control-cantidad">
+                    <label for="cantidad_ad_libitum_maturana_tinta" class="visually-hidden">Cantidad Ad Libitum Maturana Tinta</label>
+                    <input type="number" id="cantidad_ad_libitum_maturana_tinta" class="inputcantidad" value="1" min="1">
+                    <button onclick="añadirAlCarrito('Bodegas Sancha - Ad Libitum | Maturana Tinta', 'cantidad_ad_libitum_maturana_tinta')">Añadir al carrito</button>
+                </div>
             </div>
             <div class="producto">
-                <img src="img/sancha/ad_libitum_monastel_de_rioja_2012.jpg" alt="la_merced">
-                <p>Ad Libitum | Monastel de Rioja</p>
-                <h3><a href="doc/sancha/ad_libitum_monastel_de_rioja_2012.pdf">VIEW DETAILS</a></h3>
-                <a href="../formulario-en.html?producto=Bodegas%20Sancha%20-%20Ad%20Libitum%20%7C%20Monastel%20de%20Rioja">
-                    <button>Request this Product</button></a>
+                <img src="img/sancha/ad_libitum_monastel_de_rioja_2012.webp" alt="Botella de vino Ad Libitum | Monastel de Rioja">
+                <h3>Ad Libitum | Monastel de Rioja</h3>
+                <p><a href="doc/sancha/ad_libitum_monastel_de_rioja.pdf">VER FICHA</a></p>
+                <div class="control-cantidad">
+                    <label for="cantidad_ad_libitum_monastel_de_rioja" class="visually-hidden">Cantidad Ad Libitum Monastel de Rioja</label>
+                    <input type="number" id="cantidad_ad_libitum_monastel_de_rioja" class="inputcantidad" value="1" min="1">
+                    <button onclick="añadirAlCarrito('Bodegas Sancha - Ad Libitum | Monastel de Rioja', 'cantidad_ad_libitum_monastel_de_rioja')">Añadir al carrito</button>
+                </div>
             </div>
             <div class="producto">
-                <img src="img/sancha/peña_el_gato_garnacha_viñas_viejas_2012.jpg" alt="la_merced">
-                <p>Peña El Gato | Garnacha Viñas Viejas</p>
-                <h3><a href="doc/sancha/peña_el_gato_garnacha_viñas_viejas_2012.pdf">VIEW DETAILS</a></h3>
-                <a href="../formulario-en.html?producto=Bodegas%20Sancha%20-%20Pe%C3%B1a%20El%20Gato%20%7C%20Garnacha%20Vi%C3%B1as%20Viejas">
-                    <button>Request this Product</button></a>
+                <img src="img/sancha/peña_el_gato_garnacha_viñas_viejas_2012.webp" alt="Botella de vino Peña El Gato | Garnacha Viñas Viejas">
+                <h3>Peña El Gato | Garnacha Viñas Viejas</h3>
+                <p><a href="doc/sancha/pena_el_gato_clasico.pdf">VER FICHA</a></p>
+                <div class="control-cantidad">
+                    <label for="cantidad_peña_el_gato_garnacha_viñas_viejas" class="visually-hidden">Cantidad Peña El Gato Garnacha Viñas Viejas</label>
+                    <input type="number" id="cantidad_peña_el_gato_garnacha_viñas_viejas" class="inputcantidad" value="1" min="1">
+                    <button onclick="añadirAlCarrito('Bodegas Sancha - Peña El Gato | Garnacha Viñas Viejas', 'cantidad_peña_el_gato_garnacha_viñas_viejas')">Añadir al carrito</button>
+                </div>
             </div>
             <div class="producto">
-                <img src="img/sancha/el_gato_natural_garnacha.png" alt="la_merced">
-                <p>Peña El Gato | Natural "Sulphite-Free"</p>
-                <h3><a href="">VIEW DETAILS</a></h3>
-                <a href="../formulario-en.html?producto=Bodegas%20Sancha%20-%20Pe%C3%B1a%20El%20Gato%20%7C%20Natural%20%22Sin%20Sulfitos%22">
-                    <button>Request this Product</button></a>
+                <img src="img/sancha/el_gato_natural_garnacha.webp" alt="Botella de vino Peña El Gato | Natural 'Sin Sulfitos'">
+                <h3>Peña El Gato | Natural "Sin Sulfitos"</h3>
+                <p><a href="doc/sancha/pena_el_gato_natural.pdf">VER FICHA</a></p>
+                <div class="control-cantidad">
+                    <label for="cantidad_peña_el_gato_natural" class="visually-hidden">Cantidad Peña El Gato Natural</label>
+                    <input type="number" id="cantidad_peña_el_gato_natural" class="inputcantidad" value="1" min="1">
+                    <button onclick="añadirAlCarrito('Bodegas Sancha - Peña El Gato | Natural - Sin Sulfitos', 'cantidad_peña_el_gato_natural')">Añadir al carrito</button>
+                </div>
+            </div>
+             <div class="producto">
+                <img src="img/sancha/pena_el_gato_tianaja.webp" alt="Botella de vino Peña El Gato | Tinaja">
+                <h3>Peña El Gato | Tinaja</h3>
+                <p><a href="doc/sancha/pena_el_gato_tinaja.pdf">VER FICHA</a></p>
+                <div class="control-cantidad">
+                    <label for="cantidad_peña_el_gato_tinaja" class="visually-hidden">Cantidad Peña El Gato Tinaja</label>
+                    <input type="number" id="cantidad_peña_el_gato_tinaja" class="inputcantidad" value="1" min="1">
+                    <button onclick="añadirAlCarrito('Bodegas Sancha - Peña El Gato | Tinaja', 'cantidad_peña_el_gato_tinaja')">Añadir al carrito</button>
+                </div>
             </div>
             <div class="producto">
-                <img src="img/sancha/pena_el_gato_tianaja.png" alt="la_merced">
-                <p>Peña El Gato | Tinaja</p>
-                <h3><a href="">VIEW DETAILS</a></h3>
-                <a href="../formulario-en.html?producto=Bodegas%20Sancha%20-%20Pe%C3%B1a%20El%20Gato%20%7C%20Tinaja">
-                    <button>Request this Product</button></a>
+                <img src="img/sancha/el_gato_granito_granita.webp" alt="Botella de vino Peña El Gato | Granito">
+                <h3>Peña El Gato | Granito</h3>
+                <p><a href="doc/sancha/pena_el_gato_granito.pdf">VER FICHA</a></p>
+                <div class="control-cantidad">
+                    <label for="cantidad_peña_el_gato_granito" class="visually-hidden">Cantidad Peña El Gato Granito</label>
+                    <input type="number" id="cantidad_peña_el_gato_granito" class="inputcantidad" value="1" min="1">
+                    <button onclick="añadirAlCarrito('Bodegas Sancha - Peña El Gato | Granito', 'cantidad_peña_el_gato_granito')">Añadir al carrito</button>
+                </div>
             </div>
-            <div class="producto">
-                <img src="img/sancha/el_gato_granito_granita.png" alt="la_merced">
-                <p>Peña El Gato | Granito</p>
-                <h3><a href="">VIEW DETAILS</a></h3>
-                <a href="../formulario-en.html?producto=Bodegas%20Sancha%20-%20Pe%C3%B1a%20El%20Gato%20%7C%20Granito">
-                    <button>Request this Product</button></a>
+             <div class="producto">
+                <img src="img/sancha/el_gato_garnachas_centenarias_coleccion.webp" alt="Botella de vino Peña El Gato | Colección">
+                <h3>Peña El Gato | Colección</h3>
+                <p><a href="doc/sancha/pena_el_gato_garnachas_centenarias.pdf">VER FICHA</a></p>
+                <div class="control-cantidad">
+                    <label for="cantidad_peña_el_gato_coleccion" class="visually-hidden">Cantidad Peña El Gato Coleccion</label>
+                    <input type="number" id="cantidad_peña_el_gato_coleccion" class="inputcantidad" value="1" min="1">
+                    <button onclick="añadirAlCarrito('Bodegas Sancha - Peña El Gato | Colección', 'cantidad_peña_el_gato_coleccion')">Añadir al carrito</button>
+                </div>
             </div>
-            <div class="producto">
-                <img src="img/sancha/el_gato_garnachas_centenarias_coleccion.png" alt="la_merced">
-                <p>Peña El Gato | Colección</p>
-                <h3><a href="doc/sancha/peña_el_gato_colección_2021.pdf">VIEW DETAILS</a></h3>
-                <a href="../formulario-en.html?producto=Bodegas%20Sancha%20-%20Pe%C3%B1a%20El%20Gato%20%7C%20Colecci%C3%B3n">
-                    <button>Request this Product</button></a>
-            </div>
-            
         </div>
     </div>
+</section>
 </main>
+
 <footer>
-    <p>To place an order, contact us <a href="../formulario-en.html">HERE</a></p>
+    <p>To place an order, contact us <a href="../formulario-en.html">using this form.</a></p>
     <p>
         <a href="../privacy-policy.html">Privacy Policy</a> |
         <a href="../cookie-policy.html">Cookie Policy</a>
     </p>
-</footer>
+  </footer>
+    <script src="js/añadir_al_carrito.js"></script>
+    <script src="js/cart_icon.js"></script>
     <script src="js/navbar.js"></script>
 </body>
 </html>
