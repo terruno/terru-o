@@ -3,66 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>BODEGAS EMILIO VALERIO</title>
-    <link rel="stylesheet" href="css/emilio_valerio_aceite.css"> 
+    <title>Bodega Aixalà I Alcait | Terruño Único</title>
+    <meta name="description" content="Descubre el catálogo de productos de Bodegas Emilio Valerio, una bodega destacada por su selección de vinos de calidad. Encuentra una variedad de opciones para todos los gustos, con información detallada sobre cada uno de sus vinos.">
+    <link rel="icon" href="../img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/aixala_alcait_aceite.css"> 
 </head>
+
 <body>
     <header>
         <div class="navbar">
             <div class="logo">
-                <a href="../index-en.html"><img src="../img/terruno_logo.png" alt="Logo de Terruño"></a>  
+                <a href="../index-en.html"><img src="../img/terruno_logo.webp" alt="Inicio - Terruño Único"></a>   
             </div>
-            <div class="menu-toggle" id="menu-toggle">☰</div>
+            <div class="menu-toggle" id="menu-toggle" aria-label="Abrir menú de navegación">☰</div>
             <nav>
                 <ul class="menu">
                     <li><a href="../index-en.html#bodegas">Wines</a></li>
                     <li><a href="../index-en.html#almazaras">Oils</a></li>
-                    <li><a href="../index-en.html#navarra">Delicacies from Spain</a></li>
+                    <li><a href="../index.html#otros">Iberian Delicacies</a></li>
+                    <li><a href="../dop_españa-en.html">D.O. Spain</a></li>
+                    <li><a href="">News</a></li>
                     <li><a href="../formulario-en.html">Contact</a></li>
                 </ul>
             </nav>
+            <div class="carrito_logo">
+                <a href="../carrito-en.html"><img src="../img/carrito_logo.webp" alt="Logo de carrito"></a>  
+                <span class="contador-carrito" id="cart-count">0</span>
+            </div>
             <div class="language-switch">
                 <a href="../../es/almazaras/emilio_valerio_aceite.html">ES</a> | <a href="emilio_valerio_aceite_en.html">EN</a>
             </div>
         </div>
     </header>
+
     <main>
-    <div class="container">
-        <div class="logo_bodega">
-            <img src="img/emilio_valerio/logo.PNG" id="logo_emilio_valerio" alt="Logo de Emilio Valerio">
-            
-        </div>
-        <div class="texto">
+        <section aria-labelledby="info-bodega-emilio-valerio"></section>
+        <div class="container">
+            <div class="logo_bodega">
+                <img src="img/emilio_valerio/logo.webp" id="logo_emilio_valerio" alt="Logo de Emilio Valerio"> 
+            </div>
+            <div class="texto">
             <h1>BODEGAS EMILIO VALERIO | Laderas de Montejurra</h1>
-            <p>Emilio Valerio - Laderas de Montejurra is a family-run winery known for its commitment to preserving the biodiversity of the Montejurra valleys, practising biodynamic agriculture, and producing high-quality wines on the southern slopes of Montejurra, across more than 50 small plots in the Tierra Estella subzone.</p>
+            <p>The Emilio Valerio winery produces its wines with a deep respect for the land and the natural rhythms of the vineyard. They practice organic and biodynamic viticulture, without the use of chemical products, and cultivate each plot using manual and traditional methods, including tillage with horses. This way of understanding the countryside, in harmony with the environment, gives rise to authentic and expressive wines, which reflect the character of the landscape from which they come. All their wines are certified organic and biodynamic, and have been recognised both nationally and internationally for their quality and uniqueness.</p>
             <p>In addition to its renowned wines, Emilio Valerio also produces an exclusive extra virgin olive oil. This is a premium-grade oil, obtained directly from olives and solely through mechanical means, using cold extraction to preserve its flavour and natural properties to the fullest.</p>
             <p>The oil is made entirely from Arróniz olives, a native variety that gives it a distinctive character and a strong sense of place. Production is strictly limited, with a maximum of 3,000 half-litre bottles per harvest. It has an exceptionally low acidity level of just 0.2%, a clear indicator of the extraordinary quality and care invested throughout the entire production process.</p>
         </div>
     </div>
-
-
+</section>
+<section aria-labelledby="catalogo-aceites">
     <div class="catalogo">
-        <h2>Product Catalogue</h2>
+        <h2>Catálogo de Aceites</h2>
         <div class="productos">
             <div class="producto">
-                <img src="img/emilio_valerio/aceite_sanfa_fe_de_oiquina.PNG" alt="Aceite Santa Fe de Oiquina">
-                <p>Aceite Santa Fe de Oiquina</p>
-                <h3><a href="doc/aceite_sanfa_fe_de_oiquina.pdf">VIEW DETAILS</a></h3>
-                    <a href="../formulario-en.html?producto=Emilio%20Valerio%20-%20Aceite%20Santa%20Fe%20de%20Oiquina">
-                    <button>Request this Product</button></a>
+                <img src="img/emilio_valerio/aceite_sanfa_fe_de_oiquina.webp" alt="Aceite Santa Fe de Oiquina">
+                <h3>Aceite Santa Fe de Oiquina</h3>
+                <p><a href="doc/emilio_valerio/aceite_sanfa_fe_de_oiquina.pdf">VER FICHA</a></p>
+                <div>
+                    <input type="number" id="cantidad_aceite_santa_fe_de_oiquina" class="inputcantidad" value="1" min="1">
+                    <button onclick="añadirAlCarrito('Bodega Aixalà I Alcait - Aceite Santa Fe de Oiquina', 'cantidad_aceite_santa_fe_de_oiquina')">Añadir al carrito</button>
+                </div>
             </div>
         </div>
 
     </div>
 </main>
 <footer>
-    <p>To place an order, contact us <a href="../formulario-en.html">HERE</a></p>
+    <p>To place an order, contact us <a href="../formulario-en.html">using this form.</a></p>
     <p>
         <a href="../privacy-policy.html">Privacy Policy</a> |
         <a href="../cookie-policy.html">Cookie Policy</a>
     </p>
-</footer>
-<script src="js/navbar.js"></script>
+  </footer>
+    <script src="js/añadir_al_carrito.js"></script>
+    <script src="js/cart_icon.js"></script>
+    <script src="js/navbar.js"></script>
 </body>
 </html>

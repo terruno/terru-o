@@ -5,11 +5,12 @@ body {
     background: black;
     background-image: 
         linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url("../img/isul/isul_fondo.jpg");
+        url("../img/isul/isul_fondo.webp");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
 }
+
 /* BARRA SUPERIOR */
 .navbar {
     display: flex;
@@ -62,6 +63,34 @@ nav ul li a:hover {
     border-radius: 5px;
 }
 
+/*CARRITO*/
+.carrito_logo {
+    position: absolute;
+    right: 100px;
+    width: 38px;
+    height: 38px;
+    cursor: pointer;
+}
+
+.navbar .carrito_logo a img {
+    height: 38px;
+    width: auto;
+}
+
+.contador-carrito {
+    position: absolute;
+    top: -16px;
+    right: -9px;
+    background-color: #5A1E29;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 50%;
+    padding: 4px 6px;
+    min-width: 18px;
+    text-align: center;
+}
+
 /*IDIOMAS*/
 .language-switch a {
     text-decoration: none;
@@ -84,8 +113,47 @@ nav ul li a:hover {
 
 /* Responsive: cambia a menú vertical */
 @media (max-width: 768px) {
+    
+
+    .navbar {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 15px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    .logo {
+        flex-shrink: 0;
+    }
+
+    /* Centrar el carrito en móviles */
+    .carrito_logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 38px;
+        height: 38px;
+    }
+
+    .contador-carrito {
+        top: -10px;
+        right: -10px;
+    }
+
     .menu-toggle {
         display: block;
+        font-size: 28px;
+        color: white;
+        cursor: pointer;
     }
 
     nav {
@@ -94,17 +162,23 @@ nav ul li a:hover {
 
     nav ul {
         flex-direction: column;
-        background-color: #222;
         width: 100%;
-        display: none; /* Oculto por defecto */
+        display: none;
+        margin-top: 10px;
+        background-color: #222;
+        padding: 0;
+        z-index: 10;
+        position: relative;
     }
 
     nav ul.show {
-        display: flex; /* Mostrado cuando se activa el toggle */
+        display: flex;
     }
 
     nav ul li {
-        margin: 10px 0;
+        width: 100%;
+        padding: 0;
+        margin: 0;
         text-align: left;
     }
 
@@ -113,6 +187,26 @@ nav ul li a:hover {
         padding: 12px 20px;
         display: block;
         width: 100%;
+    }
+
+    .language-switch {
+        display: flex;
+        margin-right: 30px;
+    }
+
+    nav ul li.language-switch {
+        display: flex !important;
+        justify-content: flex-start;
+        padding: 10px 20px;
+    }
+
+    nav ul li.language-switch a {
+        color: white;
+        margin-right: 10px;
+    }
+
+    nav ul li.language-switch a:hover {
+        color: #5A1E29;
     }
 }
 /*BARRA SUPERIOR*/
@@ -151,6 +245,7 @@ nav ul li a:hover {
     padding: 30px;
     border-radius: 10px;
     backdrop-filter: blur(5px);
+    text-align: justify;
 }
 
 h1 {
@@ -160,6 +255,26 @@ h1 {
 
 p {
     font-size: 1.1em;
+}
+
+.etiquetas-container {
+    display: flex;
+    flex-direction: row; /* Esto coloca los elementos en una fila horizontal */
+    align-items: center; /* Alinea verticalmente los elementos (opcional) */
+    justify-content: flex-end; /* Alinea los elementos al final del contenedor (a la derecha) */
+    padding: 10px;
+    gap: 20px; /* Espacio entre las imágenes */
+}
+
+.etiquetas-container img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+#dop_aceite_la_rioja {
+    width: 70px;
+    height: auto;
 }
 
 /*CATÁLOGO DE PRODUCTOS*/
@@ -213,25 +328,31 @@ p {
     transform: scale(1.03);
 }
 
+.producto h3 {
+    font-size: 1.3em;
+    font-family: 'Roboto', sans-serif; /* Cambia la tipografía */
+    color: #2a2a2a; /* Un tono más oscuro para mayor contraste */
+    margin: 10px 0; /* Aumenta el espacio alrededor */
+    min-height: 30px; /* Aumenta la altura mínima */
+    letter-spacing: 1px; /* Añade un pequeño espacio entre las letras */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Añade una sombra sutil */
+}
+
 .producto p {
-    font-size: 1.1em;
+    font-size: 1.3em;
     color: #333;
     margin: 5px 0;
     min-height: 24px;
 }
 
-.producto h3 {
-    margin: 10px 0;
-}
-
-.producto h3 a {
+.producto p a {
     text-decoration: none;
     color: #2f855a;
     font-weight: 600;
     transition: color 0.3s;
 }
 
-.producto h3 a:hover {
+.producto p a:hover {
     color: #2f855a;
 }
 
@@ -249,6 +370,40 @@ p {
 
 .producto button:hover {
     background-color: #005f6b;
+}
+
+/*Configuración botonos añadir a carrito*/
+.control-cantidad {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* espacio entre el input y el botón */
+    margin-top: 10px;
+}
+
+.inputcantidad {
+    width: 40px;
+    height: 30px;
+    text-align: center;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    height: 36px; /* un poco más alto para igualar el input */
+    padding: 0 12px;
+    font-size: 16px;
+    border: none;
+    background-color: #2c7a7b;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    
+}
+
+button:hover {
+    background-color: #285e61;
 }
 
 /* RESPONSIVE del catálogo */
