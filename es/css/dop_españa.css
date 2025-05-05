@@ -184,6 +184,40 @@ nav ul li a:hover {
     line-height: 1.4;
 }
 
+/*SEGUNDA FILA*/
+
+.fila-inferior {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.texto_vinedo_singular{
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 30px;
+    border-radius: 12px;
+    font-size: 16px;
+    line-height: 1.6;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    color: #333;
+    text-align: justify;
+}
+
+.texto_vino_de_autor{
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 30px;
+    border-radius: 12px;
+    font-size: 16px;
+    line-height: 1.6;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    color: #333;
+    text-align: justify;
+}
+
+
+
 /* FOOTER */
 footer {
     background-color: #5A1E29;
