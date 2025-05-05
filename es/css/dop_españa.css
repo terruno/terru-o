@@ -4,7 +4,7 @@ body {
     color: rgb(0, 0, 0);
     background: black;
     background-image: 
-        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
         url("../img/dop_españa/fondo_dop_españa.webp");
     background-size: cover;
     background-position: center;
@@ -133,6 +133,7 @@ nav ul li a:hover {
     color: white;
 }
 
+
 /* Sección mapa */
 .catalogo {
     background-color: #f8f8f8;
@@ -145,7 +146,8 @@ nav ul li a:hover {
     font-size: 2em;
 }
 
-.fila-mapa {
+.fila-mapa,
+.fila-inferior {
     display: flex;
     gap: 20px;
     align-items: flex-start;
@@ -158,9 +160,21 @@ nav ul li a:hover {
     font-size: 16px;
     line-height: 1.6;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    text-align: left;
     color: #333;
     text-align: justify;
+}
+
+.texto_vino_de_autor {
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 30px;
+    border-radius: 12px;
+    font-size: 16px;
+    line-height: 1.6;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    color: #333;
+    text-align: justify;
+    margin-top: 20px;
+    
 }
 
 .texto_mapa {
@@ -168,7 +182,7 @@ nav ul li a:hover {
 }
 
 .mapa {
-    flex: 7;
+    flex: 6;
 }
 
 .mapa img {
@@ -184,54 +198,45 @@ nav ul li a:hover {
     line-height: 1.4;
 }
 
-/*SEGUNDA FILA*/
 
-.fila-inferior {
+/*BLOQUE DE IMAGENES DOP*/
+.bloque-imagenes {
     display: flex;
-    gap: 20px;
-    align-items: flex-start;
+    flex-direction: column; /* Las imágenes estarán apiladas verticalmente */
+    gap: 20px; /* Espacio entre las filas */
+    max-width: 400px; /* Puedes ajustar el tamaño máximo según tu diseño */
+    margin: 0 auto; /* Centra el bloque */
+    margin-top: 20px;
 }
 
-.texto_vinedo_singular{
-    background-color: rgba(255, 255, 255, 0.85);
-    padding: 30px;
-    border-radius: 12px;
-    font-size: 16px;
-    line-height: 1.6;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    text-align: left;
-    color: #333;
-    text-align: justify;
+.fila-imagenes {
+    display: flex;
+    gap: 20px; /* Espacio entre las imágenes */
+    justify-content: space-between; /* Distribuye las imágenes en la fila */
 }
 
-.texto_vino_de_autor{
-    background-color: rgba(255, 255, 255, 0.85);
-    padding: 30px;
-    border-radius: 12px;
-    font-size: 16px;
-    line-height: 1.6;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    text-align: left;
-    color: #333;
-    text-align: justify;
+.imagen {
+    width: 48%; /* Ajusta el tamaño de las imágenes, puedes cambiar este valor */
+    height: auto;
+    border-radius: 10px; /* Redondea las esquinas de las imágenes */
 }
 
 
-
-/* FOOTER */
+/* Footer */
 footer {
     background-color: #5A1E29;
     color: #D4AF37;
     padding: 10px;
-    margin-top: 0px;
     text-align: center;
     font-family: Arial, sans-serif;
     font-size: 14.5px;
 }
+
 footer a {
-    color: #ffff; /* Un color oscuro para mejorar el contraste */
-    text-decoration: underline; /* Subrayado */
-  }
+    color: #fff;
+    text-decoration: underline;
+}
+
 
 /* Responsive: cambia a menú vertical */
 @media (max-width: 768px) {
@@ -399,6 +404,20 @@ footer a {
         font-size: 12px;
         margin-top: 10px;
         line-height: 1.4;
+    }
+
+    .fila-inferior {
+        flex-direction: column;
+        padding: 0 10px;
+    }
+
+    .fila-imagenes {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .imagen {
+        width: 48%;
     }
 
     .footer {
