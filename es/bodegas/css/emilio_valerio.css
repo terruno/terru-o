@@ -336,6 +336,12 @@ margin-bottom: 0px;
     font-weight: 700;
 }
 
+.producto .penin {
+    font-family: Arial, sans-serif;
+    font-size: 1.1em;
+    color: #249415;
+}
+
 .productos {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
