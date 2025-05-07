@@ -1,0 +1,180 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #D6D6D6;
+    font-size: 18px;  /* Ajustar el tamaño de la letra aquí */
+}
+
+/* BARRA SUPERIOR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10px;
+    background-color: #222;
+    color: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.navbar .logo a img {
+    height: 50px;
+    width: auto;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    user-select: none;
+    color: white;
+}
+
+/* Menú horizontal por defecto */
+nav ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #5A1E29;
+    border-radius: 5px;
+}
+
+/* CARRITO */
+.carrito_logo {
+    position: absolute;
+    right: 120px;
+    width: 38px;
+    height: 38px;
+    cursor: pointer;
+}
+
+.navbar .carrito_logo a img {
+    height: 38px;
+    width: auto;
+}
+
+.contador-carrito {
+    position: absolute;
+    top: -16px;
+    right: -9px;
+    background-color: #5A1E29;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 50%;
+    padding: 4px 6px;
+    min-width: 18px;
+    text-align: center;
+}
+
+/* IDIOMAS */
+.language-switch a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    margin: 0 5px;
+    transition: color 0.3s ease;
+}
+
+.language-switch a:hover {
+    color: #5A1E29;
+}
+
+/*SECCIÓN DE NOTICIAS*/
+#noticias {
+    padding: 2rem;
+    font-family: Arial, sans-serif;
+  }
+
+  .blog-wrapper {
+    max-width: 800px;   /* o 900px, según prefieras */
+    margin: 0 auto;     /* centra el contenido horizontalmente */
+    padding: 0 1rem;    /* espacio lateral en pantallas pequeñas */
+  }
+  
+  .blog-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .blog-post {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #25242494;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color:white;
+  }
+  
+  .blog-post img {
+    width: 100%;             /* ocupa todo el ancho del contenedor */
+    height: 200px;           /* ajusta esta altura según tu diseño */
+    object-fit: cover;       /* recorta lo que sobre */
+    object-position: center 70%; /* centra la imagen en el recorte */
+    display: block;
+  }
+  
+  .post-content {
+    padding: 1rem;
+  }
+  
+  .post-content .date {
+    font-size: 0.9rem;
+    color: #777;
+  }
+  
+  .post-content h2 {
+    margin: 0.5rem 0;
+  }
+  
+  .post-content p {
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  .post-content a {
+    display: inline-block;
+    margin-top: 0.5rem;
+    color: #007b5e;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .post-content a:hover {
+    text-decoration: underline;
+  }
+  
+
+
+/*SECCIÓN FOOTER*/
+footer {
+    background-color: #5A1E29;
+    color: #D4AF37;
+    padding: 10px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 14.5px;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: underline;
+}
