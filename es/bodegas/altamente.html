@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Altamente Vinos | Terruño Único</title>
+    <meta name="description" content="Descubre el catálogo de productos de Altamente, una bodega destacada por su selección de vinos de calidad. Encuentra una variedad de opciones para todos los gustos, con información detallada sobre cada uno de sus vinos.">
+    <link rel="icon" href="../img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/altamente.css">
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <a href="../index.html"><img src="../img/terruno_logo.webp" alt="Inicio - Terruño Único"></a>  
+            </div>
+            <div class="menu-toggle" id="menu-toggle" aria-label="Abrir menú de navegación">☰</div>
+            <nav>
+                <ul class="menu">
+                    <li><a href="../index.html#bodegas">Vinos</a></li>
+                    <li><a href="../index.html#almazaras">Aceites</a></li>
+                    <li><a href="../index.html#otros">Delicias Ibéricas</a></li>
+                    <li><a href="../dop_españa.html">Calidad Certificada</a></li>
+                    <li><a href="../news.html">Noticias</a></li>
+                    <li><a href="../formulario.html">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="carrito_logo">
+                <a href="../carrito.html"><img src="../img/carrito_logo.webp" alt="Logo de carrito"></a>  
+                <span class="contador-carrito" id="cart-count">0</span>
+            </div>
+            <div class="language-switch">
+                <a href="altamente.html">ES</a> | <a href="../../en/bodegas/altamente_en.html">EN</a>
+            </div>
+        </div>
+    </header>
+
+<main>
+    <section>    
+        <div class="container">
+        <div class="logo_bodega">
+            <img src="img/altamente/altamente_con_fondo.webp" id="logo_bodega" alt="Logo Bodegas Altamente"> 
+        </div>
+        <div class="texto">
+            <h1>ALTAMENTE</h1>
+            <div class="etiquetas-container">
+                <img src="img/eurohoja.webp" id="eurohoja" alt="logo de Eurohoja">
+                <img src="img/denominacion_origen/dop_jumilla.webp" id="do_jumilla" alt="Denominacion de Origen Jumilla">
+            </div>
+        </div>
+    </div>
+</section>
+<section aria-labelledby="catalogo-vinos">
+    <div class="catalogo">
+        <h2>Catálogo de Vinos</h2>
+        <div class="productos">
+            <div class="producto">
+                <img src="img/altamente/altamente.webp" alt="Botella de vino Altamente | Altamente">
+                <h3>Altamente</h3>
+                <p>Vino tinto joven ecológico </p>
+                <p><a href="doc/altamente/altamente.pdf">VER FICHA</a></p>
+                <div class="control-cantidad">
+                    <label for="cantidad_altamente" class="visually-hidden">Cantidad Altamente | Altamente</label>
+                    <input type="number" id="cantidad_altamente" class="inputcantidad" value="1" min="1">
+                    <button onclick="añadirAlCarrito('Altamente | Altamente', 'cantidad_altamente')">Añadir al carrito</button>
+                </div>
+            </div>
+            <div class="producto">
+                <img src="img/altamente/volalto.webp" alt="Botella de vino Altamente | Volalto">
+                <h3>Volalto</h3>
+                <p>Vino tinto ecológico con crianza</p>
+                <p><a href="doc/altamente/volalto.pdf">VER FICHA</a></p>
+                <div class="control-cantidad">
+                    <label for="cantidad_volalto" class="visually-hidden">Cantidad Altamente | Volalto</label>
+                    <input type="number" id="cantidad_volalto" class="inputcantidad" value="1" min="1">
+                    <button onclick="añadirAlCarrito('Altamente | Volalto', 'cantidad_volalto')">Añadir al carrito</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</main>
+<footer>
+     <p>Para realizar un pedido, contáctanos <a href="../formulario.html">mediante este formulario.</a>></p>
+    <p>
+          <a href="../politica-privacidad.html">Política de Privacidad</a> |
+          <a href="../politica-cookies.html">Política de Cookies</a>
+    </p>
+</footer>
+
+    <script src="js/añadir_al_carrito.js"></script>
+    <script src="js/cart_icon.js"></script>
+    <script src="js/navbar.js"></script>
+</body>
+</html>
