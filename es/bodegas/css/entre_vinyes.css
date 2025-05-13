@@ -265,7 +265,7 @@ p {
     align-items: center; /* Alinea verticalmente los elementos (opcional) */
     justify-content: flex-end; /* Alinea los elementos al final del contenedor (a la derecha) */
     padding: 0px;
-    gap: 0px; /* Espacio entre las imágenes */
+    gap: 10px; /* Espacio entre las imágenes */
 }
 
 .etiquetas-container img {
@@ -275,6 +275,15 @@ margin-bottom: 0px;
 }
 
 #eurohoja {
+    max-width: 100px;
+}
+
+#do_penedes {
+    max-width: 100px;
+border-radius: 10px; /* ajusta el radio para más o menos redondez */
+}
+
+#do_cava {
     max-width: 100px;
 }
 
