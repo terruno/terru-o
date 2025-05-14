@@ -23,9 +23,17 @@ body {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
 }
 
+.navbar .logo {
+    height: 60px; /* o lo que mida actualmente tu barra */
+    overflow: hidden; /* evita que la imagen desborde la barra */
+    display: flex;
+    align-items: center;
+}
+
 .navbar .logo a img {
-    height: 50px;
+    height: 100px; /* agrandas la imagen más allá del alto del contenedor */
     width: auto;
+    object-fit: contain;
 }
 
 .menu-toggle {
