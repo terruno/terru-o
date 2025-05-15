@@ -1,14 +1,8 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    color: rgb(0, 0, 0);
-    background: black;
-    background-image: 
-        linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-        url("../img/dop_españa/fondo_dop_españa.webp");
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    color: #333;
+    background-color: #f8f8f8;
     font-size: 18px;  /* Ajustar el tamaño de la letra aquí */
 }
 
@@ -111,86 +105,75 @@ nav ul li a:hover {
     color: #5A1E29;
 }
 
-/* Contenedor principal */
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    width: 90%;
-    align-items: center;
-    justify-content: center;
-    margin: 40px auto;
-    gap: 20px;
+
+/*SECCIÓN INTRODUCTORIA*/
+.contenedor-informacion_intro {
+    background-color: #f8f8f8;
+    padding: 20px 10px;
+    text-align: center;
+    color: #333;
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        url("../img/dop_españa/fondo_dop_españa_3.webp");
 }
 
-.texto {
-    flex: 2;
-    background: rgba(255, 255, 255, 0.2);
+.contenedor-informacion_intro .texto {
+    margin: 0 auto;
     padding: 30px;
-    border-radius: 10px;
-    backdrop-filter: blur(5px);
-    color: white;
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.85);
+    font-size: 16px;
+    line-height: 1.6;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    color: #333;
     text-align: justify;
 }
 
-.texto h1{
-    color: white;
+.contenedor-informacion_intro h1 {
     text-align: center;
-}
-.texto p {
-    color: white;
+    font-size: 2.5em;
 }
 
 
-/* Sección mapa */
-.catalogo {
+/* SECCIÓN TEXTOS-MAPA */
+.contenedor-informacion_mapa {
     background-color: #f8f8f8;
-    padding: 60px 20px;
+    padding: 10px 10px;
     text-align: center;
     color: #333;
 }
 
-.catalogo h2 {
+.contenedor-informacion_mapa h2 {
     font-size: 2em;
 }
 
-.fila-mapa,
-.fila-inferior {
+.fila-mapa {
     display: flex;
     gap: 20px;
     align-items: flex-start;
 }
 
-.texto_mapa {
+.texto {
     background-color: rgba(255, 255, 255, 0.85);
     padding: 30px;
     border-radius: 12px;
     font-size: 16px;
     line-height: 1.6;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     color: #333;
     text-align: justify;
 }
 
-.texto_vino_de_autor {
-    background-color: rgba(255, 255, 255, 0.85);
-    padding: 30px;
-    border-radius: 12px;
-    font-size: 16px;
-    line-height: 1.6;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    color: #333;
-    text-align: justify;
-    margin-top: 20px;
-    
-}
-
-.texto_mapa {
+.texto {
     flex: 4;
 }
 
+.texto_vino_de_autor {
+    margin-top: 20px;
+}
+
 .mapa {
-    flex: 6;
+    flex: 5;
 }
 
 .mapa img {
@@ -206,27 +189,106 @@ nav ul li a:hover {
     line-height: 1.4;
 }
 
-
-/*BLOQUE DE IMAGENES DOP*/
-.bloque-imagenes {
+/*SECCIÓN INFERIOR*/
+.fila-inferior {
     display: flex;
-    flex-direction: column; /* Las imágenes estarán apiladas verticalmente */
-    gap: 20px; /* Espacio entre las filas */
-    max-width: 400px; /* Puedes ajustar el tamaño máximo según tu diseño */
-    margin: 0 auto; /* Centra el bloque */
-    margin-top: 20px;
+    gap: 20px;
+    align-items: flex-start;
+    padding: 20px 10px;
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("../img/dop_españa/fondo_dop_españa_2.webp");
 }
 
-.fila-imagenes {
-    display: flex;
-    gap: 20px; /* Espacio entre las imágenes */
-    justify-content: space-between; /* Distribuye las imágenes en la fila */
+.viñedo_singular{
+    flex: 5;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.85);
+    font-size: 16px;
+    line-height: 1.6;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    color: #333;
+    text-align: justify;
 }
 
-.imagen {
-    width: 48%; /* Ajusta el tamaño de las imágenes, puedes cambiar este valor */
+.texto_vino_de_autor {
+    flex: 5;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.85);
+    font-size: 16px;
+    line-height: 1.6;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    color: #333;
+    text-align: justify;
+}
+
+/*FILA FINAL*/
+.fila-mas-inferior {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    padding: 10px 20px;
+}
+
+.eurohoja {
+    flex: 2;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.85);
+    font-size: 16px;
+    line-height: 1.6;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    color: #333;
+    text-align: justify;
+}
+
+.eurohoja img {
+  width: 80px; /* Ajusta el tamaño según necesites */
+  height: auto;
+  border-radius: 10%;
+}
+
+.eurohoja p {
+  margin: 0;
+  text-align: justify;
+}
+
+.titulo-eurohoja {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* o "flex-start" si prefieres que estén más juntos */
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.titulo-eurohoja h2 {
+    margin: 0;
+    font-size: 1.5em;
+    flex: 1;
+}
+
+.titulo-eurohoja img {
+    width: 80px;
     height: auto;
-    border-radius: 10px; /* Redondea las esquinas de las imágenes */
+    border-radius: 10%;
+}
+
+.vinos_de_pago {
+    flex: 8;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.85);
+    font-size: 16px;
+    line-height: 1.6;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    color: #333;
+    text-align: justify;
 }
 
 
@@ -244,6 +306,9 @@ footer a {
     color: #fff;
     text-decoration: underline;
 }
+
+
+
 
 
 /* Responsive: cambia a menú vertical */
