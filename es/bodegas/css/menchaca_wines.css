@@ -4,10 +4,10 @@ body {
     color: white;
     background: black;
     background-image: 
-        linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-        url("../img/menchaca_wines/menchaca_fondo.webp");
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("../img/menchaca_wines/menchaca_wines_fondo_1.webp");
     background-size: cover;
-    background-position: center;
+    background-position: center 90%;
     background-attachment: fixed;
 }
 
@@ -278,6 +278,8 @@ p {
 width: 150px;
 height: auto;
 margin-bottom: 0px;
+border-radius: 5px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra suave */
 }
 
 @media (max-width: 768px) {
