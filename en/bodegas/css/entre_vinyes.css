@@ -283,18 +283,21 @@ p {
     margin-bottom: 0px;
     }
     
-    #eurohoja {
-        max-width: 100px;
-    }
-    
-    #do_penedes {
-        max-width: 100px;
+#eurohoja {
+    max-width: 100px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra suave */
+}
+
+#do_penedes {
+    max-width: 100px;
     border-radius: 10px; /* ajusta el radio para más o menos redondez */
-    }
-    
-    #do_cava {
-        max-width: 100px;
-    }
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra suave */
+}
+
+#do_cava {
+    max-width: 100px;
+    border-radius: 2px;
+}
 
 @media (max-width: 768px) {
     .container {
