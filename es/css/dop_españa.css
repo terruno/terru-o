@@ -114,18 +114,26 @@ nav ul li a:hover {
     color: #333;
     background-image: 
         linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-        url("../img/dop_españa/fondo_dop_españa_3.webp");
+        url("../img/dop_españa/fondo_dop_españa_2.webp");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 .contenedor-informacion_intro .texto {
     margin: 0 auto;
     padding: 30px;
-    border-radius: 12px;
-    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 10px;
     font-size: 16px;
     line-height: 1.6;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    color: #333;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    flex-wrap: wrap;
+    max-width: 1200px;
+    width: 90%;
+    font-family: Arial, sans-serif;
+    color: white;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
     text-align: justify;
 }
 
@@ -145,21 +153,27 @@ nav ul li a:hover {
 
 .contenedor-informacion_mapa h2 {
     font-size: 2em;
+    text-align: center;
 }
 
 .fila-mapa {
     display: flex;
     gap: 20px;
-    align-items: flex-start;
+    align-items: stretch; /* Asegura que ambos divs tengan la misma altura */
+    flex-wrap: wrap; /* Permite que se acomode bien en pantallas pequeñas */
+}
+
+.texto,
+.mapa {
+    flex: 1 1 50%; /* Ambos ocupan el mismo ancho y pueden reducirse al 50% */
+    box-sizing: border-box;
 }
 
 .texto {
-    background-color: rgba(255, 255, 255, 0.85);
+    background-color: #f8f8f8;
     padding: 30px;
     border-radius: 12px;
     font-size: 16px;
-    line-height: 1.6;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     color: #333;
     text-align: justify;
 }
@@ -197,7 +211,7 @@ nav ul li a:hover {
     padding: 20px 10px;
     background-image: 
         linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url("../img/dop_españa/fondo_dop_españa_2.webp");
+        url("../img/dop_españa/fondo_dop_españa_1.webp");
 }
 
 .viñedo_singular{
@@ -226,6 +240,11 @@ nav ul li a:hover {
     text-align: justify;
 }
 
+.viñedo_singular h2,
+.texto_vino_de_autor h2 {
+    text-align: center;
+}
+
 /*FILA FINAL*/
 .fila-mas-inferior {
     display: flex;
@@ -234,8 +253,18 @@ nav ul li a:hover {
     padding: 10px 20px;
 }
 
-.eurohoja {
+.contenedor_eurohoja {
     flex: 2;
+    background-color: #f8f8f8;
+    padding: 30px 10px;
+    color: #333;
+}
+
+.contenedor_eurohoja h2 {
+    text-align: left;
+}
+
+.eurohoja {
     margin: 0 auto;
     padding: 30px;
     border-radius: 12px;
@@ -245,6 +274,7 @@ nav ul li a:hover {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     color: #333;
     text-align: justify;
+    flex-wrap: wrap;
 }
 
 .eurohoja img {
@@ -278,17 +308,25 @@ nav ul li a:hover {
     border-radius: 10%;
 }
 
+.contenedor_vinos_de_pago {
+    flex: 6;
+    background-color: #f8f8f8;
+    padding: 0px 10px;
+    text-align: center;
+    color: #333;
+
+}
+
 .vinos_de_pago {
-    flex: 8;
     margin: 0 auto;
     padding: 20px;
     border-radius: 12px;
-    background-color: rgba(255, 255, 255, 0.85);
+    background-color: #f8f8f8;
     font-size: 16px;
-    line-height: 1.6;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     color: #333;
     text-align: justify;
+    flex-wrap: wrap;
+    max-width: 1100px;
 }
 
 
@@ -412,6 +450,7 @@ footer a {
         overflow-x: hidden;
     }
 
+
     .container {
         display: flex; /* NECESARIO para que flex-direction funcione */
         flex-direction: column;
@@ -493,10 +532,62 @@ footer a {
         width: 48%;
     }
 
+    .fila-mas-inferior {
+        flex-direction: column;
+        padding: 15px 10px;
+        gap: 20px;
+    }
+
+    .contenedor_eurohoja,
+    .contenedor_vinos_de_pago {
+        flex: 1 1 100%;
+        width: 100%;
+        padding: 0;
+    }
+
+    .eurohoja,
+    .vinos_de_pago {
+        padding: 20px 15px;
+        font-size: 15px;
+    }
+
+    .titulo-eurohoja {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .titulo-eurohoja h2 {
+        font-size: 1.3em;
+        text-align: left;
+    }
+
+    .titulo-eurohoja img,
+    .eurohoja img {
+        width: 60px;
+    }
+
+    .vinos_de_pago h2 {
+        font-size: 1.5em;
+        text-align: left;
+    }
+
+    .vinos_de_pago h3 {
+        font-size: 1.2em;
+        margin-top: 15px;
+    }
+
+    .vinos_de_pago p,
+    .eurohoja p {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
     .footer {
         font-size: 13px;
         padding: 10px;
     }
+
   
 }
 

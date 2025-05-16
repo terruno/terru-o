@@ -217,10 +217,8 @@ nav ul li a:hover {
         color: #5A1E29;
     }
 }
+
 /*BARRA SUPERIOR*/
-
-
-
 .container {
     display: flex;
     flex-wrap: wrap;
