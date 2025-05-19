@@ -331,12 +331,30 @@ margin-bottom: 0px;
     color: #249415;
 }
 
-.productos {
+.productos_1 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
     gap: 30px;
     max-width: 1200px;
     margin: 0 auto;
+}
+
+.productos_2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin: 30px auto 0 auto; /* margen superior de 30px */
+}
+
+.productos_3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin: 30px auto 0 auto; /* margen superior de 30px */
 }
 
 .producto {
