@@ -27,7 +27,7 @@
                 </ul>
             </nav>
             <div class="carrito_logo">
-                <a href="../carrito.html"><img src="../img/carrito_logo.webp" alt="Logo de carrito"></a>  
+                <a href="../carrito-en.html"><img src="../img/carrito_logo.webp" alt="Logo de carrito"></a>  
                 <span class="contador-carrito" id="cart-count">0</span>
             </div>
             <div class="language-switch">
@@ -60,6 +60,7 @@
                 <p>Axuribeltz BIO Cheese</p>
                 <p><a href="doc/axuribeltz/axuribeltz_en.pdf">VIEW DETAILS</a></p>
                 <div>
+                    <label for="cantidad_axuribeltz" class="visually-hidden">Cantidad Queso Axuribeltz</label>
                     <input type="number" id="cantidad_axuribeltz" class="inputcantidad" value="1" min="1">
                     <button onclick="añadirAlCarrito('Axuribeltz BIO Cheese', 'cantidad_axuribeltz')">Add to Cart</button>
                 </div>
@@ -70,6 +71,7 @@
                 <p>Lezaun Grape Juice</p>
                 <p><a href="doc/bodegas_lezaun/lezaun_mosto.pdf">VIEW DETAILS</a></p>
                 <div>
+                    <label for="cantidad_mosto" class="visually-hidden">Cantidad de Mosto Lezaun</label>
                     <input type="number" id="cantidad_mosto" class="inputcantidad" value="1" min="1">
                     <button onclick="añadirAlCarrito('Bodegas Lezaun | Lezaun Mosto', 'cantidad_mosto')">Add to Cart</button>
                 </div>
@@ -80,6 +82,7 @@
                 <p>Lezaun Vinegar</p>
                 <p><a href="#">VIEW DETAILS</a></p>
                 <div>
+                    <label for="cantidad_vinagre" class="visually-hidden">Cantidad de Vinagre Lezaun</label>
                     <input type="number" id="cantidad_vinagre" class="inputcantidad" value="1" min="1">
                     <button onclick="añadirAlCarrito('Bodegas Lezaun | Lezaun Vinagre', 'cantidad_vinagre')">Add to Cart</button>
                 </div>
