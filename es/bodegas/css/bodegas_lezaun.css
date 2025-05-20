@@ -280,6 +280,11 @@ p {
     font-size: 1.1em;
 }
 
+#eurohoja {
+    max-width: 100px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra suave */
+}
+
 /*CATÁLOGO DE PRODUCTOS*/
 .catalogo {
     background-color: #f8f8f8;
