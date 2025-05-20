@@ -235,9 +235,9 @@ nav ul li a:hover {
 
 /* BARRA SUPERIOR */
 header {
-    background-color: #5A1E29;
     color: #D4AF37;
     padding: 0.3125rem;
+    background: linear-gradient(to left, #792938 0%, #5A1E29 50%, #792938 100%);
 }
 
 a {

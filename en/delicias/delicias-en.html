@@ -53,10 +53,22 @@
     <div class="catalogo">
         <div class="productos">
             <div class="producto">
+                <div class="slideshow" data-images="img/axuribeltz/quesos_axuribeltz.webp,img/axuribeltz/axuribeltz_logo.webp,img/axuribeltz/eneek.webp">
+                <img src="img/axuribeltz/quesos_axuribeltz.webp" alt="Queso Axuribeltz">
+                </div>
+                <h3>Queso Axuribeltz BIO</h3>
+                <p>Axuribeltz BIO Cheese</p>
+                <p><a href="doc/axuribeltz/axuribeltz_en.pdf">VIEW DETAILS</a></p>
+                <div>
+                    <input type="number" id="cantidad_axuribeltz" class="inputcantidad" value="1" min="1">
+                    <button onclick="añadirAlCarrito('Axuribeltz BIO Cheese', 'cantidad_axuribeltz')">Add to Cart</button>
+                </div>
+            </div>
+            <div class="producto">
                 <img src="img/lezaun-mosto.webp" alt="Botella de vino Bodegas Lezaun | Lezaun Mosto">
                 <h3>Lezaun Mosto</h3>
                 <p>Lezaun Grape Juice</p>
-                <p><a href="doc/bodegas_lezaun/lezaun_mosto.pdf">SEE INFORMATION</a></p>
+                <p><a href="doc/bodegas_lezaun/lezaun_mosto.pdf">VIEW DETAILS</a></p>
                 <div>
                     <input type="number" id="cantidad_mosto" class="inputcantidad" value="1" min="1">
                     <button onclick="añadirAlCarrito('Bodegas Lezaun | Lezaun Mosto', 'cantidad_mosto')">Add to Cart</button>
@@ -66,7 +78,7 @@
                 <img src="img/lezaun-vinagre.webp" alt="Botella de vino Bodegas Lezaun | Lezaun Vinagre">
                 <h3>Lezaun Vinagre</h3>
                 <p>Lezaun Vinegar</p>
-                <p><a href="#">SEE INFORMATION</a></p>
+                <p><a href="#">VIEW DETAILS</a></p>
                 <div>
                     <input type="number" id="cantidad_vinagre" class="inputcantidad" value="1" min="1">
                     <button onclick="añadirAlCarrito('Bodegas Lezaun | Lezaun Vinagre', 'cantidad_vinagre')">Add to Cart</button>
@@ -83,6 +95,7 @@
         <a href="../cookie-policy.html">Cookie Policy</a>
     </p>
   </footer>
+    <script src="js/slideshow.js"></script>
     <script src="js/añadir_al_carrito.js"></script>
     <script src="js/cart_icon.js"></script>
     <script src="js/navbar.js"></script>

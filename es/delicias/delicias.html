@@ -53,6 +53,17 @@
     <div class="catalogo">
         <div class="productos">
             <div class="producto">
+                <div class="slideshow" data-images="img/axuribeltz/quesos_axuribeltz.webp,img/axuribeltz/axuribeltz_logo.webp,img/axuribeltz/eneek.webp">
+                <img src="img/axuribeltz/quesos_axuribeltz.webp" alt="Queso Axuribeltz">
+                </div>
+                <h3>Queso Axuribeltz BIO</h3>
+                <p><a href="doc/axuribeltz/axuribeltz.pdf">VER FICHA</a></p>
+                <div>
+                    <input type="number" id="cantidad_axuribeltz" class="inputcantidad" value="1" min="1">
+                    <button onclick="añadirAlCarrito('Queso Axuribeltz BIO', 'cantidad_axuribeltz')">Añadir al carrito</button>
+                </div>
+            </div>
+            <div class="producto">
                 <img src="img/lezaun-mosto.webp" alt="Botella de vino Bodegas Lezaun | Lezaun Mosto">
                 <h3>Lezaun Mosto</h3>
                 <p><a href="doc/bodegas_lezaun/lezaun_mosto.pdf">VER FICHA</a></p>
@@ -81,7 +92,7 @@
           <a href="../politica-cookies.html">Política de Cookies</a>
     </p>
 </footer>
-
+    <script src="js/slideshow.js"></script>
     <script src="js/añadir_al_carrito.js"></script>
     <script src="js/cart_icon.js"></script>
     <script src="js/navbar.js"></script>
