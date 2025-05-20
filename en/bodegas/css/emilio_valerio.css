@@ -310,12 +310,6 @@ margin-bottom: 0px;
         height: auto;
         padding: 20px 0;
     }
-
-    .logo_bodega, .texto {
-        width: 100%;
-        padding: 10px;
-    }
-
     .texto {
         font-size: 1em;
     }
@@ -328,7 +322,6 @@ margin-bottom: 0px;
         width: 120px;
     }
 }
-
 
 /*CATÁLOGO DE PRODUCTOS*/
 .catalogo {

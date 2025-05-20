@@ -271,14 +271,8 @@ margin-bottom: 0px;
     .container {
         flex-direction: column;
         height: auto;
-        padding: 20px 0;
+        padding: 10px 0;
     }
-
-    .logo_bodega, .texto {
-        width: 100%;
-        padding: 10px;
-    }
-
     .texto {
         font-size: 1em;
     }

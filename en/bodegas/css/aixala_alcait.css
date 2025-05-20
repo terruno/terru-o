@@ -281,7 +281,24 @@ h1 {
 p {
     font-size: 1.1em;
 }
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        height: auto;
+        padding: 20px 0;
+    }
+    .texto {
+        font-size: 1em;
+    }
 
+    .etiquetas-container {
+        justify-content: center;
+    }
+
+    .etiquetas-container img {
+        width: 120px;
+    }
+}
 /*CATÁLOGO DE PRODUCTOS*/
 .catalogo {
     background-color: #f8f8f8;
