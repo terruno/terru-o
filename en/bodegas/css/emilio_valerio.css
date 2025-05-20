@@ -360,6 +360,21 @@ margin-bottom: 0px;
     margin: 30px auto 0 auto; /* margen superior de 30px */
 }
 
+.productos_3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin: 30px auto 0 auto; /* margen superior de 30px */
+}
+.oferta_texto {
+    font-size: 1.3em;
+    margin-bottom: 40px;
+    color: #333;
+    font-weight: 700;
+}
+
 .catalogo h3 {
     font-size: 2.5em;
     margin-bottom: 40px;
