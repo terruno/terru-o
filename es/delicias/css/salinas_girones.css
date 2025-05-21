@@ -4,8 +4,8 @@ body {
     color: white;
     background: black;
     background-image: 
-        linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)),
-        url("../img/delicias_fondo_1.webp");
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("../img/salinas_girones/salinas_fondo.webp");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -258,13 +258,17 @@ p {
     align-items: center; /* Alinea verticalmente los elementos (opcional) */
     justify-content: flex-end; /* Alinea los elementos al final del contenedor (a la derecha) */
     padding: 0px;
-    gap: 0px; /* Espacio entre las imágenes */
+    gap: 5px; /* Espacio entre las imágenes */
 }
 
-.etiquetas-container img {
-width: 150px;
-height: auto;
-margin-bottom: 0px;
+#eurohoja {
+    max-width: 100px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra suave */
+}
+
+#eneek {
+    max-width: 80px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra suave */
 }
 
 @media (max-width: 768px) {
@@ -312,14 +316,6 @@ margin-bottom: 0px;
     gap: 20px; /* Espacio entre productos */
     max-width: 1200px;
     margin: 0 auto;
-}
-
-.productos_1 {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr); /* Tres columnas */
-    max-width: 1200px;
-    margin: 0 auto;
-    padding-top: 20px;
 }
 
 .catalogo_productos_1 {
