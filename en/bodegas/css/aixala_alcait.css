@@ -281,6 +281,11 @@ h1 {
 p {
     font-size: 1.1em;
 }
+
+#eurohoja {
+    max-width: 100px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra suave */
+}
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
