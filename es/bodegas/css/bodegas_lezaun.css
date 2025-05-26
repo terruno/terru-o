@@ -245,6 +245,10 @@ nav.menu-central.active ul li a:hover {
 }
 
 /*BARRA SUPERIOR*/
+main {
+    padding-top: 4rem;
+}
+
 .container {
     display: flex;
     flex-wrap: wrap;

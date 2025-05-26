@@ -245,7 +245,9 @@ nav.menu-central.active ul li a:hover {
 }
 
 /*BARRA SUPERIOR*/
-
+main {
+    padding-top: 4rem;
+}
 /* RESPONSIVE para el contenido principal */
 .container {
     display: flex;

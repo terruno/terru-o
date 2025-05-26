@@ -6,32 +6,34 @@
     <title>Bodega Aixalà I Alcait | Terruño Único</title>
     <meta name="description" content="Descubre el catálogo de productos de la Bodega Aixalà I Alcait, una bodega destacada por su selección de vinos de calidad. Encuentra una variedad de opciones para todos los gustos, con información detallada sobre cada uno de sus vinos.">
     <link rel="icon" href="../img/favicon/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/aixala_alcait_aceite.css"> 
+    <link rel="stylesheet" href="../../es/almazaras/css/aixala_alcait_aceite.css"> 
 </head>
 
 <body>
     <header>
         <div class="navbar">
             <div class="logo">
-                <a href="../index-en.html"><img src="../img/logo/terruños_unicos_sin_fondo.webp" alt="Inicio - Terruño Único"></a>   
+                <a href="../index-en.html"><img src="../img/logo/terruños_unicos_sin_fondo.webp" alt="Home - Terruños Únicos"></a>
             </div>
             <div class="menu-toggle" id="menu-toggle" aria-label="Abrir menú de navegación">☰</div>
-            <nav>
-                <ul class="menu">
+
+            <nav class="menu-central">
+                <ul>
                     <li><a href="../index-en.html#bodegas">Wines</a></li>
                     <li><a href="../index-en.html#almazaras">Oils</a></li>
-                    <li><a href="../index-en.html#otros">Iberian Delicacies</a></li>
+                    <li><a href="../index-en.html#navarra">Iberian Delicacies</a></li>
                     <li><a href="../dop_españa-en.html">Certified Quality</a></li>
                     <li><a href="../news-en.html">News</a></li>
                     <li><a href="../formulario-en.html">Contact</a></li>
+                <li class="language-switch">
+                    <a href="../../es/almazaras/aixala_alcait_aceite.html">ES</a>|<a href="aixala_alcait_aceite_en.html">EN</a>
+                </li>
                 </ul>
             </nav>
+
             <div class="carrito_logo">
-                <a href="../carrito-en.html"><img src="../img/carrito_logo.webp" alt="Logo de carrito"></a>  
+                <a href="../carrito-en.html"><img src="../img/carrito_logo.webp" alt="Logo de carrito"></a>
                 <span class="contador-carrito" id="cart-count">0</span>
-            </div>
-            <div class="language-switch">
-                <a href="../../es/almazaras/aixala_alcait_aceite.html">ES</a> | <a href="aixala_alcait_aceite_en.html">EN</a>
             </div>
         </div>
     </header>
@@ -54,16 +56,16 @@
 </section>
 <section aria-labelledby="catalogo-aceites">
     <div class="catalogo">
-        <h2>Catálogo de Aceites</h2>
+        <h2>Oil Catalogue</h2>
         <div class="productos">
             <!-- INICIO CODIGO DE PRODUCTO -->
             <div class="producto">
                 <img src="img/aixala_alcait/les_clivelles_de_torroja_2024.webp" alt="Aceite Les Clivelles de Torroja 2024">
                 <h3>Les Clivelles de Torroja 2024</h3>
-                <p><a href="doc/aixala_alcait/les_clivelles_de_torroja_2024.pdf">VER FICHA</a><p>
+                <p><a href="doc/aixala_alcait/les_clivelles_de_torroja_2024.pdf">VIEW DETAILS</a><p>
                 <div>
                     <input type="number" id="cantidad_les_clivelles_de_torroja_24_aceite" class="inputcantidad" value="1" min="1">
-                    <button onclick="añadirAlCarrito('Bodega Aixalà I Alcait - Les Clivelles de Torroja 2024 | Aceite', 'cantidad_les_clivelles_de_torroja_24_aceite')">Añadir al carrito</button>
+                    <button onclick="añadirAlCarrito('Bodega Aixalà I Alcait - Les Clivelles de Torroja 2024 | Aceite', 'cantidad_les_clivelles_de_torroja_24_aceite')">Add to Cart</button>
                 </div>
             </div>
             <!-- FIN CODIGO DE PRODUCTO -->
@@ -78,8 +80,8 @@
         <a href="../cookie-policy.html">Cookie Policy</a>
     </p>
   </footer>
-    <script src="js/añadir_al_carrito.js"></script>
-    <script src="js/cart_icon.js"></script>
-    <script src="js/navbar.js"></script>
+    <script src="../../es/almazaras/js/añadir_al_carrito.js"></script>
+    <script src="../../es/almazaras/js/cart_icon.js"></script>
+    <script src="../../es/almazaras/js/navbar.js"></script>
 </body>
 </html>
