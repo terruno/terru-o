@@ -360,7 +360,7 @@ margin-bottom: 0px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
     gap: 30px;
-    max-width: 600px; /*ORIGINAL A 1200px, reducido temporalmente*/
+    max-width: 1000px; /*ORIGINAL A 1200px, reducido temporalmente*/
     margin: 0 auto;
 }
 
