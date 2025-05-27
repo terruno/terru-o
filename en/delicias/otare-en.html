@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Otare | Terruño Único</title>
+    <meta name="description" content="Otare offers artisanal preserves made from high-quality vegetables and legumes. Their products are natural, fresh, and full of flavor, ideal for those seeking healthy and convenient meals.">
+    <link rel="icon" href="../img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../../es/delicias/css/otare.css">
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <a href="../index-en.html"><img src="../img/logo/terruños_unicos_sin_fondo.webp" alt="Home - Terruños Únicos"></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle" aria-label="Open navigation menu">☰</div>
+
+            <nav class="menu-central">
+                <ul>
+                    <li><a href="../index-en.html#bodegas">Wines</a></li>
+                    <li><a href="../index-en.html#almazaras">Oils</a></li>
+                    <li><a href="../index-en.html#navarra">Iberian Delicacies</a></li>
+                    <li><a href="../dop_españa-en.html">Certified Quality</a></li>
+                    <li><a href="../news-en.html">News</a></li>
+                    <li><a href="../formulario-en.html">Contact</a></li>
+                <li class="language-switch">
+                    <a href="../../es/delicias/otare.html">ES</a>|<a href="otare-en.html">EN</a>
+                </li>
+                </ul>
+            </nav>
+
+            <div class="carrito_logo">
+                <a href="../carrito-en.html"><img src="../img/carrito_logo.webp" alt="Logo de carrito"></a>
+                <span class="contador-carrito" id="cart-count">0</span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+    <section>    
+        <div class="container">
+        <div class="logo_bodega">
+            <img src="../delicias/img/otare/otare_logo_con_fondo.webp" id="logo_bodega" alt="Logo Otare"> 
+        </div>
+        <div class="texto">
+            <!-- INICIO TEXTO EDITABLE -->
+            <h1>OTARE</h1>
+            <p>Otare is a brand by LAKET, a distributor based in Estella, that brings together a carefully curated selection of raw materials from local producers in the region.</p>
+            <p>Their products stand out for their artisanal production methods and minimal processing, ensuring the highest quality and attention to detail. Otare is also committed to organic farming, respecting the environment and offering genuine, natural foods.</p>
+            <!-- FIN TEXTO EDITABLE -->
+            <div class="etiquetas-container">
+                <img src="img/eurohoja.webp" id="eurohoja" alt="logo de Eurohoja">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section aria-labelledby="catalogo-productos">
+    <div class="catalogo">
+        <h2>Product Catalogue</h2>
+        <div class="productos">
+            <!-- INICIO CODIGO DE PRODUCTO -->
+            <div class="producto">
+                <img src="img/otare/pimientos_del_piquillo.jpg" alt="Botella de vino Altamente | Altamente">
+                <h3>Pimientos del Piquillo Enteros BIO 250ml</h3>
+                <p><a href="#">VIEW DETAILS</a></p>
+                <div class="control-cantidad">
+                    <label for="cantidad_piquillo_250" class="visually-hidden">Pimientos del Piquillo Enteros BIO 250ml | OTARE</label>
+                    <input type="number" id="cantidad_piquillo_250" class="inputcantidad" value="1" min="1">
+                    <button onclick="añadirAlCarrito('Pimientos del Piquillo Enteros BIO 250ml | OTARE', 'cantidad_piquillo_250')">Add to Cart</button>
+                </div>
+            </div>
+            <!-- FIN CODIGO DE PRODUCTO -->
+        </div>
+    </div>
+</section>
+</main>
+
+
+<footer>
+    <p>To place an order, contact us <a href="../formulario-en.html">using this form.</a></p>
+    <p>
+        <a href="../privacy-policy.html">Privacy Policy</a> |
+        <a href="../cookie-policy.html">Cookie Policy</a>
+    </p>
+  </footer>
+
+    <script src="../../es/js/añadir_al_carrito.js"></script>
+    <script src="../../es/js/cart_icon.js"></script>
+    <script src="../../es/js/navbar.js"></script>
+</body>
+</html>

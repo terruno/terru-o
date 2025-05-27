@@ -360,7 +360,7 @@ margin-bottom: 0px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
     gap: 30px;
-    max-width: 1200px;
+    max-width: 600px; /*ORIGINAL A 1200px, reducido temporalmente*/
     margin: 0 auto;
 }
 
@@ -382,7 +382,7 @@ margin-bottom: 0px;
 
 .producto img {
     width: 100%;
-    max-height: 250px;
+    max-height: 200px;
     object-fit: contain;
     border-radius: 12px;
     margin-bottom: 15px;
