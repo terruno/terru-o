@@ -41,13 +41,7 @@ body {
 }
 
 /* Menú navegación */
-.menu-central {
-    margin: 0 auto;
-    max-width: calc(100% - 200px); /* ajusta según necesidad */
-    overflow: hidden;
-}
-
-@media (max-width: 1024px) {
+@media (max-width: 1100px) {
     nav ul li {
         margin: 0 10px;
     }
@@ -57,6 +51,26 @@ body {
         padding: 8px;
     }
 }
+
+.menu-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.menu-central {
+    display: flex;
+    justify-content: center;
+    flex: 0 1 auto;
+}
+
+.menu-central ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 
 nav ul {
     display: flex;
