@@ -45,33 +45,6 @@ body {
     margin: 0 auto;
 }
 
-@media screen and (max-width: 1280px) and (min-width: 900px) {
-    .navbar {
-        padding: 15px 20px; /* un poco más de padding para que no quede muy apretado */
-    }
-
-    /* Hacer que carrito sea relativo dentro del flex para que esté junto al menú, no absolute */
-    .carrito_logo {
-        position: relative;
-        right: auto;
-        width: 38px;
-        height: 38px;
-        margin-left: 20px; /* separación respecto al menú */
-        flex-shrink: 0; /* no dejar que se reduzca */
-    }
-
-    /* Ajustar el menú central para que reduzca el espacio entre elementos */
-    nav ul {
-        justify-content: center; /* centrar el menú */
-        flex-wrap: nowrap;
-        overflow-x: auto; /* si es necesario que se desplace */
-    }
-
-    nav ul li {
-        margin: 0 10px; /* menos margen para que quepa más */
-    }
-}
-
 nav ul {
     display: flex;
     list-style-type: none;
@@ -160,6 +133,28 @@ nav ul li a:hover {
 .language-switch a:hover {
     color: #5A1E29;
 }
+
+/* ======== SOLUCIÓN PARA NO SOLAPAR MENÚ CENTRAL Y CARRITO EN PC ESTRECHAS ======== */
+@media screen and (max-width: 1280px) and (min-width: 900px) {
+    .navbar {
+        padding-right: 180px; /* espacio extra para que el carrito no tape el menú */
+    }
+
+    .menu-central {
+        max-width: calc(100% - 220px); /* limita el ancho para no tocar carrito */
+        overflow: hidden; /* evitar desbordes */
+    }
+
+    nav ul {
+        justify-content: center;
+        flex-wrap: nowrap;
+    }
+
+    nav ul li {
+        margin: 0 10px; /* margen reducido para que quepa el menú */
+    }
+}
+
 
 /* Responsive hasta 1100px */
 @media (max-width: 1100px) {
