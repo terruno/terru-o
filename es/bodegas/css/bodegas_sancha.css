@@ -41,36 +41,36 @@ body {
 }
 
 /* Menú navegación */
-@media (max-width: 1100px) {
-    nav ul li {
-        margin: 0 10px;
-    }
-
-    nav ul li a {
-        font-size: 16px;
-        padding: 8px;
-    }
-}
-
-.menu-wrapper {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    overflow: hidden;
-}
-
 .menu-central {
-    display: flex;
-    justify-content: center;
-    flex: 0 1 auto;
+    margin: 0 auto;
 }
 
-.menu-central ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
+@media screen and (max-width: 1280px) and (min-width: 900px) {
+    .navbar {
+        padding: 15px 20px; /* un poco más de padding para que no quede muy apretado */
+    }
 
+    /* Hacer que carrito sea relativo dentro del flex para que esté junto al menú, no absolute */
+    .carrito_logo {
+        position: relative;
+        right: auto;
+        width: 38px;
+        height: 38px;
+        margin-left: 20px; /* separación respecto al menú */
+        flex-shrink: 0; /* no dejar que se reduzca */
+    }
+
+    /* Ajustar el menú central para que reduzca el espacio entre elementos */
+    nav ul {
+        justify-content: center; /* centrar el menú */
+        flex-wrap: nowrap;
+        overflow-x: auto; /* si es necesario que se desplace */
+    }
+
+    nav ul li {
+        margin: 0 10px; /* menos margen para que quepa más */
+    }
+}
 
 nav ul {
     display: flex;
