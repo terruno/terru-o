@@ -454,6 +454,22 @@ a {
     margin: 0;
 }
 
+.delicias_grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 10px;
+    grid-auto-rows: 280px;
+}
+
+.delicia {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
 /*IMG Giratoria*/
 
 .flip-card-container{

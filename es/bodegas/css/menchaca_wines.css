@@ -280,8 +280,10 @@ main {
     width: 200px;
     height: auto;
     margin-bottom: 20px;
-    border-radius: 15px; /* Bordes redondeados */
+    border-radius: 10px; /* Bordes redondeados */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra suave */
+    background-color: white; /* Fondo blanco */
+    padding: 15px;
 }
 
 .texto {

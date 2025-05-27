@@ -4,8 +4,8 @@ body {
     color: white;
     background: black;
     background-image: 
-        linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)),
-        url("../img/delicias_fondo_1.webp");
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("../img/otare/otare_fondo.webp");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -255,8 +255,6 @@ nav.menu-central.active ul li a:hover {
 main {
     padding-top: 4rem;
 }
-
-
 /* RESPONSIVE para el contenido principal */
 .container {
     display: flex;
@@ -269,6 +267,25 @@ main {
     gap: 20px;
 }
 
+.logo_bodega {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.logo_bodega img {
+    width: 200px;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra suave */
+    background-color: white; /* Fondo blanco */
+    padding: 10px;
+}
+
 .texto {
     flex: 2;
     background: rgba(255, 255, 255, 0.2);
@@ -278,29 +295,32 @@ main {
     text-align: justify;
 }
 
-.texto h1 {
+h1 {
     font-size: 2em;
     margin-bottom: 10px;
-    text-align: center;
 }
 
 p {
     font-size: 1.1em;
 }
-
 .etiquetas-container {
     display: flex;
     flex-direction: row; /* Esto coloca los elementos en una fila horizontal */
     align-items: center; /* Alinea verticalmente los elementos (opcional) */
     justify-content: flex-end; /* Alinea los elementos al final del contenedor (a la derecha) */
     padding: 0px;
-    gap: 0px; /* Espacio entre las imágenes */
+    gap: 6px; /* Espacio entre las imágenes */
 }
 
 .etiquetas-container img {
 width: 150px;
 height: auto;
 margin-bottom: 0px;
+}
+
+#eurohoja {
+    max-width: 100px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra suave */
 }
 
 @media (max-width: 768px) {
@@ -330,19 +350,10 @@ margin-bottom: 0px;
 }
 
 .catalogo h2 {
-    font-size: 1.3em;
-    font-family: 'Roboto', sans-serif; /* Cambia la tipografía */
-    color: #2a2a2a; /* Un tono más oscuro para mayor contraste */
-    margin: 20px 0; /* Aumenta el espacio alrededor */
-    min-height: 40px; /* Aumenta la altura mínima */
-    letter-spacing: 1px; /* Añade un pequeño espacio entre las letras */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Añade una sombra sutil */
-}
-
-.producto .penin {
-    font-family: Arial, sans-serif;
-    font-size: 1.1em;
-    color: #249415;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #333;
+    font-weight: 700;
 }
 
 .productos {
@@ -478,6 +489,8 @@ button:hover {
     white-space: nowrap;
     border: 0;
 }
+
+
   
 /* RESPONSIVE del catálogo */
 @media (max-width: 480px) {
