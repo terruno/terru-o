@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L'OLIVATIERA | Terruño Único</title>
+    <meta name="description" content="Organic olives and tapenades from Quatretondeta, made with natural fermentation and authentic Mediterranean flavor.">
+    <link rel="icon" href="../img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../../es/delicias/css/olivatiera.css">
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <a href="../index-en.html"><img src="../img/logo/terruños_unicos_sin_fondo.webp" alt="Home - Terruños Únicos"></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle" aria-label="Open navigation menu">☰</div>
+
+            <nav class="menu-central">
+                <ul>
+                    <li><a href="../index-en.html#bodegas">Wines</a></li>
+                    <li><a href="../index-en.html#almazaras">Oils</a></li>
+                    <li><a href="../index-en.html#navarra">Iberian Delicacies</a></li>
+                    <li><a href="../dop_españa-en.html">Certified Quality</a></li>
+                    <li><a href="../news-en.html">News</a></li>
+                    <li><a href="../formulario-en.html">Contact</a></li>
+                <li class="language-switch">
+                    <a href="../../es/delicias/olivatiera.html">ES</a>|<a href="olivatiera-en.html">EN</a>
+                </li>
+                </ul>
+            </nav>
+
+            <div class="carrito_logo">
+                <a href="../carrito-en.html"><img src="../img/carrito_logo.webp" alt="Logo de carrito"></a>
+                <span class="contador-carrito" id="cart-count">0</span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+    <section>    
+        <div class="container">
+        <div class="logo_bodega">
+            <img src="../delicias/img/olivateria/olivateria_logo.webp" id="logo_bodega" alt="Logo L'OLIVATIERA"> 
+        </div>
+        <div class="texto">
+            <!-- INICIO TEXTO EDITABLE -->
+            <h1>L'OLIVATIERA</h1>
+            <p>L’Olivateria is a small family-run project based in Quatretondeta, in northern Alicante. It was born from the joint efforts of Rosa Gil and Alejandro Iris Redondo, who share both deep agricultural roots and a genuine love for the land. Together, they produce organic olives and olive spreads using delicious, distinctive, and healthy recipes.</p>
+            <p>Their respect for the land and for natural processes is evident in every product they make. At L’Olivateria, there are no shortcuts: the olives are naturally fermented through lactic acid fermentation and never pasteurized, preserving all their health benefits. The result is bold, vibrant, and authentic flavors.</p>
+            <p>They offer a wide selection of seasoned olives prepared with aromatic herbs and spices, along with delicious olive spreads, all made with the highest quality ingredients and great care. These are products for those who seek more than just good taste: they reflect tradition, character, and a deep respect for nature.</p>
+            <!-- FIN TEXTO EDITABLE -->
+            <div class="etiquetas-container">
+                <img src="img/eurohoja.webp" id="eurohoja" alt="logo de Eurohoja">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section aria-labelledby="catalogo-productos">
+    <div class="catalogo">
+        <h2>Product Catalogue</h2>
+        <div class="productos">
+            <!-- INICIO CODIGO DE PRODUCTO -->
+            <div class="producto">
+                <img src="img/olivateria/olivas_hierbas.webp" alt="Olivas Hierbas BIO 225gr | L'OLIVATERIA">
+                <h3>Olivas Hierbas BIO 225gr</h3>
+                <p>Organic olives with mountain herbs</p>
+                <p><a href="#">VIEW DETAILS</a></p>
+                <div class="control-cantidad">
+                    <label for="cantidad_olivas_hierbas" class="visually-hidden">Olivas Hierbas BIO 225gr | L'OLIVATERIA</label>
+                    <input type="number" id="cantidad_olivas_hierbas" class="inputcantidad" value="1" min="1">
+                    <button onclick="añadirAlCarrito('Olivas Hierbas BIO 225gr | L´OLIVATERIA', 'cantidad_olivas_hierbas')">Add to Cart</button>
+                </div>
+            </div>
+            <!-- FIN CODIGO DE PRODUCTO -->
+            <!-- INICIO CODIGO DE PRODUCTO -->
+            <div class="producto">
+                <img src="img/olivateria/olivas_picantes.webp" alt="Olivas Gazpachas Picantes BIO 225gr | L'OLIVATERIA">
+                <h3>Olivas Gazpachas Picantes BIO 225gr</h3>
+                <p>Spicy organic gazpacha olives</p>
+                <p><a href="#">VIEW DETAILS</a></p>
+                <div class="control-cantidad">
+                    <label for="cantidad_olivas_picantes" class="visually-hidden">Olivas Gazpachas Picantes BIO 225gr | L'OLIVATERIA</label>
+                    <input type="number" id="cantidad_olivas_picantes" class="inputcantidad" value="1" min="1">
+                    <button onclick="añadirAlCarrito('Olivas Gazpachas Picantes BIO 225gr | L´OLIVATERIA', 'cantidad_olivas_picantes')">Add to Cart</button>
+                </div>
+            </div>
+            <!-- FIN CODIGO DE PRODUCTO -->
+        </div>
+    </div>
+</section>
+</main>
+
+
+<footer>
+    <p>To place an order, contact us <a href="../formulario-en.html">using this form.</a></p>
+    <p>
+        <a href="../privacy-policy.html">Privacy Policy</a> |
+        <a href="../cookie-policy.html">Cookie Policy</a>
+    </p>
+  </footer>
+
+    <script src="../../es/delicias/js/añadir_al_carrito.js"></script>
+    <script src="../../es/delicias/js/cart_icon.js"></script>
+    <script src="../../es/delicias/js/navbar.js"></script>
+</body>
+</html>

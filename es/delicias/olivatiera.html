@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L'OLIVATIERA | Terruño Único</title>
+    <meta name="description" content="Elaboración ecológica de aceitunas y olivadas en Quatretondeta, con fermentación natural y sabores auténticos.">
+    <link rel="icon" href="../img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/olivatiera.css">
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <a href="../index.html"><img src="../img/logo/terruños_unicos_sin_fondo.webp" alt="Inicio - Terruños Únicos"></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle" aria-label="Abrir menú de navegación">☰</div>
+
+            <nav class="menu-central">
+                <ul>
+                <li><a href="../index.html#bodegas">Vinos</a></li>
+                <li><a href="../index.html#almazaras">Aceites</a></li>
+                <li><a href="../index.html#navarra">Delicias Ibéricas</a></li>
+                <li><a href="../dop_españa.html">Calidad Certificada</a></li>
+                <li><a href="../news.html">Noticias</a></li>
+                <li><a href="../formulario.html">Contacto</a></li>
+                <li class="language-switch">
+                    <a href="olivatiera.html">ES</a>|<a href="../../en/delicias/olivatiera-en.html">EN</a>
+                </li>
+                </ul>
+            </nav>
+
+            <div class="carrito_logo">
+                <a href="../carrito.html"><img src="../img/carrito_logo.webp" alt="Logo de carrito"></a>
+                <span class="contador-carrito" id="cart-count">0</span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+    <section>    
+        <div class="container">
+        <div class="logo_bodega">
+            <img src="../delicias/img/olivateria/olivateria_logo.webp" id="logo_bodega" alt="Logo Otare"> 
+        </div>
+        <div class="texto">
+            <!-- INICIO TEXTO EDITABLE -->
+            <h1>L'OLIVATIERA</h1>
+            <p>L’Olivateria es un pequeño proyecto familiar ubicado en Quatretondeta, en el norte de Alicante, nacido del trabajo conjunto de Rosa Gil y Alejandro Iris Redondo. Unidos por sus raíces agrícolas y su pasión por la tierra, elaboran de forma totalmente ecológica aceitunas y olivadas  con recetas sabrosas, únicas y saludables.</p>
+            <p>Su compromiso con la tierra y los procesos naturales se refleja en cada uno de sus productos. En L’Olivateria no hay atajos: las aceitunas fermentan de forma natural, mediante fermentación ácido-láctica, sin pasteurización, para conservar intactos sus beneficios para la salud. El resultado son sabores intensos, vivos y auténticos.</p>
+            <p>Ofrecen una variada selección de aceitunas aliñadas con hierbas aromáticas y especias, así como deliciosas olivadas, todas ellas elaboradas con ingredientes de máxima calidad y mucho mimo. Productos pensados para quienes buscan algo más: tradición, carácter y un profundo respeto por lo natural.</p>
+            <!-- FIN TEXTO EDITABLE -->
+            <div class="etiquetas-container">
+                <img src="img/eurohoja.webp" id="eurohoja" alt="logo de Eurohoja">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section aria-labelledby="catalogo-productos">
+    <div class="catalogo">
+        <h2>Catálogo de Productos</h2>
+        <div class="productos">
+            <!-- INICIO CODIGO DE PRODUCTO -->
+            <div class="producto">
+                <img src="img/olivateria/olivas_hierbas.webp" alt="Olivas Hierbas BIO 225gr | L'OLIVATERIA">
+                <h3>Olivas Hierbas BIO 225gr</h3>
+                <p><a href="#">VER FICHA</a></p>
+                <div class="control-cantidad">
+                    <label for="cantidad_olivas_hierbas" class="visually-hidden">Olivas Hierbas BIO 225gr | L'OLIVATERIA</label>
+                    <input type="number" id="cantidad_olivas_hierbas" class="inputcantidad" value="1" min="1">
+                    <button onclick="añadirAlCarrito('Olivas Hierbas BIO 225gr | L´OLIVATERIA', 'cantidad_olivas_hierbas')">Añadir al carrito</button>
+                </div>
+            </div>
+            <!-- FIN CODIGO DE PRODUCTO -->
+            <!-- INICIO CODIGO DE PRODUCTO -->
+            <div class="producto">
+                <img src="img/olivateria/olivas_picantes.webp" alt="Olivas Gazpachas Picantes BIO 225gr | L'OLIVATERIA">
+                <h3>Olivas Gazpachas Picantes BIO 225gr</h3>
+                <p><a href="#">VER FICHA</a></p>
+                <div class="control-cantidad">
+                    <label for="cantidad_olivas_picantes" class="visually-hidden">Olivas Gazpachas Picantes BIO 225gr | L'OLIVATERIA</label>
+                    <input type="number" id="cantidad_olivas_picantes" class="inputcantidad" value="1" min="1">
+                    <button onclick="añadirAlCarrito('Olivas Gazpachas Picantes BIO 225gr | L´OLIVATERIA', 'cantidad_olivas_picantes')">Añadir al carrito</button>
+                </div>
+            </div>
+            <!-- FIN CODIGO DE PRODUCTO -->
+        </div>
+    </div>
+</section>
+</main>
+
+
+<footer>
+     <p>Para realizar un pedido, contáctanos <a href="../formulario.html">mediante este formulario.</a></p>
+    <p>
+          <a href="../politica-privacidad.html">Política de Privacidad</a> |
+          <a href="../politica-cookies.html">Política de Cookies</a>
+    </p>
+</footer>
+    <script src="js/añadir_al_carrito.js"></script>
+    <script src="js/cart_icon.js"></script>
+    <script src="js/navbar.js"></script>
+</body>
+</html>
