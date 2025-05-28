@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L'OLIVATIERA | Terruño Único</title>
+    <meta name="description" content="Biocomercio promotes organic production using local raw materials and quality products, ensuring safety and traceability from the field onward.">
+    <link rel="icon" href="../img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../../es/delicias/css/biocomercio.css">
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <a href="../index-en.html"><img src="../img/logo/terruños_unicos_sin_fondo.webp" alt="Home - Terruños Únicos"></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle" aria-label="Open navigation menu">☰</div>
+
+            <nav class="menu-central">
+                <ul>
+                    <li><a href="../index-en.html#bodegas">Wines</a></li>
+                    <li><a href="../index-en.html#almazaras">Oils</a></li>
+                    <li><a href="../index-en.html#navarra">Iberian Delicacies</a></li>
+                    <li><a href="../dop_españa-en.html">Certified Quality</a></li>
+                    <li><a href="../news-en.html">News</a></li>
+                    <li><a href="../formulario-en.html">Contact</a></li>
+                <li class="language-switch">
+                    <a href="../../es/delicias/biocomercio.html">ES</a>|<a href="biocomercio-en.html">EN</a>
+                </li>
+                </ul>
+            </nav>
+
+            <div class="carrito_logo">
+                <a href="../carrito-en.html"><img src="../img/carrito_logo.webp" alt="Logo de carrito"></a>
+                <span class="contador-carrito" id="cart-count">0</span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+    <section>    
+        <div class="container">
+        <div class="logo_bodega">
+            <img src="../delicias/img/biocomercio/biocomercio_logo_con_fondo.PNG" id="logo_bodega" alt="Logo Biocomercio"> 
+        </div>
+        <div class="texto">
+            <!-- INICIO TEXTO EDITABLE -->
+            <h1>BIOcomercio</h1>
+            <p>BIOcomercio is a project dedicated to promoting organic production from Alicante. They work with both organic raw materials intended for processing and packaging, as well as ready-to-consume organic products.</p>
+            <p>Their commitment is to use Spanish raw materials and, whenever possible, sourced from nearby areas, thus encouraging local farming and supporting the regional economy. Additionally, they run their own plantation projects in Alicante, actively contributing to the growth of organic agriculture.</p>
+            <p>At BIOcomercio, they ensure food safety, quality, and traceability at every stage — from the fieldwork to the product reaching the consumer. Their goal is to offer authentic, healthy, and environmentally friendly products designed for those who value natural, locally sourced production.</p>
+            <!-- FIN TEXTO EDITABLE -->
+            <div class="etiquetas-container">
+                <img src="img/eurohoja.webp" id="eurohoja" alt="logo de Eurohoja">
+                <img src="img/eneek.webp" id="eneek" alt="Nekazaritza ekologikoa | Agricultura ecológica logo">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section aria-labelledby="catalogo-productos">
+    <div class="catalogo">
+        <h2>Product Catalogue</h2>
+        <div class="productos">
+            <!-- INICIO CODIGO DE PRODUCTO -->
+            <div class="producto">
+                <img src="img/biocomercio/almendra_piel.webp" alt="Almendra con Piel BIO 150gr | BIOcomercio">
+                <h3>Organic Almonds with Skin 150g</h3>
+                <p><a href="#">VIEW DETAILS</a></p>
+                <div class="control-cantidad">
+                    <label for="cantidad_almendra_piel" class="visually-hidden">Almendra con Piel BIO 150gr | BIOcomercio</label>
+                    <input type="number" id="cantidad_almendra_piel" class="inputcantidad" value="1" min="1">
+                    <button onclick="añadirAlCarrito('Almendra con Piel BIO 150gr | BIOcomercio', 'cantidad_almendra_piel')">Add to Cart</button>
+                </div>
+            </div>
+            <!-- FIN CODIGO DE PRODUCTO -->
+             <!-- INICIO CODIGO DE PRODUCTO -->
+            <div class="producto">
+                <img src="img/biocomercio/almendra_tostada.webp" alt="Almendra Tostada BIO 150gr | BIOcomercio">
+                <h3>Organic Roasted Almonds 150g</h3>
+                <p><a href="#">VIEW DETAILS</a></p>
+                <div class="control-cantidad">
+                    <label for="cantidad_almendra_tostada" class="visually-hidden">Almendra Tostada BIO 150gr | BIOcomercio</label>
+                    <input type="number" id="cantidad_almendra_tostada" class="inputcantidad" value="1" min="1">
+                    <button onclick="añadirAlCarrito('Almendra Tostada BIO 150gr | BIOcomercio', 'cantidad_almendra_tostada')">Add to Cart</button>
+                </div>
+            </div>
+            <!-- FIN CODIGO DE PRODUCTO -->
+             <!-- INICIO CODIGO DE PRODUCTO -->
+            <div class="producto">
+                <img src="img/biocomercio/avellanas.webp" alt="Avellana BIO 150gr | BIOcomercio">
+                <h3>Organic Hazelnuts 150g</h3>
+                <p><a href="#">VIEW DETAILS</a></p>
+                <div class="control-cantidad">
+                    <label for="cantidad_avellana" class="visually-hidden">Avellana BIO 150gr | BIOcomercio</label>
+                    <input type="number" id="cantidad_avellana" class="inputcantidad" value="1" min="1">
+                    <button onclick="añadirAlCarrito('Avellana BIO 150gr | BIOcomercio', 'cantidad_avellana')">Add to Cart</button>
+                </div>
+            </div>
+            <!-- FIN CODIGO DE PRODUCTO -->
+        </div>
+    </div>
+</section>
+</main>
+
+
+<footer>
+    <p>To place an order, contact us <a href="../formulario-en.html">using this form.</a></p>
+    <p>
+        <a href="../privacy-policy.html">Privacy Policy</a> |
+        <a href="../cookie-policy.html">Cookie Policy</a>
+    </p>
+  </footer>
+
+    <script src="../../es/delicias/js/añadir_al_carrito.js"></script>
+    <script src="../../es/delicias/js/cart_icon.js"></script>
+    <script src="../../es/delicias/js/navbar.js"></script>
+</body>
+</html>
