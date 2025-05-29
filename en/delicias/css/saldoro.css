@@ -4,8 +4,8 @@ body {
     color: white;
     background: black;
     background-image: 
-        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url("../img/salinas_girones/salinas_fondo.webp");
+        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)),
+        url("../img/saldoro/salinas_fondo.webp");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -260,11 +260,28 @@ main {
     display: flex;
     flex-wrap: wrap;
     max-width: 1200px;
-    width: 60%;
+    width: 90%;
     align-items: center;
     justify-content: center;
     margin: 40px auto;
     gap: 20px;
+}
+
+.logo_bodega {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.logo_bodega img {
+    width: 220px;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra suave */
 }
 
 .texto {
@@ -279,20 +296,24 @@ main {
 h1 {
     font-size: 2em;
     margin-bottom: 10px;
-    text-align: center;
 }
 
 p {
     font-size: 1.1em;
 }
-
 .etiquetas-container {
     display: flex;
     flex-direction: row; /* Esto coloca los elementos en una fila horizontal */
     align-items: center; /* Alinea verticalmente los elementos (opcional) */
     justify-content: flex-end; /* Alinea los elementos al final del contenedor (a la derecha) */
     padding: 0px;
-    gap: 5px; /* Espacio entre las imágenes */
+    gap: 6px; /* Espacio entre las imágenes */
+}
+
+.etiquetas-container img {
+width: 150px;
+height: auto;
+margin-bottom: 0px;
 }
 
 #eurohoja {
@@ -305,11 +326,17 @@ p {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra suave */
 }
 
+#reyno_gourmet {
+    max-width: 100px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.0); /* Sombra suave */
+    background-color: #ccc;
+}
+
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
         height: auto;
-        padding: 10px 0;
+        padding: 20px 0;
     }
     .texto {
         font-size: 1em;
@@ -338,30 +365,13 @@ p {
     font-weight: 700;
 }
 
-.producto .penin {
-    font-family: Arial, sans-serif;
-    font-size: 1.1em;
-    color: #249415;
-}
-
 .productos {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Tres columnas */
-    gap: 20px; /* Espacio entre productos */
-    max-width: 1200px;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 30px;
+    max-width: 400px; /*ORIGINAL A 1200px, reducido temporalmente*/
     margin: 0 auto;
 }
-
-.catalogo_productos_1 {
-    display: flex;
-    gap: 5px; /* Espacio entre imágenes, opcional */
-}
-
-.catalogo_productos_1 img {
-    max-width: 1200px; /* Ajusta el tamaño según lo necesites */
-    height: auto;
-}
-
 
 .producto {
     background-color: #ffffff;
@@ -381,7 +391,7 @@ p {
 
 .producto img {
     width: 100%;
-    max-height: 250px;
+    max-height: 200px;
     object-fit: contain;
     border-radius: 12px;
     margin-bottom: 15px;
@@ -396,7 +406,7 @@ p {
 }
 
 
-.producto h2 {
+.producto h3 {
     font-size: 1.3em;
     font-family: 'Roboto', sans-serif; /* Cambia la tipografía */
     color: #2a2a2a; /* Un tono más oscuro para mayor contraste */
@@ -488,6 +498,7 @@ button:hover {
     white-space: nowrap;
     border: 0;
 }
+
 
   
 /* RESPONSIVE del catálogo */

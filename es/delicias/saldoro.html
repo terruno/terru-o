@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GIRONÉS Hnos | Terruño Único</title>
-    <meta name="description" content="Delicias Ibéricas: descubre una cuidada selección de productos representativos de la rica y variada gastronomía ibérica. Calidad, tradición y sabor en cada bocado.">
+    <title>Sal D'Oro | Terruño Único</title>
+    <meta name="description" content="Sal D'Oro es una sal de manantial artesanal producida en Salinas de Oro (Navarra), donde se conserva un método ancestral de recolección solar y manual. Pura, sin aditivos y de sabor equilibrado, es ideal para realzar cualquier plato.">
     <link rel="icon" href="../img/favicon/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/salinas_girones.css">
+    <link rel="stylesheet" href="css/saldoro.css">
 </head>
 
 <body>
@@ -26,7 +26,7 @@
                 <li><a href="../news.html">Noticias</a></li>
                 <li><a href="../formulario.html">Contacto</a></li>
                 <li class="language-switch">
-                    <a href="delicias.html">ES</a>|<a href="../../en/delicias/delicias-en.html">EN</a>
+                    <a href="saldoro.html">ES</a>|<a href="../../en/delicias/saldoro-en.html">EN</a>
                 </li>
                 </ul>
             </nav>
@@ -39,40 +39,64 @@
     </header>
 
     <main>
-    <section aria-labelledby="info-bodegas-sancha">    
+    <section>    
         <div class="container">
+        <div class="logo_bodega">
+            <img src="../delicias/img/saldoro/saldoro.webp" id="logo_bodega" alt="Logo Sal D'Oro"> 
+        </div>
         <div class="texto">
-            <h1>SAL DE MANANTIAL SALINAS DE ORO</h1>
+            <!-- INICIO TEXTO EDITABLE -->
+            <h1>Sal D'Oro</h1>
             <p>Desde la pequeña localidad de Salinas de Oro, en Tierra Estella (Navarra), llega una de las pocas sales de manantial que aún se produce de forma artesanal en Europa. Las salinas de esta zona, documentadas desde 1492 y seguramente anteriores, aprovechan un manantial salino único y un proceso ancestral que ha pasado de generación en generación.</p>
             <p>El agua se extrae directamente del manantial y se vierte en pequeñas eras donde, gracias al sol y al viento, se evapora lentamente. La sal se recoge a mano, sin maquinaria ni aditivos, conservando intactas sus cualidades naturales.</p>
             <p>El resultado es una sal pura, con cristales de estructura cúbica y textura delicada. Su sabor, equilibrado y limpio, realza los alimentos sin enmascararlos, lo que la convierte en un ingrediente ideal tanto para el uso diario como para la cocina más exigente.</p>
-            <p>Distribuimos esta sal bajo el nombre Sal-Oro, directamente desde su origen, respetando la tradición y el saber hacer de quienes llevan generaciones cuidando este proceso único.</p>
+            <p>La sal se distribuye bajo el nombre Sal-Oro, directamente desde su origen, respetando la tradición y el saber hacer de quienes llevan generaciones cuidando este proceso único.</p>
             <div class="etiquetas-container">
-                <img src="img/salinas_girones/eurohoja.webp" id="eurohoja" alt="logo de Eurohoja">
-                <img src="img/salinas_girones/eneek.webp" id="eneek" alt="Nekazaritza ekologikoa | Agricultura ecológica logo">
+                <img src="img/saldoro/eurohoja.webp" id="eurohoja" alt="logo de Eurohoja">
+                <img src="img/saldoro/eneek.webp" id="eneek" alt="Nekazaritza ekologikoa | Agricultura ecológica logo">
+                <img src="img/saldoro/reyno_gourmet.webp" id="reyno_gourmet" alt="Logo Reyno Gourmet">
             </div>
         </div>
+    </div>
+</section>
+
+<section aria-labelledby="catalogo-productos">
+    <div class="catalogo">
+        <h2>Catálogo de Productos</h2>
+        <div class="productos">
+            <!-- INICIO CODIGO DE PRODUCTO -->
+            <div class="producto">
+                <img src="img/saldoro/sal_tradicional.webp" alt="Sal Tradicional BIO Caja de 400gr | Sal D'Oro">
+                <h3>Sal Tradicional BIO</h3>
+                <p>Caja de 400gr</p>
+                <div class="control-cantidad">
+                    <label for="cantidad_sal_tradicional_400" class="visually-hidden">Sal Tradicional BIO Caga de 400gr | Sal D'Oro</label>
+                    <input type="number" id="cantidad_sal_tradicional_400" class="inputcantidad" value="1" min="1">
+                    <button onclick="añadirAlCarrito('Sal Tradicional BIO Caja de 400gr | Sal D´Oro', 'cantidad_sal_tradicional_400')">Añadir al carrito</button>
+                </div>
+            </div>
+            <!-- FIN CODIGO DE PRODUCTO -->
         </div>
     </div>
 </section>
 <section aria-labelledby="catalogo-fotos">
     <div class="catalogo">
         <div class="galeria" style="display: flex; justify-content: center; gap: 20px; padding: 20px;">
-        <img src="img/salinas_girones/salinas_girones_1.webp" alt="Imagen de Juan Carlos Sancha" style="width: 30%; height: auto;" loading="lazy">
-        <img src="img/salinas_girones/salinas_girones_4.webp" alt="Imagen de Juan Carlos Sancha" style="width: 30%; height: auto;" loading="lazy">
-        <img src="img/salinas_girones/salinas_girones_3.webp" alt="Imagen de Juan Carlos Sancha" style="width: 30%; height: auto;" loading="lazy">
+        <img src="img/saldoro/salinas_girones_1.webp" alt="Imagen de Sal D'Oro" style="width: 30%; height: auto;" loading="lazy">
+        <img src="img/saldoro/salinas_girones_4.webp" alt="Imagen de Sal D'Oro" style="width: 30%; height: auto;" loading="lazy">
+        <img src="img/saldoro/salinas_girones_3.webp" alt="Imagen de Sal D'Oro" style="width: 30%; height: auto;" loading="lazy">
         </div>
     </div>
 </section>
 </main>
+
 <footer>
-    <p>Para realizar un pedido, contáctanos <a href="../formulario.html">mediante este formulario.</a></p>
+     <p>Para realizar un pedido, contáctanos <a href="../formulario.html">mediante este formulario.</a></p>
     <p>
           <a href="../politica-privacidad.html">Política de Privacidad</a> |
           <a href="../politica-cookies.html">Política de Cookies</a>
     </p>
 </footer>
-    <script src="js/slideshow.js"></script>
     <script src="js/añadir_al_carrito.js"></script>
     <script src="js/cart_icon.js"></script>
     <script src="js/navbar.js"></script>

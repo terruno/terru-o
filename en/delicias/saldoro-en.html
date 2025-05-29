@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sal D'Oro | Terruño Único</title>
+    <meta name="description" content="Sal D'Oro is an artisanal spring salt from Salinas de Oro (Navarra, Spain), produced using a traditional sun-drying and hand-harvesting method. Pure, additive-free, and well-balanced in flavor, it's perfect for enhancing any dish.">
+    <link rel="icon" href="../img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../../es/delicias/css/saldoro.css">
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <a href="../index-en.html"><img src="../img/logo/terruños_unicos_sin_fondo.webp" alt="Home - Terruños Únicos"></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle" aria-label="Open navigation menu">☰</div>
+
+            <nav class="menu-central">
+                <ul>
+                    <li><a href="../index-en.html#bodegas">Wines</a></li>
+                    <li><a href="../index-en.html#almazaras">Oils</a></li>
+                    <li><a href="../index-en.html#navarra">Iberian Delicacies</a></li>
+                    <li><a href="../dop_españa-en.html">Certified Quality</a></li>
+                    <li><a href="../news-en.html">News</a></li>
+                    <li><a href="../formulario-en.html">Contact</a></li>
+                <li class="language-switch">
+                    <a href="../../es/delicias/saldoro.html">ES</a>|<a href="saldoro-en.html">EN</a>
+                </li>
+                </ul>
+            </nav>
+            <div class="carrito_logo">
+                <a href="../carrito-en.html"><img src="../img/carrito_logo.webp" alt="Logo de carrito"></a>
+                <span class="contador-carrito" id="cart-count">0</span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+    <section>    
+        <div class="container">
+        <div class="logo_bodega">
+            <img src="../delicias/img/saldoro/saldoro.webp" id="logo_bodega" alt="Logo Sal D'Oro"> 
+        </div>
+        <div class="texto">
+            <!-- INICIO TEXTO EDITABLE -->
+            <h1>Sal D'Oro</h1>
+            <p>From the small village of Salinas de Oro, in Tierra Estella (Navarre), comes one of the few spring salts in Europe still crafted by hand. The saltworks in this area, documented since 1492 and likely even older, draw on a unique saline spring and a time-honored process passed down through generations.</p>
+            <p>Water is drawn directly from the spring and poured into shallow pools, where it slowly evaporates under the sun and wind. Harvested entirely by hand, the salt retains all its natural qualities thanks to this careful, traditional method.</p>
+            <p>The result is a pure salt, with delicate, cube-shaped crystals and a clean, well-balanced flavor that brings out the best in food. Ideal for both everyday use and refined cuisine.</p>
+            <p>The salt is distributed under the name Sal-Oro, brought straight from its source and shaped by centuries of tradition and know-how.</p>
+            <div class="etiquetas-container">
+                <img src="img/saldoro/eurohoja.webp" id="eurohoja" alt="logo de Eurohoja">
+                <img src="img/saldoro/eneek.webp" id="eneek" alt="Nekazaritza ekologikoa | Agricultura ecológica logo">
+                <img src="img/saldoro/reyno_gourmet.webp" id="reyno_gourmet" alt="Logo Reyno Gourmet">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section aria-labelledby="catalogo-productos">
+    <div class="catalogo">
+        <h2>Product Catalogue</h2>
+        <div class="productos">
+            <!-- INICIO CODIGO DE PRODUCTO -->
+            <div class="producto">
+                <img src="img/saldoro/sal_tradicional.webp" alt="Sal Tradicional BIO Caga de 400gr | Sal D'Oro">
+                <h3>Traditional Organic Salt</h3>
+                <p>400gr Box</p>
+                <div class="control-cantidad">
+                    <label for="cantidad_sal_tradicional_400" class="visually-hidden">Traditional Organic Salt 400gr Box | Sal D'Oro</label>
+                    <input type="number" id="cantidad_sal_tradicional_400" class="inputcantidad" value="1" min="1">
+                    <button onclick="añadirAlCarrito('Traditional Organic Salt 400gr Box | Sal D´Oro', 'cantidad_sal_tradicional_400')">Add to Cart</button>
+                </div>
+            </div>
+            <!-- FIN CODIGO DE PRODUCTO -->
+        </div>
+    </div>
+</section>
+<section aria-labelledby="catalogo-fotos">
+    <div class="catalogo">
+        <div class="galeria" style="display: flex; justify-content: center; gap: 20px; padding: 20px;">
+        <img src="img/saldoro/salinas_girones_1.webp" alt="Imagen de Sal D'Oro" style="width: 30%; height: auto;" loading="lazy">
+        <img src="img/saldoro/salinas_girones_4.webp" alt="Imagen de Sal D'Oro" style="width: 30%; height: auto;" loading="lazy">
+        <img src="img/saldoro/salinas_girones_3.webp" alt="Imagen de Sal D'Oro" style="width: 30%; height: auto;" loading="lazy">
+        </div>
+    </div>
+</section>
+</main>
+
+<footer>
+    <p>To place an order, contact us <a href="../formulario-en.html">using this form.</a></p>
+    <p>
+        <a href="../privacy-policy.html">Privacy Policy</a> |
+        <a href="../cookie-policy.html">Cookie Policy</a>
+    </p>
+  </footer>
+    <script src="../../es/delicias/js/añadir_al_carrito.js"></script>
+    <script src="../../es/delicias/js/cart_icon.js"></script>
+    <script src="../../es/delicias/js/navbar.js"></script>
+</body>
+</html>
