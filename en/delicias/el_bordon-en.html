@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Bordón | Terruño Único</title>
+    <meta name="description" content="Embutidos El Bordón makes artisanal and organic cured meats in Viana, Spain, using natural ingredients and family tradition since 1989.">
+    <link rel="icon" href="../img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../../es/delicias/css/el_bordon.css">
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <a href="../index-en.html"><img src="../img/logo/terruños_unicos_sin_fondo.webp" alt="Home - Terruños Únicos"></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle" aria-label="Open navigation menu">☰</div>
+
+            <nav class="menu-central">
+                <ul>
+                    <li><a href="../index-en.html#bodegas">Wines</a></li>
+                    <li><a href="../index-en.html#almazaras">Oils</a></li>
+                    <li><a href="../index-en.html#navarra">Iberian Delicacies</a></li>
+                    <li><a href="../dop_españa-en.html">Certified Quality</a></li>
+                    <li><a href="../news-en.html">News</a></li>
+                    <li><a href="../formulario-en.html">Contact</a></li>
+                <li class="language-switch">
+                    <a href="../../es/delicias/el_bordon.html">ES</a>|<a href="el_bordon-en.html">EN</a>
+                </li>
+                </ul>
+            </nav>
+
+            <div class="carrito_logo">
+                <a href="../carrito-en.html"><img src="../img/carrito_logo.webp" alt="Logo de carrito"></a>
+                <span class="contador-carrito" id="cart-count">0</span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+    <section>    
+        <div class="container">
+        <div class="logo_bodega">
+            <img src="../delicias/img/el_bordon/el_bordon.webp" id="logo_bodega" alt="Logo de El Bordón"> 
+        </div>
+        <div class="texto">
+            <!-- INICIO TEXTO EDITABLE -->
+            <h1>EL BORDÓN</h1>
+            <p>El Bordón Cured Meats is a family-run artisan company that has been making natural cured meats since 1989. Based in the historic town of Viana, in the Navarra region of Spain, the business was founded by a family with several generations of experience. Over the years, they have carefully refined the rich charcuterie tradition of Navarra, always committed to quality and respect for the environment.</p>
+            <p>From the very beginning, El Bordón has focused on every detail of the process, carefully selecting only natural ingredients and treating each product with the attention it deserves to achieve a truly authentic flavor. Staying true to their values of sustainability and health, they now offer their traditional recipe in an organic version, made with certified ingredients that ensure a more environmentally friendly product.</p>
+            <p>For this family business, making cured meats is about more than just food. It’s a way of preserving rural life and keeping local traditions alive. Through their work, they help maintain the culture and distinctive flavors of Navarra.</p>
+            <!-- FIN TEXTO EDITABLE -->
+            <div class="etiquetas-container">
+                <img src="img/saldoro/eurohoja.webp" id="eurohoja" alt="logo de Eurohoja">
+                <img src="img/saldoro/reyno_gourmet.webp" id="reyno_gourmet" alt="Logo Reyno Gourmet">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section aria-labelledby="catalogo-productos">
+    <div class="catalogo">
+        <h2>Product Catalogue</h2>
+        <div class="productos">
+            <!-- INICIO CODIGO DE PRODUCTO -->
+            <div class="producto">
+                <img src="img/el_bordon/chorizo_dulce.webp" alt="Mild BIO Chorizo | EL BORDÓN">
+                <h3>Mild BIO Chorizo</h3>
+                <div class="control-cantidad">
+                    <label for="cantidad_chorizo_dulce" class="visually-hidden">Mild BIO Chorizo | EL BORDÓN</label>
+                    <input type="number" id="cantidad_chorizo_dulce" class="inputcantidad" value="1" min="1">
+                    <button onclick="añadirAlCarrito('Mild BIO Chorizo | EL BORDÓN', 'cantidad_chorizo_dulce')">Add to Cart</button>
+                </div>
+            </div>
+            <!-- FIN CODIGO DE PRODUCTO -->
+             <!-- INICIO CODIGO DE PRODUCTO -->
+            <div class="producto">
+                <img src="img/el_bordon/chorizo_picante.webp" alt="Spicy BIO Chorizo | EL BORDÓN">
+                <h3>Spicy BIO Chorizo</h3>
+                <div class="control-cantidad">
+                    <label for="cantidad_chorizo_picante" class="visually-hidden">Spicy BIO Chorizo | EL BORDÓN</label>
+                    <input type="number" id="cantidad_chorizo_picante" class="inputcantidad" value="1" min="1">
+                    <button onclick="añadirAlCarrito('Spicy BIO Chorizo | EL BORDÓN', 'cantidad_chorizo_picante')">Add to Cart</button>
+                </div>
+            </div>
+            <!-- FIN CODIGO DE PRODUCTO -->
+        </div>
+    </div>
+</section>
+</main>
+
+<footer>
+    <p>To place an order, contact us <a href="../formulario-en.html">using this form.</a></p>
+    <p>
+        <a href="../privacy-policy.html">Privacy Policy</a> |
+        <a href="../cookie-policy.html">Cookie Policy</a>
+    </p>
+  </footer>
+    <script src="../../es/delicias/js/añadir_al_carrito.js"></script>
+    <script src="../../es/delicias/js/cart_icon.js"></script>
+    <script src="../../es/delicias/js/navbar.js"></script>
+</body>
+</html>

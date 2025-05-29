@@ -354,9 +354,10 @@ main {
     gap: 20px;
     align-items: flex-start;
     padding: 20px 10px;
-    background-image: 
+    /*background-image: 
         linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url("../img/dop_españa/fondo_dop_españa_1.webp");
+        url("../img/dop_españa/fondo_dop_españa_1.webp");*/
+    background: linear-gradient(to left, #792938 0%, #5A1E29 50%, #792938 100%);
 }
 
 .viñedo_singular{

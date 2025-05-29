@@ -4,13 +4,12 @@ body {
     color: white;
     background: black;
     background-image: 
-        linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-        url("../img/emilio_valerio/emilio_valerio_fondo.webp");
+        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)),
+        url("../img/el_bordon/el_bordon_fondo.webp");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
 }
-
 
 /* GENERAL BARRA */
 .navbar {
@@ -256,9 +255,7 @@ nav.menu-central.active ul li a:hover {
 main {
     padding-top: 4rem;
 }
-
 /* RESPONSIVE para el contenido principal */
-
 .container {
     display: flex;
     flex-wrap: wrap;
@@ -280,32 +277,11 @@ main {
 }
 
 .logo_bodega img {
-    width: 200px;
+    width: 150px;
     height: auto;
     margin-bottom: 20px;
-    border-radius: 15px; /* Bordes redondeados */
+    border-radius: 5px; /* Bordes redondeados */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra suave */
-    background-color: white; /* Fondo blanco */
-    padding: 10px;
-}
-
-.etiquetas-container {
-    display: flex;
-    flex-direction: row; /* Esto coloca los elementos en una fila horizontal */
-    align-items: center; /* Alinea verticalmente los elementos (opcional) */
-    justify-content: flex-end; /* Alinea los elementos al final del contenedor (a la derecha) */
-    padding: 10px;
-    gap: 20px; /* Espacio entre las imágenes */
-}
-
-.etiquetas-container img {
-width: 100px;
-height: auto;
-margin-bottom: 10px;
-}
-
-#eurohoja {
-    max-width: 100px;
 }
 
 .texto {
@@ -322,25 +298,38 @@ h1 {
     margin-bottom: 10px;
 }
 
-.texto p {
+p {
     font-size: 1.1em;
-    color: #fff;
 }
-
-
 .etiquetas-container {
     display: flex;
     flex-direction: row; /* Esto coloca los elementos en una fila horizontal */
     align-items: center; /* Alinea verticalmente los elementos (opcional) */
     justify-content: flex-end; /* Alinea los elementos al final del contenedor (a la derecha) */
     padding: 0px;
-    gap: 0px; /* Espacio entre las imágenes */
+    gap: 6px; /* Espacio entre las imágenes */
 }
 
 .etiquetas-container img {
 width: 150px;
 height: auto;
 margin-bottom: 0px;
+}
+
+#eurohoja {
+    max-width: 100px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra suave */
+}
+
+#eneek {
+    max-width: 80px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra suave */
+}
+
+#reyno_gourmet {
+    max-width: 100px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.0); /* Sombra suave */
+    background-color: #ccc;
 }
 
 @media (max-width: 768px) {
@@ -376,49 +365,12 @@ margin-bottom: 0px;
     font-weight: 700;
 }
 
-.producto .penin {
-    font-family: Arial, sans-serif;
-    font-size: 1.1em;
-    color: #249415;
-}
-
-.productos_1 {
+.productos {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
     gap: 30px;
-    max-width: 1200px;
+    max-width: 800px; /*ORIGINAL A 1200px, reducido temporalmente*/
     margin: 0 auto;
-}
-
-.productos_2 {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-    gap: 30px;
-    max-width: 1200px;
-    margin: 0 auto;
-    margin: 30px auto 0 auto; /* margen superior de 30px */
-}
-
-.productos_3 {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-    gap: 30px;
-    max-width: 1200px;
-    margin: 0 auto;
-    margin: 30px auto 0 auto; /* margen superior de 30px */
-}
-.oferta_texto {
-    font-size: 1.3em;
-    margin-bottom: 40px;
-    color: #333;
-    font-weight: 700;
-}
-
-.catalogo h3 {
-    font-size: 2.5em;
-    margin-bottom: 40px;
-    color: #333;
-    font-weight: 700;
 }
 
 .producto {
@@ -439,16 +391,20 @@ margin-bottom: 0px;
 
 .producto img {
     width: 100%;
-    max-height: 250px;
+    max-height: 300px;
     object-fit: contain;
     border-radius: 12px;
     margin-bottom: 15px;
     transition: transform 0.3s ease;
+    min-height: 200px;
+    justify-content: space-between;
+    height: 100%;
 }
 
 .producto img:hover {
     transform: scale(1.03);
 }
+
 
 .producto h3 {
     font-size: 1.3em;
@@ -499,6 +455,11 @@ margin-bottom: 0px;
     align-items: center;
     gap: 10px; /* espacio entre el input y el botón */
     margin-top: 10px;
+    margin-top: auto; /* nuevo */
+}
+
+.control-cantidad button {
+    margin-top: 0; /* quitar margen superior para que esté alineado */
 }
 
 .inputcantidad {
@@ -536,15 +497,10 @@ button:hover {
     clip: rect(0, 0, 0, 0);
     white-space: nowrap;
     border: 0;
-  }
-
-.texto_img {
-    font-size: 0.75em;
-    color: #555;
-    line-height: 1.4;
 }
-  
 
+
+  
 /* RESPONSIVE del catálogo */
 @media (max-width: 480px) {
     .producto p {
@@ -569,11 +525,9 @@ footer {
     margin-top: 0px;
     text-align: center;
     font-family: Arial, sans-serif;
-    font-size: 13.3px;
+    font-size: 14.5px;
 }
-
 footer a {
     color: #ffff; /* Un color oscuro para mejorar el contraste */
     text-decoration: underline; /* Subrayado */
 }
-
