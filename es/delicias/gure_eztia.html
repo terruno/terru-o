@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GURE EZTIA | Terruño Único</title>
+    <meta name="description" content="Miel cruda y artesanal del País Vasco, elaborada en frío y con sello Eusko Label. Calidad, frescura y respeto por la naturaleza.">
+    <link rel="icon" href="../img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/gure_eztia.css">
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <a href="../index.html"><img src="../img/logo/terruños_unicos_sin_fondo.webp" alt="Inicio - Terruños Únicos"></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle" aria-label="Abrir menú de navegación">☰</div>
+
+            <nav class="menu-central">
+                <ul>
+                <li><a href="../index.html#bodegas">Vinos</a></li>
+                <li><a href="../index.html#almazaras">Aceites</a></li>
+                <li><a href="../index.html#navarra">Delicias Ibéricas</a></li>
+                <li><a href="../dop_españa.html">Calidad Certificada</a></li>
+                <li><a href="../news.html">Noticias</a></li>
+                <li><a href="../formulario.html">Contacto</a></li>
+                <li class="language-switch">
+                    <a href="gure_eztia.html">ES</a>|<a href="../../en/delicias/gure_eztia-en.html">EN</a>
+                </li>
+                </ul>
+            </nav>
+
+            <div class="carrito_logo">
+                <a href="../carrito.html"><img src="../img/carrito_logo.webp" alt="Logo de carrito"></a>
+                <span class="contador-carrito" id="cart-count">0</span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+    <section>    
+        <div class="container">
+        <div class="logo_bodega">
+            <img src="../delicias/img/gure_eztia/gure_eztia_sin_fondo.webp" id="logo_bodega" alt="Mieles Gure Eztia"> 
+        </div>
+        <div class="texto">
+            <!-- INICIO TEXTO EDITABLE -->
+            <h1>GURE EZTIA</h1>
+            <p>Desde 1993, GURE EZTIA reúne a un grupo de apicultores vascos comprometidos con una forma de trabajar respetuosa con la naturaleza y con las abejas. Su objetivo es claro: ofrecer una miel cruda, fresca y artesanal, con la máxima pureza y calidad, bajo el sello Eusko Label.</p>
+            <p>Su miel no pasa por procesos de pasteurización ni altas temperaturas, lo que permite conservar intactas sus propiedades naturales. Se elabora en pequeñas producciones, con mimo y envasado en frío, lo que le da esa textura cremosa tan característica y una frescura que se nota desde la primera cucharada.</p>
+            <p>Consumir GURE EZTIA no es solo disfrutar de una miel excepcional, es también apoyar un proyecto local que cuida del entorno y de la biodiversidad.</p>
+            <!-- FIN TEXTO EDITABLE -->
+            <div class="etiquetas-container">
+                <img src="img/eurohoja.webp" id="eurohoja" alt="logo de Eurohoja">
+                <img src="img/gure_eztia/euskolabel.webp" id="euskolabel" alt="logo de Euskolabel">
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<section aria-labelledby="catalogo-productos">
+    <div class="catalogo">
+        <h2>Catálogo de Productos</h2>
+        <div class="productos_1">
+            <!-- INICIO CODIGO DE PRODUCTO -->
+            <div class="producto">
+                <img src="img/gure_eztia/miel_bosque.webp" alt="Miel de bosque | GURE EZTIA">
+                <h3>Miel de bosque<br><span class="peso">500g o 1kg</span></h3>
+                <div class="control-cantidad">
+                    <label for="cantidad_miel_bosque" class="visually-hidden">Miel de bosque | GURE EZTIA</label>
+                    <input type="number" id="cantidad_miel_bosque" class="inputcantidad" value="1" min="1">
+                    <button onclick="añadirAlCarrito('Miel de bosque | GURE EZTIA', 'cantidad_miel_bosque')">Añadir al carrito</button>
+                </div>
+            </div>
+            <!-- FIN CODIGO DE PRODUCTO -->
+            <!-- INICIO CODIGO DE PRODUCTO -->
+            <div class="producto">
+                <img src="img/gure_eztia/miel_montana_propoleo.webp" alt="Miel de Montaña con Propoleo | GURE EZTIA">
+                <h3>Miel de Montaña con Propoleo<br><span class="peso">250g</span></h3>
+                <div class="control-cantidad">
+                    <label for="cantidad_miel_propoleo" class="visually-hidden">Miel de Montaña con Propoleo | GURE EZTIA</label>
+                    <input type="number" id="cantidad_miel_propoleo" class="inputcantidad" value="1" min="1">
+                    <button onclick="añadirAlCarrito('Miel de Montaña con Propoleo | GURE EZTIA', 'cantidad_miel_propoleo')">Añadir al carrito</button>
+                </div>
+            </div>
+            <!-- FIN CODIGO DE PRODUCTO -->
+            <!-- INICIO CODIGO DE PRODUCTO -->
+            <div class="producto">
+                <img src="img/gure_eztia/miel_flores_1.webp" alt="Miel de Flores | Navarra | GURE EZTIA">
+                <h3>Miel de Flores | Navarra<br><span class="peso">425g</span></h3>
+                <div class="control-cantidad">
+                    <label for="cantidad_miel_flores_navarra" class="visually-hidden">Miel de Flores | Navarra | GURE EZTIA</label>
+                    <input type="number" id="cantidad_miel_flores_navarra" class="inputcantidad" value="1" min="1">
+                    <button onclick="añadirAlCarrito('Miel de Flores | Navarra | GURE EZTIA', 'cantidad_miel_flores_navarra')">Añadir al carrito</button>
+                </div>
+            </div>
+            <!-- FIN CODIGO DE PRODUCTO -->
+             <!-- INICIO CODIGO DE PRODUCTO -->
+            <div class="producto">
+                <img src="img/gure_eztia/miel_flores_2.webp" alt="Miel de Flores | GURE EZTIA">
+                <h3>Miel de Flores<br><span class="peso">500g o 1kg</span></h3>
+                <div class="control-cantidad">
+                    <label for="cantidad_miel_flores" class="visually-hidden">Miel de Flores | GURE EZTIA</label>
+                    <input type="number" id="cantidad_miel_flores" class="inputcantidad" value="1" min="1">
+                    <button onclick="añadirAlCarrito('Miel de Flores | GURE EZTIA', 'cantidad_miel_flores')">Añadir al carrito</button>
+                </div>
+            </div>
+            <!-- FIN CODIGO DE PRODUCTO -->
+            <!-- INICIO CODIGO DE PRODUCTO -->
+            <div class="producto">
+                <img src="img/gure_eztia/miel_jalea_real.webp" alt="Miel con Jalea Real | GURE EZTIA">
+                <h3>Miel con Jalea Real<br><span class="peso">500g</span></h3>
+                <div class="control-cantidad">
+                    <label for="cantidad_miel_jalea" class="visually-hidden">Miel con Jalea Real | GURE EZTIA</label>
+                    <input type="number" id="cantidad_miel_jalea" class="inputcantidad" value="1" min="1">
+                    <button onclick="añadirAlCarrito('Miel con Jalea Real | GURE EZTIA', 'cantidad_miel_jalea')">Añadir al carrito</button>
+                </div>
+            </div>
+            <!-- FIN CODIGO DE PRODUCTO -->
+            <!-- INICIO CODIGO DE PRODUCTO -->
+            <div class="producto">
+                <img src="img/gure_eztia/indarplus.webp" alt="Indarplus | GURE EZTIA">
+                <h3>Indarplus<br><span class="peso">500g</span></h3>
+                <p>Miel con Polen y Jalea Real</p>
+                <div class="control-cantidad">
+                    <label for="cantidad_indarplus" class="visually-hidden">Indarplus | GURE EZTIA</label>
+                    <input type="number" id="cantidad_indarplus" class="inputcantidad" value="1" min="1">
+                    <button onclick="añadirAlCarrito('Indarplus | GURE EZTIA', 'cantidad_indarplus')">Añadir al carrito</button>
+                </div>
+            </div>
+            <!-- FIN CODIGO DE PRODUCTO -->
+            <!-- INICIO CODIGO DE PRODUCTO -->
+            <div class="producto">
+                <img src="img/gure_eztia/romero.webp" alt="Miel de Romero | GURE EZTIA">
+                <h3>Miel de Romero<br><span class="peso">400g</span></h3>
+                <div class="control-cantidad">
+                    <label for="cantidad_miel_romero" class="visually-hidden">Miel de Romero | GURE EZTIA</label>
+                    <input type="number" id="cantidad_miel_romero" class="inputcantidad" value="1" min="1">
+                    <button onclick="añadirAlCarrito('Miel de Romero | GURE EZTIA', 'cantidad_miel_romero')">Añadir al carrito</button>
+                </div>
+            </div>
+            <!-- FIN CODIGO DE PRODUCTO -->
+            <!-- INICIO CODIGO DE PRODUCTO -->
+            <div class="producto">
+                <img src="img/gure_eztia/brezo_castano.webp" alt="Miel de Brezo y Castaño (BIO) | GURE EZTIA">
+                <h3>Miel de Brezo y Castaño (BIO)<br><span class="peso">425g</span></h3>
+                <div class="control-cantidad">
+                    <label for="cantidad_miel_brezo_castaño" class="visually-hidden">Miel de Brezo y Castaño (BIO) | GURE EZTIA</label>
+                    <input type="number" id="cantidad_miel_brezo_castaño" class="inputcantidad" value="1" min="1">
+                    <button onclick="añadirAlCarrito('Miel de Brezo y Castaño BIO | GURE EZTIA', 'cantidad_miel_brezo_castaño')">Añadir al carrito</button>
+                </div>
+            </div>
+            <!-- FIN CODIGO DE PRODUCTO -->
+            <!-- INICIO CODIGO DE PRODUCTO -->
+            <div class="producto">
+                <img src="img/gure_eztia/brezo.webp" alt="Miel de Brezo | GURE EZTIA">
+                <h3>Miel de Brezo<br><span class="peso">400g</span></h3>
+                <div class="control-cantidad">
+                    <label for="cantidad_miel_brezo" class="visually-hidden">Miel de Brezo | GURE EZTIA</label>
+                    <input type="number" id="cantidad_miel_brezo" class="inputcantidad" value="1" min="1">
+                    <button onclick="añadirAlCarrito('Miel de Brezo | GURE EZTIA', 'cantidad_miel_brezo')">Añadir al carrito</button>
+                </div>
+            </div>
+            <!-- FIN CODIGO DE PRODUCTO -->
+            <!-- INICIO CODIGO DE PRODUCTO -->
+            <div class="producto">
+                <img src="img/gure_eztia/miel_brezo.webp" alt="Miel de Brezo | Eusko Label | GURE EZTIA">
+                <h3>Miel de Brezo | Eusko Label<br><span class="peso">AGOTADO</span></h3>
+                <div class="control-cantidad">
+                    <label for="cantidad_miel_brezo_euskolabel" class="visually-hidden">Miel de Brezo | Eusko Label | GURE EZTIA</label>
+                    <input type="number" id="cantidad_miel_brezo_euskolabel" class="inputcantidad" value="1" min="1">
+                    <button onclick="añadirAlCarrito('Miel de Brezo | Eusko Label | GURE EZTIA', 'cantidad_miel_brezo_euskolabel')">Añadir al carrito</button>
+                </div>
+            </div>
+            <!-- FIN CODIGO DE PRODUCTO -->
+            <!-- INICIO CODIGO DE PRODUCTO -->
+            <div class="producto">
+                <img src="img/gure_eztia/antonana_araba.webp" alt="Antoñana | Eusko Label | GURE EZTIA">
+                <h3>Antoñana | Eusko Label<br><span class="peso">250g</span></h3>
+                <div class="control-cantidad">
+                    <label for="cantidad_miel_antonana" class="visually-hidden">Antoñana | Eusko Label | GURE EZTIA</label>
+                    <input type="number" id="cantidad_miel_antonana" class="inputcantidad" value="1" min="1">
+                    <button onclick="añadirAlCarrito('Antoñana | Eusko Label | GURE EZTIA', 'cantidad_miel_antonana')">Añadir al carrito</button>
+                </div>
+            </div>
+            <!-- FIN CODIGO DE PRODUCTO -->
+        </div>
+        <div class="productos_2">
+            <!-- INICIO CODIGO DE PRODUCTO -->
+            <div class="producto">
+                <img src="img/gure_eztia/pole_de_abejas.webp" alt="Polen de Abeja | GURE EZTIA">
+                <h3>Polen de Abeja<br><span class="peso">255g</span></h3>
+                <p>Las abejas lo recolectan directamente de las flores, y tras un proceso de secado, se envasa de forma natural. Es un suplemento nutricional que nos proporciona una amplia variedad de minerales y vitaminas esenciales.</p>
+                <div class="control-cantidad">
+                    <label for="cantidad_polen" class="visually-hidden">Polen de Abeja | GURE EZTIA</label>
+                    <input type="number" id="cantidad_polen" class="inputcantidad" value="1" min="1">
+                    <button onclick="añadirAlCarrito('Polen de Abeja | GURE EZTIA', 'cantidad_polen')">Añadir al carrito</button>
+                </div>
+            </div>
+            <!-- FIN CODIGO DE PRODUCTO -->
+        </div>
+        <div class="productos_3">
+            <!-- INICIO CODIGO DE PRODUCTO -->
+            <div class="producto">
+                <img src="img/gure_eztia/propoleo.webp" alt="Propoleo | GURE EZTIA">
+                <h3>Propóleo<br><span class="peso">31ml</span></h3>
+                <p>Contiene 31 ml de una solución de propóleo en alcohol. El propóleo, que las abejas emplean para mantener la colmena libre de infecciones, es un potente antibiótico natural.</p>
+                <div class="control-cantidad">
+                    <label for="cantidad_propoleo" class="visually-hidden">Propoleo | GURE EZTIA</label>
+                    <input type="number" id="cantidad_propoleo" class="inputcantidad" value="1" min="1">
+                    <button onclick="añadirAlCarrito('Propoleo | GURE EZTIA', 'cantidad_propoleo')">Añadir al carrito</button>
+                </div>
+            </div>
+            <!-- FIN CODIGO DE PRODUCTO -->
+        </div>
+    </div>
+</section>
+</main>
+
+
+<footer>
+     <p>Para realizar un pedido, contáctanos <a href="../formulario.html">mediante este formulario.</a></p>
+    <p>
+          <a href="../politica-privacidad.html">Política de Privacidad</a> |
+          <a href="../politica-cookies.html">Política de Cookies</a>
+    </p>
+</footer>
+    <script src="js/añadir_al_carrito.js"></script>
+    <script src="js/cart_icon.js"></script>
+    <script src="js/navbar.js"></script>
+</body>
+</html>
