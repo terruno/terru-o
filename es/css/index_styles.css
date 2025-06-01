@@ -12,6 +12,10 @@ html {
   scroll-behavior: smooth;
 }
 
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 /* GENERAL BARRA */
 .navbar {
     display: flex;
@@ -264,6 +268,29 @@ a {
     color: #fff;
     text-decoration: none;
 }
+
+
+/* Banner 20 años exp */
+.top-banner {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;   /* Alineado con el contenido principal */
+  margin: 0 auto;
+  background-color: #222;  /* Negro profundo */
+  color: #D4AF37;          /* Dorado elegante */
+  text-align: center;
+  padding: 12px 20px;
+  margin-top: 2%;
+  font-size: 1em;
+  font-weight: 500;
+  border: 1px solid #D4AF37;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  font-family: 'Georgia', serif;
+  letter-spacing: 0.3px;
+}
+
+
+
 
 /* SECCIÓN SABORES */
 .sabores {
