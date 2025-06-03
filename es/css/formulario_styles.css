@@ -7,71 +7,6 @@ body {
     height: 100%;
   }
 
-  form {
-    max-width: 500px;
-    margin: auto;
-    background: white;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.1);
-  }
-
-  h2 {
-    text-align: center;
-    margin-bottom: 30px;
-  }
-
-  h3 {
-    text-align: center;
-    margin-bottom: 30px;
-  }
-
-  label {
-    display: block;
-    margin-bottom: 6px;
-    font-weight: bold;
-    color: #2d3748;
-  }
-
-  input[type="text"],
-  input[type="email"],
-  input[type="tel"],
-  select,
-  textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 14px;
-    box-sizing: border-box;
-  }
-
-  select {
-    background-color: white;
-  }
-
-  button {
-    background-color: #2f855a;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 6px;
-    font-size: 16px;
-    cursor: pointer;
-    width: 100%;
-  }
-
-  form a {
-  color: #000; /* Negro */
-  text-decoration: underline; /* Opcional, para hacerlo visible como enlace */
-  }
-
-  .privacidad-link {
-  color: #000;
-  text-decoration: underline;
-}
-
 /* GENERAL BARRA */
 .navbar {
     display: flex;
@@ -312,7 +247,165 @@ nav.menu-central.active ul li a:hover {
     }
 }
 
-/*BARRA SUPERIOR*/
+/*TEXO QUIENES SOMOS*/
+section {
+  max-width: 800px;
+  margin: 0.5rem auto;
+  padding: 2rem;
+  background-color: white;
+  font-family: 'Georgia', serif;
+  color: #2c2c2c;
+  line-height: 1.7;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  border-radius: 8px;
+}
+
+section > p {
+  margin-bottom: 1.2rem;
+  font-size: 1.1rem;
+}
+
+section em {
+  font-style: italic;
+  color: #5e3e2f;
+}
+
+section strong {
+  font-weight: bold;
+  color: #5A1E29;
+}
+
+section .quote {
+  font-style: italic;
+  padding-left: 1rem;
+  border-left: 4px solid #bfa57a;
+  color: #444;
+  margin: 1.5rem 0;
+  background-color: #f7f2ec;
+  padding: 1rem;
+  border-radius: 4px;
+}
+
+.title-image {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Para que h1 quede a la izquierda y la img a la derecha */
+  margin-bottom: 1rem; /* espacio debajo para separar del texto */
+}
+
+.title-image h1 {
+  font-size: 2.2rem;
+  color: #5A1E29;
+  margin-bottom: 0.5rem;
+}
+
+.title-image img {
+  width: 150px;
+  height: auto;
+  object-fit: contain;
+}
+/*IMG DIVISORA*/
+.divider-image {
+  width: 100vw;
+  overflow: hidden;
+  height: 30vh;
+  max-height: 250px;
+  min-height: 150px;
+  margin: 2rem 0;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+.divider-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+/* En móviles: quitar el desplazamiento lateral para que no se salga */
+@media (max-width: 600px) {
+  .divider-image {
+    width: 100%;       /* cambiar 100vw a 100% */
+    height: 20vh;
+    min-height: 120px;
+    margin: 1rem 0;
+    left: 0;           /* eliminar offset lateral */
+    right: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+
+/*FORMULARIO*/
+  form {
+    max-width: 500px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  h3 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #2d3748;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  select,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    box-sizing: border-box;
+  }
+
+  select {
+    background-color: white;
+  }
+
+  button {
+    background-color: #2f855a;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+  }
+
+  form a {
+  color: #000; /* Negro */
+  text-decoration: underline; /* Opcional, para hacerlo visible como enlace */
+  }
+
+  .privacidad-link {
+  color: #000;
+  text-decoration: underline;
+}
 
 main {
     padding-top: 6rem;

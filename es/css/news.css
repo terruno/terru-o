@@ -252,7 +252,7 @@ main {
   }
 
   .blog-wrapper {
-    max-width: 800px;   /* o 900px, según prefieras */
+    max-width: 800px;
     margin: 0 auto;     /* centra el contenido horizontalmente */
     padding: 2rem 1rem;    /* espacio lateral en pantallas pequeñas */
   }
