@@ -192,12 +192,12 @@ nav ul li a:hover {
     flex-direction: column;
     align-items: center;
     padding: 15px 0; /* algo de padding arriba y abajo del menú */
-}
+    }
 
 nav.menu-central.active ul li {
     margin: 15px 0; /* más espacio vertical entre opciones */
     text-align: center;
-}
+    }
 
 nav.menu-central.active ul li a {
     display: block;
@@ -205,13 +205,13 @@ nav.menu-central.active ul li a {
     font-size: 20px; /* un poco más grande para mejor lectura */
     border-radius: 8px; /* bordes redondeados para mejor look */
     transition: background-color 0.3s ease;
-}
+    }
 
 nav.menu-central.active ul li a:hover {
     background-color: #5A1E29; /* mantén tu color hover */
     color: white;
     box-shadow: 0 4px 8px rgba(90, 30, 41, 0.4); /* sombra sutil para dar profundidad */
-}
+    }
 
     /* Idiomas en línea horizontal */
     .language-switch {
@@ -270,28 +270,6 @@ a {
 }
 
 
-/* Banner 20 años exp */
-.top-banner {
-  position: relative;
-  width: 100%;
-  max-width: 1200px;   /* Alineado con el contenido principal */
-  margin: 0 auto;
-  background-color: #222;  /* Negro profundo */
-  color: #D4AF37;          /* Dorado elegante */
-  text-align: center;
-  padding: 12px 20px;
-  margin-top: 2%;
-  font-size: 1em;
-  font-weight: 500;
-  border: 1px solid #D4AF37;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-  font-family: 'Georgia', serif;
-  letter-spacing: 0.3px;
-}
-
-
-
-
 /* SECCIÓN SABORES */
 .sabores {
     text-align: center;
@@ -318,6 +296,7 @@ a {
     margin: 0;
 }
 
+/*Lineas Laterales Título*/
 .linea-gradiente {
     flex: 1;
     height: 2px;
@@ -333,15 +312,43 @@ a {
     background: linear-gradient(to left, transparent, #e2b007);
 }
 
+/*Texto Inferiror Título*/
+.titulo_inferior {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.6em;
+    color: #D4AF37;
+    font-weight: bold;
+    font-style: italic;
+    text-shadow: 1px 1px 1px #3b1a1a;
+    margin: 0;
+}
+
+/*Texto INICIO*/
+.texto_intro {
+  max-width: 1200px;          /* ancho máximo para que no sea muy ancho */
+  margin: 0 auto;            /* centrar horizontalmente */
+  padding: 20px 20px;        /* espacio interno */
+  text-align: center;        /* texto centrado */
+}
+
 .sabores p {
     font-family: Arial, sans-serif;
     font-size: 1.1em;
     color: #D4AF37;
-    max-width: 1000px;
     margin: 1rem auto 0.5rem;
     line-height: 1.6;
     text-align: center;
 }
+
+.texto_intro p {
+    font-family: Arial, sans-serif;
+    font-size: 1.2em;
+    color: #D4AF37;
+    margin: 1rem auto 0.5rem;
+    line-height: 1.6;
+    text-align: center;
+}
+
 
 /*VINOS*/
 .bodegas_intro {
@@ -402,6 +409,53 @@ a {
 .emilio_valerio img {
     width: 300px;
     height: auto;
+}
+
+/*ENLACE A CALIDAD CERTIFICADA*/
+.top-banner {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 2% auto 0 auto;
+  background-color: #1c1c1c;
+  color: #D4AF37;
+  text-align: center;
+  padding: 32px 24px;
+  border: 1px solid #D4AF37;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  font-family: 'Georgia', serif;
+  letter-spacing: 0.4px;
+  border-radius: 8px;
+}
+
+.banner-content h3 {
+  font-size: 1.6em;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.banner-content p {
+  font-size: 1em;
+  margin-bottom: 20px;
+  color: #f8f5e4;
+}
+
+.banner-button {
+  display: inline-block;
+  padding: 10px 22px;
+  background-color: transparent;
+  color: #D4AF37;
+  border: 1px solid #D4AF37;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95em;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.banner-button:hover {
+  background-color: #e6c97a;
+  color: #1c1c1c;
 }
 
 
@@ -584,7 +638,6 @@ align-items: center;
 padding: 10px;
 }
 
-
 /*FOOTER*/
 footer {
     background-color: #5A1E29;
@@ -597,7 +650,6 @@ footer a {
     color: #ffff; /* Un color oscuro para mejorar el contraste */
     text-decoration: underline; /* Subrayado */
 }
-
 
 /*SEPARADOR*/
 .separador {
@@ -612,6 +664,11 @@ footer a {
 @media (max-width: 600px) {
     .titulo-principal {
         font-size: 2em;
+        white-space: normal;
+    }
+
+    .titulo_inferior {
+        font-size: 1.4em;
         white-space: normal;
     }
 

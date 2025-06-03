@@ -10,7 +10,7 @@
 </head>
 <body>
     
-    <header>
+    <header id="top">
         <div class="navbar">
             <div class="logo">
                 <a href="index.html"><img src="img/logo/terruños_unicos_sin_fondo.webp" alt="Inicio - Terruño Único"></a>
@@ -18,12 +18,12 @@
             <div class="menu-toggle" id="menu-toggle" aria-label="Abrir menú de navegación">☰</div>
             <nav class="menu-central">
                 <ul class="menu">
+                <li><a href="#" onclick="event.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' });">Inicio</a></li>
                 <li><a href="#bodegas">Vinos</a></li>
                 <li><a href="#almazaras">Aceites</a></li>
                 <li><a href="#navarra">Delicias Ibéricas</a></li>
-                <li><a href="dop_españa.html">Calidad Certificada</a></li>
                 <li><a href="news.html">Noticias</a></li>
-                <li><a href="formulario.html">Contacto</a></li>
+                <li><a href="formulario.html">Sobre Nosotros</a></li>
                 <li class="language-switch">
                 <a href="index.html">ES</a>|<a href="../en/index-en.html">EN</a>
                 </li>
@@ -36,24 +36,25 @@
             </div>
         </div>
 
-        <div class="top-banner">
-            <span style="margin-right: 8px;">🌍</span>
-            Con más de dos décadas de experiencia, exportamos productos de calidad a Bélgica desde el año 2000.
-        </div>
-
         <div class="sabores">
             <div class="titulo-con-lineas">
                 <span class="linea-gradiente izquierda"></span>
                 <h1 class="titulo-principal">Terruños Únicos</h1>
                 <span class="linea-gradiente derecha"></span>
             </div>
-            <p><strong>Terruños Únicos</strong> nace del amor por la tierra, por la calidad y por los sabores que nos conectan con lo esencial.</p>
-            <p>Seleccionamos vinos naturales con carácter, aceites que expresan su origen, y productos locales que contienen la esencia de su lugar.</p>
+
+            <div class="titulo_inferior">
+                <p>25 años repartiendo, distribuyendo y exportando delicias locales</p>
+            </div>
+
+            <div class="texto_intro">
+                <p><strong>Terruños Únicos</strong> nace del amor y la pasión por la tierra, por la autenticidad y la personalidad de lo que crece desde sus raíces sin traicionarlas, y de los sentidos que nos conectan con lo esencial.</p>
+                <p>Nuestra pasión se convirtió en nuestra misión: dar a conocer nuevas experiencias culinarias y sensoriales — en resumen, experiencias vividas.</p>
+            </div>
         </div>
     </header>
     
     <main>
-        
         <section class="bodegas" id="bodegas">
         <div class="bodegas_intro">
                 <h2>Bodegas Asociadas</h2>
@@ -115,8 +116,14 @@
                 <img src="img/bodegas/altamente_sin_fondo.webp" alt="Logo de Altamente Vinos" class="altamente_vinos" width="200" height="100" loading="lazy" style="max-height: 60%; width: auto; object-fit: contain; margin-top: 40px;">
                 </a>
             </div>
-            
-            
+        </div>  
+        
+        <div class="top-banner">
+            <div class="banner-content">
+                <h3>¿Qué garantiza la calidad de estos vinos?</h3>
+                    <p>Descubre el significado de certificaciones como D.O., D.O.P. o Vino de Autor.</p>
+                    <a href="dop_españa.html" class="banner-button">Conoce más</a>
+            </div>
         </div>
         </section>
         <section class="almazaras" id="almazaras">
