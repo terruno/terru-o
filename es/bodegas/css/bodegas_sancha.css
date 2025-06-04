@@ -4,7 +4,7 @@ body {
     color: white;
     background: black;
     background-image: 
-        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
         url("../img/sancha/sancha_fondo.webp");
     background-size: cover;
     background-position: center;

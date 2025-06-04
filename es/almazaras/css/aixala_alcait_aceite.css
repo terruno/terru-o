@@ -268,6 +268,21 @@ main {
     gap: 20px;
 }
 
+.etiquetas-container {
+        display: flex;
+        flex-direction: row; /* Esto coloca los elementos en una fila horizontal */
+        align-items: center; /* Alinea verticalmente los elementos (opcional) */
+        justify-content: flex-end; /* Alinea los elementos al final del contenedor (a la derecha) */
+        padding: 10px;
+        gap: 20px; /* Espacio entre las imágenes */
+}
+
+.etiquetas-container img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
 .logo_bodega {
     flex: 1;
     display: flex;
@@ -297,6 +312,11 @@ main {
 h1 {
     font-size: 2em;
     margin-bottom: 10px;
+}
+
+#eurohoja {
+    max-width: 100px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra suave */
 }
 
 p {
@@ -340,7 +360,7 @@ p {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
     gap: 30px;
-    max-width: 1200px;
+    max-width: 400px;
     margin: 0 auto;
 }
 
