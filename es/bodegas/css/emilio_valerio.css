@@ -308,19 +308,24 @@ margin-bottom: 10px;
     max-width: 100px;
 }
 
+.texto h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.texto p {
+    text-align: justify; /* Solo los párrafos se justifican */
+}
+
 .texto {
     flex: 2;
     background: rgba(255, 255, 255, 0.2);
     padding: 30px;
     border-radius: 10px;
     backdrop-filter: blur(5px);
-    text-align: justify;
 }
 
-h1 {
-    font-size: 2em;
-    margin-bottom: 10px;
-}
+
 
 .texto p {
     font-size: 1.1em;
@@ -341,6 +346,11 @@ h1 {
 width: 150px;
 height: auto;
 margin-bottom: 0px;
+}
+
+#eurohoja {
+    max-width: 100px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra suave */
 }
 
 @media (max-width: 768px) {
