@@ -124,19 +124,6 @@ nav ul li a:hover {
     cursor: pointer;
 }
 
-nav.menu-central {
-    display: none;
-    position: fixed;
-    top: 70px;
-    left: 0;
-    width: 100%;
-    max-height: calc(100vh - 70px); /* ocupa el resto de la pantalla debajo de la barra */
-    overflow-y: auto; /* permite scroll vertical */
-    background-color: #222;
-    flex-direction: column;
-    z-index: 999;
-}
-
 /* IDIOMAS */
 .language-switch a {
     text-decoration: none;
@@ -175,7 +162,7 @@ nav.menu-central {
         background-color: #222;
         z-index: 1000;
     }
-
+/*MENÚ HAMBURGUESA INICIO*/
     .menu-toggle {
         display: block;
         position: absolute;
@@ -187,14 +174,16 @@ nav.menu-central {
     }
 
     nav.menu-central {
-        display: none;
-        position: fixed;
-        top: 70px;
-        left: 0;
-        width: 100%;
-        background-color: #222;
-        flex-direction: column;
-        z-index: 999;
+    display: none;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    max-height: calc(100vh - 70px); /* ocupa el resto de la pantalla debajo de la barra */
+    overflow-y: auto; /* permite scroll vertical */
+    background-color: #222;
+    flex-direction: column;
+    z-index: 999;
     }
 
     nav.menu-central.active {
@@ -566,6 +555,16 @@ a {
     position: relative;
 }
 
+.delicia img {
+    max-height: 180px;
+    max-width: 90%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease-in-out;
+    margin: 0 auto;
+}
+
 .lolivateria {
     height: auto;
     margin-bottom: 20px;
@@ -650,6 +649,16 @@ align-items: center;
 padding: 10px;
 }
 
+.flip-img {
+    max-height: 180px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+
 /*FOOTER*/
 footer {
     background-color: #5A1E29;
@@ -722,12 +731,6 @@ footer a {
     .delicias_grid {
     grid-template-columns: repeat(1, 1fr); /* 1 columna en móvil */
     gap: 5px;
-    }
-
-    .delicia img {
-        max-height: 250px;
-        max-width: 100%;
-        object-fit: contain; /* Cambiado de cover a contain para evitar que se recorten */
     }
     
 }
