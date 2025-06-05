@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # Cambia si usas otra rama
+      - main  # Cambia si tu rama principal tiene otro nombre
 
 permissions:
   contents: read
@@ -13,17 +13,18 @@ permissions:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout code
+      - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Setup Pages
         uses: actions/configure-pages@v3
 
-      - name: Upload site
+      - name: Upload site artifact
         uses: actions/upload-pages-artifact@v2
         with:
-          path: .  # Si tienes build cambia aquí la carpeta
+          path: .  # Cambia si usas build, ej: "dist"
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v2
