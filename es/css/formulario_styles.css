@@ -115,6 +115,19 @@ nav ul li a:hover {
     cursor: pointer;
 }
 
+nav.menu-central {
+    display: none;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    max-height: calc(100vh - 70px); /* ocupa el resto de la pantalla debajo de la barra */
+    overflow-y: auto; /* permite scroll vertical */
+    background-color: #222;
+    flex-direction: column;
+    z-index: 999;
+}
+
 /* IDIOMAS */
 .language-switch a {
     text-decoration: none;

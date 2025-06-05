@@ -7,3 +7,5 @@ document.addEventListener('DOMContentLoaded', function () {
         menu.classList.toggle('active'); // ahora se alinea con tu CSS
     });
 });
+
+

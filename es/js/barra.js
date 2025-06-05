@@ -10,9 +10,22 @@ window.onscroll = function () {
 // Menú hamburguesa
 document.addEventListener('DOMContentLoaded', function () {
     const toggle = document.getElementById('menu-toggle');
-    const menu = document.querySelector('nav.menu-central'); // este es el contenedor <nav>
+    const menu = document.querySelector('nav.menu-central');
 
+    // Mostrar/ocultar menú al hacer clic en el icono hamburguesa
     toggle.addEventListener('click', () => {
-        menu.classList.toggle('active'); // ahora se alinea con tu CSS
+        menu.classList.toggle('active');
+    });
+
+    // Cerrar el menú al hacer clic en un enlace de navegación interno
+    const menuLinks = menu.querySelectorAll('a[href^="#"]');
+    menuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            // Solo cerrar si el menú está activo
+            if (menu.classList.contains('active')) {
+                menu.classList.remove('active');
+            }
+        });
     });
 });
+
