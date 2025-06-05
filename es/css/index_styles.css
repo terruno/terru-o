@@ -516,6 +516,11 @@ a {
     height: 100%;
 }
 
+img.isul {
+    max-height: 250px;
+    height: auto;
+}
+
 /*DELICIAS*/
 .navarra_intro {
     text-align: center;
@@ -556,7 +561,7 @@ a {
 }
 
 .delicia img {
-    max-height: 180px;
+    max-height: 200px;
     max-width: 90%;
     width: auto;
     height: auto;
@@ -565,14 +570,15 @@ a {
     margin: 0 auto;
 }
 
-.lolivateria {
+img.lolivateria {
+    max-height: 130px;
     height: auto;
     margin-bottom: 20px;
-    border-radius: 5px; /* Bordes redondeados */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.saldoro {
+img.saldoro {
     width: 220px;
     height: auto;
     margin-bottom: 20px;
@@ -594,8 +600,8 @@ align-items: center;
 
 .flip-card {
 background-color: transparent;
-width: 250px;
-height: 250px;
+width: 200px;
+height: 200px;
 perspective: 1000px;
 margin: 20px;
 }
@@ -647,15 +653,6 @@ display: flex;
 justify-content: center;
 align-items: center;
 padding: 10px;
-}
-
-.flip-img {
-    max-height: 180px;
-    width: auto;
-    height: auto;
-    object-fit: contain;
-    display: block;
-    margin: 0 auto;
 }
 
 
