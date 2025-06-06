@@ -59,7 +59,7 @@
       <img src="img/formulario/fondo_quienes_somos.webp" alt="Imagen viñas fondo">
     </div>
 
-  <form action="https://formspree.io/f/xzzekony" method="POST">
+<form action="https://formspree.io/f/xzzekony" method="POST">
   <h2 style="text-align:center;">Haznos tu consulta sin ningún compromiso</h2>
   <p><small><span style="color:red;">*</span> Campos obligatorios</small></p>
 
@@ -82,12 +82,16 @@
   <textarea id="message" name="mensaje" rows="5" required></textarea>
 
   <label>
-  <input type="checkbox" required>
+    <input type="checkbox" required>
     He leído y acepto la <a href="politica-privacidad.html" target="_blank">Política de Privacidad</a>.<strong style="color: red;">*</strong>
   </label>
 
+  <!-- HONEYPOT: campo oculto antispam -->
+  <input type="text" name="_gotcha" style="display:none">
+
   <button type="submit">Enviar solicitud</button>
 </form>
+
 
 </main>
 <footer>
