@@ -5,7 +5,7 @@ body {
     background: black;
     background-image: 
         linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url("../img/dit_celler/dit_celler_fondo.webp");
+        url("../img/pedro_garnica/pedro_garnica_fondo.webp");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -284,6 +284,8 @@ main {
     margin-bottom: 20px;
     border-radius: 15px; /* Bordes redondeados */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra suave */
+    background-color: white; /* Fondo blanco */
+    padding: 15px;
 }
 
 .texto {

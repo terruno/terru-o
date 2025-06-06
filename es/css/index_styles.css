@@ -414,9 +414,16 @@ a {
     height: 100%;
 }
 
-.emilio_valerio img {
-    width: 300px;
+img.emilio_valerio {
+    width: 340px;
     height: auto;
+    margin-top: -30px;
+}
+
+img.bodegas_pedro_garnica {
+    max-width: 340px;
+    height: auto;
+    margin-top: 100px;
 }
 
 /*ENLACE A CALIDAD CERTIFICADA*/
@@ -525,6 +532,12 @@ a {
 img.isul {
     max-height: 250px;
     height: auto;
+}
+
+img.emilio_valerio_aceite {
+    width: 340px;
+    height: auto;
+    margin-top: -30px;
 }
 
 /*DELICIAS*/
