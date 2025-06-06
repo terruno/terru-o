@@ -59,35 +59,36 @@
       <img src="img/formulario/fondo_quienes_somos.webp" alt="Imagen viñas fondo">
     </div>
 
-  
-
   <form action="https://formspree.io/f/xzzekony" method="POST">
-    <h2 style="text-align:center;">Haznos tu consulta sin ningún compromiso</h2>
-    <label for="name">Nombre:</label>
-    <input type="text" id="name" name="name" required>
+  <h2 style="text-align:center;">Haznos tu consulta sin ningún compromiso</h2>
+  <p><small><span style="color:red;">*</span> Campos obligatorios</small></p>
 
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required>
+  <label for="name">Nombre: <span style="color:red;">*</span></label>
+  <input type="text" id="name" name="name" required>
 
-    <label for="telefono">Teléfono:</label>
-    <input 
-      type="tel" 
-      id="telefono" 
-      name="telefono" 
-      pattern="^\+?[0-9\s\-]{7,20}$" 
-      placeholder="+[cc] xxx xxx xxx" 
-      required
-    ><br>
+  <label for="email">Email: <span style="color:red;">*</span></label>
+  <input type="email" id="email" name="email" required>
 
-    <label for="message">Consulta:</label>
-    <textarea id="message" name="mensaje" rows="5" required></textarea>
-    <label>
-      <input type="checkbox" required>
-      He leído y acepto la <a href="politica-privacidad.html" target="_blank">Política de Privacidad</a>.
-    </label>
+  <label for="telefono">Teléfono (opcional):</label>
+  <input 
+    type="tel" 
+    id="telefono" 
+    name="telefono" 
+    pattern="^\+?[0-9\s\-]{7,20}$" 
+    placeholder="+[cc] xxx xxx xxx"
+  ><br>
 
-    <button type="submit">Enviar solicitud</button>
-  </form>
+  <label for="message">Consulta: <span style="color:red;">*</span></label>
+  <textarea id="message" name="mensaje" rows="5" required></textarea>
+
+  <label>
+  <input type="checkbox" required>
+    He leído y acepto la <a href="politica-privacidad.html" target="_blank">Política de Privacidad</a>.<strong style="color: red;">*</strong>
+  </label>
+
+  <button type="submit">Enviar solicitud</button>
+</form>
+
 </main>
 <footer>
   <p>Para realizar un pedido, contáctanos <a href="formulario.html">mediante este formulario.</a></p>

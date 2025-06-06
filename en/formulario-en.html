@@ -60,36 +60,38 @@
       <img src="../es/img/formulario/fondo_quienes_somos.webp" alt="Imagen viñas fondo">
     </div>
 
+<form action="https://formspree.io/f/xzzekony" method="POST">
+  <h2 style="text-align:center;">We're here to help: reach out anytime, no obligation.</h2>
+  <p><small><span style="color:red;">*</span> Required fields</small></p>
 
-  
+  <label for="name">Name: <span style="color:red;">*</span></label>
+  <input type="text" id="name" name="name" required>
 
-  <form action="https://formspree.io/f/xzzekony" method="POST">
-    <h2 style="text-align:center;">We're here to help: reach out anytime, no obligation.</h2>
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name" required>
+  <label for="email">Email: <span style="color:red;">*</span></label>
+  <input type="email" id="email" name="email" required>
 
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required>
+  <label for="telefono">Telephone (optional):</label>
+  <input 
+    type="tel" 
+    id="telefono" 
+    name="telefono" 
+    pattern="^\+?[0-9\s\-]{7,20}$" 
+    placeholder="+[cc] xxx xxx xxx"
+  ><br>
 
-    <label for="telefono">Telephone:</label>
-    <input 
-      type="tel" 
-      id="telefono" 
-      name="telefono" 
-      pattern="^\+?[0-9\s\-]{7,20}$" 
-      placeholder="+[cc] xxx xxx xxx" 
-      required
-    ><br>
+  <label for="message">Inquiry: <span style="color:red;">*</span></label>
+  <textarea id="message" name="mensaje" rows="5" required></textarea>
 
-    <label for="message">Inquiry:</label>
-    <textarea id="message" name="mensaje" rows="5" required></textarea>
-    <label>
-      <input type="checkbox" required>
-      I have read and accept the <a href="privacy-policy.html" target="_blank">Privacy Policy</a>.
-    </label>
+  <label>
+    <input type="checkbox" required>
+    I have read and accept the <a href="privacy-policy.html" target="_blank">Privacy Policy</a>.
+  </label>
 
-    <button type="submit">Submit Request</button>
-  </form>
+  <button type="submit">Submit Request</button>
+</form>
+
+
+
 </main>
 <footer>
   <p>To place an order, contact us <a href="formulario-en.html">using this form.</a></p>

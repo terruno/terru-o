@@ -40,60 +40,82 @@
     
 <main>
 
-  <h2 style="text-align:center;">Ask for what you need or make a no-obligation enquiry.</h2>
-  <h3>We will reply to you by email to confirm availability, prices and conditions before placing any order.</h3>
+  <h1>Ask for what you need or make a no-obligation enquiry.</h1>
+  <h2>We will reply to you by email to confirm availability, prices and conditions before placing any order.</h2>
 
 
 
-  <form action="https://formspree.io/f/xzzekony" method="POST">
+<form action="https://formspree.io/f/xzzekony" method="POST">
 
-    <label for="name">Name:</label>
+  <p><small><span style="color:red;">*</span> Required fields</small></p>
+
+  <fieldset>
+    <legend>Contact information</legend>
+
+    <label for="name">Name:<strong style="color: red;">*</strong></label>
     <input type="text" id="name" name="name" required>
 
-    <label for="email">Email:</label>
+    <label for="email">Email:<strong style="color: red;">*</strong></label>
     <input type="email" id="email" name="email" required>
 
-<label for="telefono">Telephone:</label>
-<input 
-  type="tel" 
-  id="telefono" 
-  name="telefono" 
-  pattern="^\+?[0-9\s\-]{7,20}$" 
-  placeholder="+[cc] xxx xxx xxx" 
-  required
-><br>
+    <label for="telefono">Telephone:<strong style="color: red;">*</strong></label>
+    <input 
+      type="tel" 
+      id="telefono" 
+      name="telefono" 
+      pattern="^\+?[0-9\s\-]{7,20}$" 
+      placeholder="+[cc] xxx xxx xxx" 
+      required>   
+    <br>
+  </fieldset>
 
-    <label for="ciudad">Address:</label>
-    <input type="text" id="ciudad" name="ciudad">
+  <fieldset>
+    <legend>Address</legend>
+
+    <label for="pais">Country:<strong style="color: red;">*</strong></label>
+    <select id="pais" name="pais" required>
+      <option value="">Select your country</option>
+      <option value="España">Spain</option>
+      <option value="Bélgica">Belgium</option>
+      <option value="Francia">France</option>
+      <option value="Alemania">Germany</option>
+      <option value="Países Bajos">The Netherlands</option>
+      <option value="Otro">Other</option>
+    </select>
 
     <label for="direccion_postal">Postcode:</label>
-    <input type="text" id="direccion_postal" name="direccion_postal"><br>  
+    <input type="text" id="direccion_postal" name="direccion_postal"><br>
 
-    <label for="pais">Country:</label>
-      <select id="pais" name="pais" required>
-        <option value="">Select your country</option>
-        <option value="España">Spain</option>
-        <option value="Bélgica">Belgium</option>
-        <option value="Francia">France</option>
-        <option value="Alemania">Germany</option>
-        <option value="Países Bajos">The Netherlands</option>
-        <option value="Otro">Other</option>
-    </select>
+    <label for="ciudad">City / Town:</label>
+    <input type="text" id="ciudad" name="ciudad">
+  </fieldset>
+
+  <fieldset>
+    <legend>Enquiry</legend>
 
     <label>Selected products:</label>
     <div id="productos-seleccionados"></div>
     <input type="hidden" name="productos" id="campo-productos">
 
-    <label for="message">Enquiry:</label>
+    <label for="message">Enquiry:<strong style="color: red;">*</strong></label>
     <textarea id="message" name="mensaje" rows="5" required></textarea>
+
     <label>
       <input type="checkbox" required>
-      I have read and accept the <a href="privacy-policy.html" target="_blank">Privacy Policy</a>.
+      I have read and accept the <a href="privacy-policy.html" target="_blank">Privacy Policy</a>.<strong style="color: red;">*</strong>
     </label>
+  </fieldset>
 
-    <button type="submit">Submit Request</button>
-  </form>
+  <p style="font-size: 0.9rem; color: #555; margin-top: 10px;">
+    * Shipping cost will be calculated according to the delivery destination.
+  </p>
+
+  <button type="submit">Submit Request</button>
+</form>
+
 </main>
+
+
 <footer>
   <p>To place an order, contact us <a href="formulario-en.html">using this form.</a></p>
   <p>

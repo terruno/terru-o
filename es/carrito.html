@@ -39,59 +39,81 @@
     </header>
 <main>
 
-  <h2 style="text-align:center;">Solicita lo que necesites o haznos tu consulta sin compromiso.</h2>
-  <h3>Te responderemos mediante correo electrónico para confirmar disponibilidad, precios y condiciones antes de formalizar cualquier pedido.</h3>
-
-
+  <h1>Solicita lo que necesites o haznos tu consulta sin compromiso.</h1>
+  <h2>Te responderemos mediante correo electrónico para confirmar disponibilidad, precios y condiciones antes de formalizar cualquier pedido.</h2>
 
   <form action="https://formspree.io/f/xzzekony" method="POST">
 
-    <label for="name">Nombre:</label>
-    <input type="text" id="name" name="name" required>
+  <p><small><span style="color:red;">*</span> Campos obligatorios</small></p>
 
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required>
+  <fieldset>
+  <legend>Datos de contacto</legend>
+  <!-- campos de nombre, email, teléfono -->
+  
 
-<label for="telefono">Teléfono:</label>
-<input 
-  type="tel" 
-  id="telefono" 
-  name="telefono" 
-  pattern="^\+?[0-9\s\-]{7,20}$" 
-  placeholder="+[cc] xxx xxx xxx" 
-  required
-><br>
+  <label for="name">Nombre:<strong style="color: red;">*</strong></label>
+  <input type="text" id="name" name="name" required>
 
-    <label for="ciudad">Localidad:</label>
-    <input type="text" id="ciudad" name="ciudad">
+  <label for="email">Email:<strong style="color: red;">*</strong></label>
+  <input type="email" id="email" name="email" required>
 
-    <label for="direccion_postal">Código postal:</label>
-    <input type="text" id="direccion_postal" name="direccion_postal"><br>  
+  <label for="telefono">Teléfono:<strong style="color: red;">*</strong></label>
+  <input 
+    type="tel" 
+    id="telefono" 
+    name="telefono" 
+    pattern="^\+?[0-9\s\-]{7,20}$" 
+    placeholder="+[cc] xxx xxx xxx" 
+    required>   
+  <br>
+  </fieldset>
+  
+  <fieldset>
+  <legend>Dirección</legend>
+  <!-- país, código postal, ciudad -->
+  
+  <label for="pais">País:<strong style="color: red;">*</strong></label>
+  <select id="pais" name="pais" required>
+    <option value="">Selecciona tu país</option>
+    <option value="España">España</option>
+    <option value="Bélgica">Bélgica</option>
+    <option value="Francia">Francia</option>
+    <option value="Alemania">Alemania</option>
+    <option value="Países Bajos">Países Bajos</option>
+    <option value="Otro">Otro</option>
+  </select>
 
-    <label for="pais">País:</label>
-      <select id="pais" name="pais" required>
-        <option value="">Selecciona tu país</option>
-        <option value="España">España</option>
-        <option value="Bélgica">Bélgica</option>
-        <option value="Francia">Francia</option>
-        <option value="Alemania">Alemania</option>
-        <option value="Países Bajos">Países Bajos</option>
-        <option value="Otro">Otro</option>
-    </select>
+  <label for="direccion_postal">Código postal:</label>
+  <input type="text" id="direccion_postal" name="direccion_postal"><br>  
 
-    <label>Productos seleccionados:</label>
-    <div id="productos-seleccionados"></div>
-    <input type="hidden" name="productos" id="campo-productos">
+  <label for="ciudad">Localidad:</label>
+  <input type="text" id="ciudad" name="ciudad">
+  </fieldset>
+  <fieldset>
+  <legend>Consulta</legend>
+  <!-- productos, mensaje, checkbox -->
 
-    <label for="message">Consulta:</label>
-    <textarea id="message" name="mensaje" rows="5" required></textarea>
-    <label>
-      <input type="checkbox" required>
-      He leído y acepto la <a href="politica-privacidad.html" target="_blank">Política de Privacidad</a>.
-    </label>
+  <label>Productos seleccionados:</label>
+  <div id="productos-seleccionados"></div>
+  <input type="hidden" name="productos" id="campo-productos">
 
-    <button type="submit">Enviar solicitud</button>
-  </form>
+  <label for="message">Consulta:<strong style="color: red;">*</strong></label>
+  <textarea id="message" name="mensaje" rows="5" required></textarea>
+
+  <label>
+    <input type="checkbox" required>
+    He leído y acepto la <a href="politica-privacidad.html" target="_blank">Política de Privacidad</a>.<strong style="color: red;">*</strong>
+  </label>
+  </fieldset>
+
+  <p style="font-size: 0.9rem; color: #555; margin-top: 10px;">
+    * El precio del transporte será calculado según según el destino de entrega.
+  </p>
+
+  <button type="submit">Enviar solicitud</button>
+</form>
+
+
 </main>
 <footer>
   <p>Para realizar un pedido, contáctanos <a href="formulario.html">mediante este formulario.</a></p>
@@ -109,6 +131,7 @@
     document.getElementById('product').value = decodeURIComponent(producto);
   }
 </script>
+<script src="js/mensaje-exito.js"></script>
 <script src="js/navbar.js"></script>
 <script src="js/carrito.js"></script>
 <script src="js/cart_icon.js"></script>
